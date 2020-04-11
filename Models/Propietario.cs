@@ -15,9 +15,4 @@ public class Propietario
     [Required]
     public string Telefono { get; set; }
 
-    // Relaciones 
-    public List<SitioTuristico> SitiosTuristicos { get; set; }
-    
-    public List<Publicacion> Publicaciones { get; set; }
-
 }

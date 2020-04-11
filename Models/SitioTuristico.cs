@@ -23,6 +23,4 @@ public class SitioTuristico
 
     public Propietario Propietario { get; set; }
     
-    public List<Publicacion> Publicaciones { get; set; }
-
 }

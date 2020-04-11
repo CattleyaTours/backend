@@ -72,7 +72,7 @@ namespace backend.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Fecha = table.Column<DateTime>(nullable: false),
-                    Description = table.Column<string>(nullable: false),
+                    Descripcion = table.Column<string>(nullable: false),
                     PropietarioId = table.Column<int>(nullable: false),
                     SitioId = table.Column<int>(nullable: false)
                 },

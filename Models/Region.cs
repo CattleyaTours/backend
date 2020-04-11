@@ -12,7 +12,4 @@ public class Region
     [Required]
     public string Descripcion { get; set; }
 
-    // Relaciones
-    internal List<SitioTuristico> SitiosTuristicos { get; set; }
-    
 }

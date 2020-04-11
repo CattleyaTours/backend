@@ -27,6 +27,14 @@ namespace backend.Controllers
             return await _context.Publicaciones.ToListAsync();
         }
 
+        // GET: api/Publicaciones/region/5
+        [HttpGet("region/{regionId}")]
+        public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicacionesByRegion(int regionId)
+        {
+            return await _context.Publicaciones.Include(x => x.Sitio).Where(x => x.Sitio.RegionId == regionId).ToListAsync();
+        }
+
+
         // GET: api/Publicaciones/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Publicacion>> GetPublicacion(int id)
