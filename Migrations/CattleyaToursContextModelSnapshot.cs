@@ -65,6 +65,10 @@ namespace backend.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("PropietarioId");
+
+                    b.HasIndex("SitioId");
+
                     b.ToTable("Publicaciones");
                 });
 
@@ -110,6 +114,10 @@ namespace backend.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("PropietarioId");
+
+                    b.HasIndex("RegionId");
+
                     b.ToTable("SitiosTuristicos");
                 });
 
@@ -135,6 +143,36 @@ namespace backend.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Usuarios");
+                });
+
+            modelBuilder.Entity("Publicacion", b =>
+                {
+                    b.HasOne("Propietario", "Propietario")
+                        .WithMany("Publicaciones")
+                        .HasForeignKey("PropietarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("SitioTuristico", "Sitio")
+                        .WithMany("Publicaciones")
+                        .HasForeignKey("SitioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("SitioTuristico", b =>
+                {
+                    b.HasOne("Propietario", "Propietario")
+                        .WithMany("SitiosTuristicos")
+                        .HasForeignKey("PropietarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Region", "Region")
+                        .WithMany("SitiosTuristicos")
+                        .HasForeignKey("RegionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

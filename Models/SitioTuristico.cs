@@ -19,7 +19,7 @@ public class SitioTuristico
     public int PropietarioId { get;  set; }
 
     // Relaciones    
-    internal Region Region { get; set; }
+    public Region Region { get; set; }
 
     public Propietario Propietario { get; set; }
     

@@ -10,7 +10,7 @@ public class Publicacion
     public DateTime Fecha { get; set; }
     
     [Required]
-    public string Description { get; set; }
+    public string Descripcion { get; set; }
 
     [Required]
     public int PropietarioId { get; set; }
