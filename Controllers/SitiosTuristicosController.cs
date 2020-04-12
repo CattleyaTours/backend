@@ -31,7 +31,7 @@ namespace backend.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<SitioTuristico>> GetSitioTuristico(int id)
         {
-            var sitioTuristico = await _context.SitiosTuristicos.FindAsync(id);
+            var sitioTuristico = await _context.SitiosTuristicos.FindAsync(id);            
 
             if (sitioTuristico == null)
             {
@@ -40,6 +40,7 @@ namespace backend.Controllers
 
             return sitioTuristico;
         }
+
 
         // PUT: api/SitiosTuristicos/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for

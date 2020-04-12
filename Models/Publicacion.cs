@@ -19,6 +19,9 @@ public class Publicacion
     public int PropietarioId { get; set; }
 
     [Required]
+    public int Precio { get; set; }
+
+    [Required]
     public int SitioId { get; set; }
     
     // Relaciones
