@@ -41,6 +41,12 @@ namespace backend.Controllers
             return sitioTuristico;
         }
 
+        // GET: api/Publicaciones/propietario/5
+        [HttpGet("propietario/{propietarioId}")]
+        public async Task<ActionResult<IEnumerable<SitioTuristico>>> GetPublicacionesByPropietario(int propietarioId)
+        {
+            return await _context.SitiosTuristicos.Where(x => x.PropietarioId == propietarioId).ToListAsync();
+        }
 
         // PUT: api/SitiosTuristicos/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
