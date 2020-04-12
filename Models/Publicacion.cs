@@ -10,6 +10,9 @@ public class Publicacion
     public DateTime Fecha { get; set; }
     
     [Required]
+    public string Titulo { get; set; }
+
+    [Required]
     public string Descripcion { get; set; }
 
     [Required]
