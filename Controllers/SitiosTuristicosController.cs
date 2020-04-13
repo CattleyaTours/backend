@@ -31,7 +31,7 @@ namespace backend.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<SitioTuristico>> GetSitioTuristico(int id)
         {
-            var sitioTuristico = await _context.SitiosTuristicos.FindAsync(id);
+            var sitioTuristico = await _context.SitiosTuristicos.FindAsync(id);            
 
             if (sitioTuristico == null)
             {
@@ -39,6 +39,13 @@ namespace backend.Controllers
             }
 
             return sitioTuristico;
+        }
+
+        // GET: api/Publicaciones/propietario/5
+        [HttpGet("propietario/{propietarioId}")]
+        public async Task<ActionResult<IEnumerable<SitioTuristico>>> GetPublicacionesByPropietario(int propietarioId)
+        {
+            return await _context.SitiosTuristicos.Where(x => x.PropietarioId == propietarioId).ToListAsync();
         }
 
         // PUT: api/SitiosTuristicos/5
