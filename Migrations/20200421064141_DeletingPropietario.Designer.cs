@@ -10,8 +10,8 @@ using backend.Models;
 namespace backend.Migrations
 {
     [DbContext(typeof(CattleyaToursContext))]
-    [Migration("20200409232612_Publicaciones_Propietarios_SitiosTuristicos_Regiones")]
-    partial class Publicaciones_Propietarios_SitiosTuristicos_Regiones
+    [Migration("20200421064141_DeletingPropietario")]
+    partial class DeletingPropietario
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,28 +21,27 @@ namespace backend.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Propietario", b =>
+            modelBuilder.Entity("Pais", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Email")
+                    b.Property<string>("Bandera")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(200)");
 
-                    b.Property<string>("Nombres")
+                    b.Property<string>("Nombre")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Telefono")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(30)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Propietarios");
+                    b.HasIndex("Nombre")
+                        .IsUnique();
+
+                    b.ToTable("Pais");
                 });
 
             modelBuilder.Entity("Publicacion", b =>
@@ -54,16 +53,23 @@ namespace backend.Migrations
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(200)");
 
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("Precio")
+                        .HasColumnType("int");
 
                     b.Property<int>("PropietarioId")
                         .HasColumnType("int");
 
                     b.Property<int>("SitioId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Titulo")
+                        .IsRequired()
+                        .HasColumnType("varchar(30)");
 
                     b.HasKey("Id");
 
@@ -83,11 +89,11 @@ namespace backend.Migrations
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(200)");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(30)");
 
                     b.HasKey("Id");
 
@@ -106,7 +112,11 @@ namespace backend.Migrations
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(200)");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("varchar(30)");
 
                     b.Property<int>("PropietarioId")
                         .HasColumnType("int");
@@ -131,32 +141,51 @@ namespace backend.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Nacionalidad")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("varchar(30)");
 
                     b.Property<string>("Nombres")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<int>("PaisId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("varchar(200)");
 
                     b.Property<string>("Telefono")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("varchar(15)");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("varchar(30)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.HasIndex("PaisId");
+
+                    b.HasIndex("Username")
+                        .IsUnique();
 
                     b.ToTable("Usuarios");
                 });
 
             modelBuilder.Entity("Publicacion", b =>
                 {
-                    b.HasOne("Propietario", "Propietario")
-                        .WithMany("Publicaciones")
+                    b.HasOne("Usuario", "Propietario")
+                        .WithMany()
                         .HasForeignKey("PropietarioId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("SitioTuristico", "Sitio")
-                        .WithMany("Publicaciones")
+                        .WithMany()
                         .HasForeignKey("SitioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -164,15 +193,24 @@ namespace backend.Migrations
 
             modelBuilder.Entity("SitioTuristico", b =>
                 {
-                    b.HasOne("Propietario", "Propietario")
-                        .WithMany("SitiosTuristicos")
+                    b.HasOne("Usuario", "Propietario")
+                        .WithMany()
                         .HasForeignKey("PropietarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Region", "Region")
-                        .WithMany("SitiosTuristicos")
+                        .WithMany()
                         .HasForeignKey("RegionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Usuario", b =>
+                {
+                    b.HasOne("Pais", "Pais")
+                        .WithMany()
+                        .HasForeignKey("PaisId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

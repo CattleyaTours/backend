@@ -41,7 +41,7 @@ namespace backend.Controllers
             return sitioTuristico;
         }
 
-        // GET: api/Publicaciones/propietario/5
+        // GET: api/SitiosTuristicos/propietario/5
         [HttpGet("propietario/{propietarioId}")]
         public async Task<ActionResult<IEnumerable<SitioTuristico>>> GetPublicacionesByPropietario(int propietarioId)
         {
@@ -49,8 +49,6 @@ namespace backend.Controllers
         }
 
         // PUT: api/SitiosTuristicos/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSitioTuristico(int id, SitioTuristico sitioTuristico)
         {
@@ -81,8 +79,6 @@ namespace backend.Controllers
         }
 
         // POST: api/SitiosTuristicos
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<SitioTuristico>> PostSitioTuristico(SitioTuristico sitioTuristico)
         {

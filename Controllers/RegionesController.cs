@@ -1,8 +1,6 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using backend.Models;
@@ -20,7 +18,7 @@ namespace backend.Controllers
             _context = context;
         }
 
-        // GET: api/Regiones
+        // GET: api/Regiones    
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Region>>> GetRegiones()
         {
@@ -42,8 +40,6 @@ namespace backend.Controllers
         }
 
         // PUT: api/Regiones/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutRegion(int id, Region region)
         {
@@ -74,8 +70,6 @@ namespace backend.Controllers
         }
 
         // POST: api/Regiones
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<Region>> PostRegion(Region region)
         {

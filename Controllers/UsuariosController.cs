@@ -6,20 +6,57 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using backend.Models;
-using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Options;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
 
 namespace backend.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UsuariosController : ControllerBase
     {
         private readonly CattleyaToursContext _context;
+        private readonly JWTSettings _jwtSettings;
 
-        public UsuariosController(CattleyaToursContext context)
+        public UsuariosController(CattleyaToursContext context, IOptions<JWTSettings> jwtSettings)
         {
             _context = context;
+            _jwtSettings = jwtSettings.Value;
+        }
+
+        // GET: api/Usuarios/Login
+        [HttpPost("Login")]
+        public async Task<ActionResult<IEnumerable<UsuarioConToken>>> Login([FromBody] UsuarioAuth usuario)
+        {
+            var _usuario =  await _context.Usuarios
+                .Where(x => (x.Email == usuario.Email || x.Username == usuario.Username))
+                .FirstOrDefaultAsync();
+            
+            if (_usuario == null || !BCrypt.Net.BCrypt.Verify(usuario.Password, _usuario.Password)){
+                return NotFound();
+            }
+            
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(_jwtSettings.SecretKey);
+            var tokenDescriptor = new SecurityTokenDescriptor(){
+                Subject = new System.Security.Claims.ClaimsIdentity(new Claim[]{
+                    new Claim(ClaimTypes.Name, usuario.Email)
+                }),
+                Expires = DateTime.UtcNow.AddDays(1),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
+                SecurityAlgorithms.HmacSha256Signature)
+            };
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+
+            _usuario.Password = null;
+            UsuarioConToken usuario_con_token = new UsuarioConToken(){
+                usuario = _usuario,
+                token = tokenHandler.WriteToken(token),
+            };
+            return Ok(usuario_con_token);
         }
 
         // GET: api/Usuarios
@@ -44,8 +81,6 @@ namespace backend.Controllers
         }
 
         // PUT: api/Usuarios/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUsuario(int id, Usuario usuario)
         {
@@ -53,7 +88,11 @@ namespace backend.Controllers
             {
                 return BadRequest();
             }
-
+    
+            //Si la contraseña cambio, encriptar la nueva contraseña
+            if (_context.Usuarios.Find(id).Password != usuario.Password){
+                usuario.Password = BCrypt.Net.BCrypt.HashPassword(usuario.Password);
+            }
             _context.Entry(usuario).State = EntityState.Modified;
 
             try
@@ -75,12 +114,11 @@ namespace backend.Controllers
             return NoContent();
         }
 
-        // POST: api/Usuarios
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPost]
-        public async Task<ActionResult<Usuario>> PostUsuario(Usuario usuario)
+        // POST: api/Usuarios/Register
+        [HttpPost("Register")]
+        public async Task<ActionResult<Usuario>> Register(Usuario usuario)
         {
+            usuario.Password = BCrypt.Net.BCrypt.HashPassword(usuario.Password);
             _context.Usuarios.Add(usuario);
             await _context.SaveChangesAsync();
 

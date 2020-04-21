@@ -7,9 +7,11 @@ public class SitioTuristico
     public int Id { get; set; }
 
     [Required]
+    [Column(TypeName = "varchar(200)")]
     public string Descripcion { get; set; }
     
     [Required]
+    [Column(TypeName = "varchar(30)")]
     public string Nombre { get; set; }
 
     [Required]
@@ -24,6 +26,6 @@ public class SitioTuristico
     // Relaciones    
     public Region Region { get; set; }
 
-    public Propietario Propietario { get; set; }
+    public Usuario Propietario { get; set; }
     
 }

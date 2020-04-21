@@ -19,28 +19,27 @@ namespace backend.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Propietario", b =>
+            modelBuilder.Entity("Pais", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Email")
+                    b.Property<string>("Bandera")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(200)");
 
-                    b.Property<string>("Nombres")
+                    b.Property<string>("Nombre")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Telefono")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(30)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Propietarios");
+                    b.HasIndex("Nombre")
+                        .IsUnique();
+
+                    b.ToTable("Pais");
                 });
 
             modelBuilder.Entity("Publicacion", b =>
@@ -52,7 +51,7 @@ namespace backend.Migrations
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(200)");
 
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime2");
@@ -68,7 +67,7 @@ namespace backend.Migrations
 
                     b.Property<string>("Titulo")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(30)");
 
                     b.HasKey("Id");
 
@@ -88,11 +87,11 @@ namespace backend.Migrations
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(200)");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(30)");
 
                     b.HasKey("Id");
 
@@ -111,11 +110,11 @@ namespace backend.Migrations
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(200)");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(30)");
 
                     b.Property<int>("PropietarioId")
                         .HasColumnType("int");
@@ -141,36 +140,43 @@ namespace backend.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Nacionalidad")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(30)");
 
                     b.Property<string>("Nombres")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<int>("PaisId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(200)");
 
                     b.Property<string>("Telefono")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(15)");
 
                     b.Property<string>("Username")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(30)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.HasIndex("PaisId");
+
+                    b.HasIndex("Username")
+                        .IsUnique();
 
                     b.ToTable("Usuarios");
                 });
 
             modelBuilder.Entity("Publicacion", b =>
                 {
-                    b.HasOne("Propietario", "Propietario")
+                    b.HasOne("Usuario", "Propietario")
                         .WithMany()
                         .HasForeignKey("PropietarioId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -185,7 +191,7 @@ namespace backend.Migrations
 
             modelBuilder.Entity("SitioTuristico", b =>
                 {
-                    b.HasOne("Propietario", "Propietario")
+                    b.HasOne("Usuario", "Propietario")
                         .WithMany()
                         .HasForeignKey("PropietarioId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -194,6 +200,15 @@ namespace backend.Migrations
                     b.HasOne("Region", "Region")
                         .WithMany()
                         .HasForeignKey("RegionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Usuario", b =>
+                {
+                    b.HasOne("Pais", "Pais")
+                        .WithMany()
+                        .HasForeignKey("PaisId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
