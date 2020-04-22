@@ -116,7 +116,7 @@ namespace backend.Migrations
                 oldType: "nvarchar(max)");
 
             migrationBuilder.CreateTable(
-                name: "Pais",
+                name: "Paises",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -148,7 +148,7 @@ namespace backend.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_Pais_Nombre",
-                table: "Pais",
+                table: "Paises",
                 column: "Nombre",
                 unique: true);
 
@@ -172,7 +172,7 @@ namespace backend.Migrations
                 name: "FK_Usuarios_Pais_PaisId",
                 table: "Usuarios",
                 column: "PaisId",
-                principalTable: "Pais",
+                principalTable: "Paises",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);
         }
@@ -192,7 +192,7 @@ namespace backend.Migrations
                 table: "Usuarios");
 
             migrationBuilder.DropTable(
-                name: "Pais");
+                name: "Paises");
 
             migrationBuilder.DropIndex(
                 name: "IX_Usuarios_Email",
@@ -326,7 +326,7 @@ namespace backend.Migrations
                 column: "PropietarioId",
                 principalTable: "Propietarios",
                 principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+                onDelete: ReferentialAction.NoAction);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_SitiosTuristicos_Propietarios_PropietarioId",

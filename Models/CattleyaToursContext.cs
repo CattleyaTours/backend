@@ -24,6 +24,7 @@ namespace backend.Models
         }
 
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Pais> Paises { get; set; }
         public DbSet<Region> Regiones { get; set; }
         public DbSet<SitioTuristico> SitiosTuristicos { get; set; }
         public DbSet<Publicacion> Publicaciones { get; set; }

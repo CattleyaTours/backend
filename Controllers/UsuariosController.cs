@@ -38,12 +38,18 @@ namespace backend.Controllers
             if (_usuario == null || !BCrypt.Net.BCrypt.Verify(usuario.Password, _usuario.Password)){
                 return NotFound();
             }
-            
+            Claim claim = null;
+            if (usuario.Email == null){
+                claim = new Claim(ClaimTypes.Name, usuario.Username);
+            }else{
+                claim = new Claim(ClaimTypes.Email, usuario.Email);
+            }
+
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_jwtSettings.SecretKey);
             var tokenDescriptor = new SecurityTokenDescriptor(){
                 Subject = new System.Security.Claims.ClaimsIdentity(new Claim[]{
-                    new Claim(ClaimTypes.Name, usuario.Email)
+                    claim
                 }),
                 Expires = DateTime.UtcNow.AddDays(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
@@ -63,7 +69,9 @@ namespace backend.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Usuario>>> GetUsuarios()
         {
-            return await _context.Usuarios.ToListAsync();
+            var usuarios = await _context.Usuarios.ToListAsync();
+            usuarios.ForEach(u => u.Password = null);
+            return usuarios;
         }
 
         // GET: api/Usuarios/5
@@ -76,7 +84,7 @@ namespace backend.Controllers
             {
                 return NotFound();
             }
-
+            usuario.Password = null;
             return usuario;
         }
 
@@ -88,9 +96,8 @@ namespace backend.Controllers
             {
                 return BadRequest();
             }
-    
             //Si la contraseña cambio, encriptar la nueva contraseña
-            if (_context.Usuarios.Find(id).Password != usuario.Password){
+            if (usuario.Password != null){
                 usuario.Password = BCrypt.Net.BCrypt.HashPassword(usuario.Password);
             }
             _context.Entry(usuario).State = EntityState.Modified;
@@ -137,7 +144,7 @@ namespace backend.Controllers
 
             _context.Usuarios.Remove(usuario);
             await _context.SaveChangesAsync();
-
+            usuario.Password = null;
             return usuario;
         }
 

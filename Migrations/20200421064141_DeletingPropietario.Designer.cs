@@ -21,7 +21,7 @@ namespace backend.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Pais", b =>
+            modelBuilder.Entity("Paises", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -41,7 +41,7 @@ namespace backend.Migrations
                     b.HasIndex("Nombre")
                         .IsUnique();
 
-                    b.ToTable("Pais");
+                    b.ToTable("Paises");
                 });
 
             modelBuilder.Entity("Publicacion", b =>
@@ -208,7 +208,7 @@ namespace backend.Migrations
 
             modelBuilder.Entity("Usuario", b =>
                 {
-                    b.HasOne("Pais", "Pais")
+                    b.HasOne("Paises", "Pais")
                         .WithMany()
                         .HasForeignKey("PaisId")
                         .OnDelete(DeleteBehavior.Cascade)
