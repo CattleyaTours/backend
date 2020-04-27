@@ -19,7 +19,7 @@ namespace backend.Controllers
         {
             _context = context;
         }
-
+    
         // GET: api/Publicaciones
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicaciones()

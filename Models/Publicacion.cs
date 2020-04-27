@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -28,5 +29,7 @@ public class Publicacion
     public Propietario Propietario { get; set; }
 
     public SitioTuristico Sitio { get; set; }
-        
+    
+    public Galeria Galeria{get; set;}
+    
 }
