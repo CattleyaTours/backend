@@ -22,10 +22,11 @@ public class SitioTuristico
     
     [Required]
     public int PropietarioId { get;  set; }
+    
+    [Required]
+    public int Ubicacion { get; set; }
 
     // Relaciones    
-    public Region Region { get; set; }
-
     public Usuario Propietario { get; set; }
     
 }

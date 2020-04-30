@@ -26,9 +26,8 @@ public class Usuario
     public string Telefono { get; set; }
 
     [Required]
-    public int PaisId { get; set; }
-
-    public Pais Pais { get; set; }
+    [Column(TypeName = "varchar(3)")]
+    public string Nacionalidad { get; set; }
 }
 
 [NotMapped]

@@ -38,29 +38,11 @@ namespace backend.Controllers
             if (_usuario == null || !BCrypt.Net.BCrypt.Verify(usuario.Password, _usuario.Password)){
                 return NotFound();
             }
-            Claim claim = null;
-            if (usuario.Email == null){
-                claim = new Claim(ClaimTypes.Name, usuario.Username);
-            }else{
-                claim = new Claim(ClaimTypes.Email, usuario.Email);
-            }
-
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_jwtSettings.SecretKey);
-            var tokenDescriptor = new SecurityTokenDescriptor(){
-                Subject = new System.Security.Claims.ClaimsIdentity(new Claim[]{
-                    claim
-                }),
-                Expires = DateTime.UtcNow.AddDays(1),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
-                SecurityAlgorithms.HmacSha256Signature)
-            };
-            var token = tokenHandler.CreateToken(tokenDescriptor);
 
             _usuario.Password = null;
             UsuarioConToken usuario_con_token = new UsuarioConToken(){
                 usuario = _usuario,
-                token = tokenHandler.WriteToken(token),
+                token = GetNewTokenString(_usuario),
             };
             return Ok(usuario_con_token);
         }
@@ -117,19 +99,22 @@ namespace backend.Controllers
                     throw;
                 }
             }
-
             return NoContent();
         }
 
         // POST: api/Usuarios/Register
         [HttpPost("Register")]
-        public async Task<ActionResult<Usuario>> Register(Usuario usuario)
+        public async Task<ActionResult<UsuarioConToken>> Register(Usuario usuario)
         {
             usuario.Password = BCrypt.Net.BCrypt.HashPassword(usuario.Password);
             _context.Usuarios.Add(usuario);
             await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetUsuario", new { id = usuario.Id }, usuario);
+            usuario.Password = null;
+            UsuarioConToken usuarioConToken = new UsuarioConToken{
+                usuario = usuario,
+                token = GetNewTokenString(usuario)
+            };
+            return CreatedAtAction("GetUsuario", new { id = usuario.Id }, usuarioConToken);
         }
 
         // DELETE: api/Usuarios/5
@@ -151,6 +136,22 @@ namespace backend.Controllers
         private bool UsuarioExists(int id)
         {
             return _context.Usuarios.Any(e => e.Id == id);
+        }
+
+        private string GetNewTokenString(Usuario usuario)
+        {            
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(_jwtSettings.SecretKey);
+            var tokenDescriptor = new SecurityTokenDescriptor(){
+                Subject = new System.Security.Claims.ClaimsIdentity(new Claim[]{
+                    new Claim(ClaimTypes.Email, usuario.Email)
+                }),
+                Expires = DateTime.UtcNow.AddDays(1),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
+                SecurityAlgorithms.HmacSha256Signature)
+            };
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            return tokenHandler.WriteToken(token);
         }
     }
 }
