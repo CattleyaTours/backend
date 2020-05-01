@@ -32,7 +32,7 @@ namespace backend.Controllers
         public async Task<ActionResult<IEnumerable<UsuarioConToken>>> Login([FromBody] UsuarioAuth usuario)
         {
             var _usuario =  await _context.Usuarios
-                .Where(x => (x.Email == usuario.Email || x.Username == usuario.Username))
+                .Where(x => x.Email == usuario.Email)
                 .FirstOrDefaultAsync();
             
             if (_usuario == null || !BCrypt.Net.BCrypt.Verify(usuario.Password, _usuario.Password)){

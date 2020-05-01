@@ -40,8 +40,8 @@ public class UsuarioConToken
 [NotMapped]
 public class UsuarioAuth
 {
+    [Required]
     public string Email { get; set; }
-    public string Username { get; set; }
     [Required]
     public string Password { get; set; }
 }
