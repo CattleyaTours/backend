@@ -55,14 +55,14 @@ namespace backend.Migrations
                         column: x => x.PropietarioId,
                         principalTable: "Propietarios",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                         
                     table.ForeignKey(
                         name: "FK_SitiosTuristicos_Regiones_RegionId",
                         column: x => x.RegionId,
                         principalTable: "Regiones",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -84,13 +84,13 @@ namespace backend.Migrations
                         column: x => x.PropietarioId,
                         principalTable: "Propietarios",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_Publicaciones_SitiosTuristicos_SitioId",
                         column: x => x.SitioId,
                         principalTable: "SitiosTuristicos",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

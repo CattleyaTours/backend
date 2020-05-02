@@ -27,11 +27,11 @@ namespace backend.Controllers
             return await _context.Publicaciones.ToListAsync();
         }
 
-        // GET: api/Publicaciones/region/5
-        [HttpGet("region/{regionId}")]
-        public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicacionesByRegion(int regionId)
+        // GET: api/Publicaciones/ubicacion/5
+        [HttpGet("ubicacion/{ubicacion}")]
+        public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicacionesByRegion(int ubicacion)
         {
-            return await _context.Publicaciones.Include(x => x.Sitio).Where(x => x.Sitio.RegionId == regionId).ToListAsync();
+            return await _context.Publicaciones.Include(x => x.Sitio).Where(x => x.Sitio.Ubicacion == ubicacion).ToListAsync();
         }
 
 
@@ -52,8 +52,6 @@ namespace backend.Controllers
         
 
         // PUT: api/Publicaciones/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPublicacion(int id, Publicacion publicacion)
         {
@@ -84,8 +82,6 @@ namespace backend.Controllers
         }
 
         // POST: api/Publicaciones
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<Publicacion>> PostPublicacion(Publicacion publicacion)
         {

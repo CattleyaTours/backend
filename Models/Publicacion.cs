@@ -10,9 +10,11 @@ public class Publicacion
     public DateTime Fecha { get; set; }
     
     [Required]
+    [Column(TypeName = "varchar(30)")]
     public string Titulo { get; set; }
 
     [Required]
+    [Column(TypeName = "varchar(200)")]
     public string Descripcion { get; set; }
 
     [Required]
@@ -25,7 +27,7 @@ public class Publicacion
     public int SitioId { get; set; }
     
     // Relaciones
-    public Propietario Propietario { get; set; }
+    public Usuario Propietario { get; set; }
 
     public SitioTuristico Sitio { get; set; }
         

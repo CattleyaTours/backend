@@ -152,7 +152,7 @@ namespace backend.Migrations
                     b.HasOne("Propietario", "Propietario")
                         .WithMany("Publicaciones")
                         .HasForeignKey("PropietarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("SitioTuristico", "Sitio")

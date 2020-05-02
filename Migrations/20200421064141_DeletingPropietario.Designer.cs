@@ -3,21 +3,46 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backend.Models;
 
 namespace backend.Migrations
 {
     [DbContext(typeof(CattleyaToursContext))]
-    partial class CattleyaToursContextModelSnapshot : ModelSnapshot
+    [Migration("20200421064141_DeletingPropietario")]
+    partial class DeletingPropietario
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("Paises", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Bandera")
+                        .IsRequired()
+                        .HasColumnType("varchar(200)");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("varchar(30)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Nombre")
+                        .IsUnique();
+
+                    b.ToTable("Paises");
+                });
 
             modelBuilder.Entity("Publicacion", b =>
                 {
@@ -55,6 +80,26 @@ namespace backend.Migrations
                     b.ToTable("Publicaciones");
                 });
 
+            modelBuilder.Entity("Region", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasColumnType("varchar(200)");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("varchar(30)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Regiones");
+                });
+
             modelBuilder.Entity("SitioTuristico", b =>
                 {
                     b.Property<int>("Id")
@@ -79,12 +124,11 @@ namespace backend.Migrations
                     b.Property<int>("RegionId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Ubicacion")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("PropietarioId");
+
+                    b.HasIndex("RegionId");
 
                     b.ToTable("SitiosTuristicos");
                 });
@@ -100,13 +144,12 @@ namespace backend.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(30)");
 
-                    b.Property<string>("Nacionalidad")
-                        .IsRequired()
-                        .HasColumnType("varchar(3)");
-
                     b.Property<string>("Nombres")
                         .IsRequired()
                         .HasColumnType("varchar(50)");
+
+                    b.Property<int>("PaisId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Password")
                         .IsRequired()
@@ -124,6 +167,8 @@ namespace backend.Migrations
 
                     b.HasIndex("Email")
                         .IsUnique();
+
+                    b.HasIndex("PaisId");
 
                     b.HasIndex("Username")
                         .IsUnique();
@@ -151,6 +196,21 @@ namespace backend.Migrations
                     b.HasOne("Usuario", "Propietario")
                         .WithMany()
                         .HasForeignKey("PropietarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Region", "Region")
+                        .WithMany()
+                        .HasForeignKey("RegionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Usuario", b =>
+                {
+                    b.HasOne("Paises", "Pais")
+                        .WithMany()
+                        .HasForeignKey("PaisId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
