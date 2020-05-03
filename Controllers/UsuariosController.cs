@@ -11,6 +11,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
+using Microsoft.Data.SqlClient;
 
 namespace backend.Controllers
 {
@@ -36,7 +37,7 @@ namespace backend.Controllers
                 .FirstOrDefaultAsync();
             
             if (_usuario == null || !BCrypt.Net.BCrypt.Verify(usuario.Password, _usuario.Password)){
-                return NotFound();
+                return NotFound("Credenciales invalidas");
             }
 
             _usuario.Password = null;
@@ -76,7 +77,7 @@ namespace backend.Controllers
         {
             if (id != usuario.Id)
             {
-                return BadRequest();
+                return BadRequest("El id no corresponde al usuario que intenta modificar");
             }
             //Si la contraseña cambio, encriptar la nueva contraseña
             if (usuario.Password != null){
@@ -92,7 +93,7 @@ namespace backend.Controllers
             {
                 if (!UsuarioExists(id))
                 {
-                    return NotFound();
+                    return NotFound("El usuario especificado no existe");
                 }
                 else
                 {
@@ -107,6 +108,14 @@ namespace backend.Controllers
         public async Task<ActionResult<UsuarioConToken>> Register(Usuario usuario)
         {
             usuario.Password = BCrypt.Net.BCrypt.HashPassword(usuario.Password);
+            var u = _context.Usuarios.Where(x => x.Email == usuario.Email || x.Username == usuario.Username).FirstOrDefault();
+            if (u != null){
+                if (u.Email == usuario.Email){
+                    return BadRequest("Este correo ya esta registrado");
+                }
+                    return BadRequest("Este nombre de usuario ya esta registrado");
+            }
+
             _context.Usuarios.Add(usuario);
             await _context.SaveChangesAsync();
             usuario.Password = null;
@@ -124,7 +133,7 @@ namespace backend.Controllers
             var usuario = await _context.Usuarios.FindAsync(id);
             if (usuario == null)
             {
-                return NotFound();
+                return NotFound("El usuario especificado no existe");
             }
 
             _context.Usuarios.Remove(usuario);
