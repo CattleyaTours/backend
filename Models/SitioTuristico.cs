@@ -18,13 +18,19 @@ public class SitioTuristico
     public int Capacidad { get;  set; }
 
     [Required]
-    public int RegionId { get;  set; }
+    [Column(TypeName = "varchar(50)")]
+    public string Region { get;  set; }
+
+    [Required]
+    [Column(TypeName = "varchar(50)")]
+    public int Departamento { get;  set; }
+    
+    [Required]
+    [Column(TypeName = "varchar(50)")]
+    public string Municipio { get;  set; }
     
     [Required]
     public int PropietarioId { get;  set; }
-    
-    [Required]
-    public int Ubicacion { get; set; }
 
     // Relaciones    
     public Usuario Propietario { get; set; }

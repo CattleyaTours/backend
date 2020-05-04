@@ -27,11 +27,11 @@ namespace backend.Controllers
             return await _context.Publicaciones.ToListAsync();
         }
 
-        // GET: api/Publicaciones/ubicacion/5
-        [HttpGet("ubicacion/{ubicacion}")]
-        public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicacionesByRegion(int ubicacion)
+        // GET: api/Publicaciones/region/andina
+        [HttpGet("region/{region}")]
+        public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicacionesByRegion(string region)
         {
-            return await _context.Publicaciones.Include(x => x.Sitio).Where(x => x.Sitio.Ubicacion == ubicacion).ToListAsync();
+            return await _context.Publicaciones.Include(x => x.Sitio).Where(x => x.Sitio.Region == region).ToListAsync();
         }
 
 
