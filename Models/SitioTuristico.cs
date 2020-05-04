@@ -23,7 +23,7 @@ public class SitioTuristico
 
     [Required]
     [Column(TypeName = "varchar(50)")]
-    public int Departamento { get;  set; }
+    public string Departamento { get;  set; }
     
     [Required]
     [Column(TypeName = "varchar(50)")]
