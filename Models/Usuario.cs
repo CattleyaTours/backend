@@ -22,7 +22,7 @@ public class Usuario
     public string Nombres { get; set; }
 
     [Required]
-    [Column(TypeName = "varchar(15)")]
+    [Column(TypeName = "varchar(20)")]
     public string Telefono { get; set; }
 
     [Required]

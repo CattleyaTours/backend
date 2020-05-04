@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backend.Models;
 
 namespace backend.Migrations
 {
     [DbContext(typeof(CattleyaToursContext))]
-    partial class CattleyaToursContextModelSnapshot : ModelSnapshot
+    [Migration("20200504040703_cambio sitio turistico")]
+    partial class cambiositioturistico
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -28,7 +30,7 @@ namespace backend.Migrations
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
-                        .HasColumnType("varchar(800)");
+                        .HasColumnType("varchar(200)");
 
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime2");
@@ -44,7 +46,7 @@ namespace backend.Migrations
 
                     b.Property<string>("Titulo")
                         .IsRequired()
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("varchar(30)");
 
                     b.HasKey("Id");
 
@@ -71,7 +73,7 @@ namespace backend.Migrations
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
-                        .HasColumnType("varchar(800)");
+                        .HasColumnType("varchar(200)");
 
                     b.Property<string>("Municipio")
                         .IsRequired()
@@ -79,7 +81,7 @@ namespace backend.Migrations
 
                     b.Property<string>("Nombre")
                         .IsRequired()
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("varchar(30)");
 
                     b.Property<int>("PropietarioId")
                         .HasColumnType("int");
@@ -120,7 +122,7 @@ namespace backend.Migrations
 
                     b.Property<string>("Telefono")
                         .IsRequired()
-                        .HasColumnType("varchar(20)");
+                        .HasColumnType("varchar(15)");
 
                     b.Property<string>("Username")
                         .IsRequired()
