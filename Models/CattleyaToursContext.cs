@@ -23,5 +23,8 @@ namespace backend.Models
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<SitioTuristico> SitiosTuristicos { get; set; }
         public DbSet<Publicacion> Publicaciones { get; set; }
+        public DbSet<Rol> Roles { get; set; }
+        public DbSet<CategoriaActividad> CategoriasActividad { get; set; }
+        public DbSet<TipoHabitacion> TiposHabitacion { get; set; }
     }
 }
