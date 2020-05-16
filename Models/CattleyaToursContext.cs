@@ -1,5 +1,6 @@
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using Seeders;
 
 namespace backend.Models
 {
@@ -18,6 +19,9 @@ namespace backend.Models
             builder.Entity<Usuario>()
                 .HasIndex(u => u.Username)
                 .IsUnique();
+            builder.SeedActividades();
+            builder.SeedHabitaciones();
+            builder.SeedRoles();
         }
 
         public DbSet<Usuario> Usuarios { get; set; }
