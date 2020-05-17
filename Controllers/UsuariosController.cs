@@ -12,6 +12,7 @@ using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Logging;
 
 namespace backend.Controllers
 {
@@ -19,29 +20,34 @@ namespace backend.Controllers
     [ApiController]
     public class UsuariosController : ControllerBase
     {
-        private readonly CattleyaToursContext _context;
-        private readonly JWTSettings _jwtSettings;
+        private readonly CattleyaToursContext context;
+        private readonly JWTSettings jwtSettings;
 
-        public UsuariosController(CattleyaToursContext context, IOptions<JWTSettings> jwtSettings)
+        private readonly ILogger<UsuariosController> logger;
+
+        public UsuariosController(CattleyaToursContext _context, IOptions<JWTSettings> _jwtSettings, ILogger<UsuariosController> _logger)
         {
-            _context = context;
-            _jwtSettings = jwtSettings.Value;
+            context = _context;
+            jwtSettings = _jwtSettings.Value;
+            logger = _logger;
         }
 
         // GET: api/Usuarios/Login
         [HttpPost("Login")]
         public async Task<ActionResult<IEnumerable<UsuarioConToken>>> Login([FromBody] UsuarioAuth usuario)
         {
-            var _usuario =  await _context.Usuarios
+            var _usuario = await context.Usuarios
                 .Where(x => x.Email == usuario.Email)
                 .FirstOrDefaultAsync();
-            
-            if (_usuario == null || !BCrypt.Net.BCrypt.Verify(usuario.Password, _usuario.Password)){
-                return NotFound("Credenciales invalidas");
+
+            if (_usuario == null || !BCrypt.Net.BCrypt.Verify(usuario.Password, _usuario.Password))
+            {
+                return Unauthorized("Credenciales invalidas");
             }
 
             _usuario.Password = null;
-            UsuarioConToken usuario_con_token = new UsuarioConToken(){
+            UsuarioConToken usuario_con_token = new UsuarioConToken()
+            {
                 usuario = _usuario,
                 token = GetNewTokenString(_usuario),
             };
@@ -52,7 +58,7 @@ namespace backend.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Usuario>>> GetUsuarios()
         {
-            var usuarios = await _context.Usuarios.ToListAsync();
+            var usuarios = await context.Usuarios.ToListAsync();
             usuarios.ForEach(u => u.Password = null);
             return usuarios;
         }
@@ -61,7 +67,7 @@ namespace backend.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Usuario>> GetUsuario(int id)
         {
-            var usuario = await _context.Usuarios.FindAsync(id);
+            var usuario = await context.Usuarios.FindAsync(id);
 
             if (usuario == null)
             {
@@ -80,14 +86,15 @@ namespace backend.Controllers
                 return BadRequest("El id no corresponde al usuario que intenta modificar");
             }
             //Si la contraseña cambio, encriptar la nueva contraseña
-            if (usuario.Password != null){
+            if (usuario.Password != null)
+            {
                 usuario.Password = BCrypt.Net.BCrypt.HashPassword(usuario.Password);
             }
-            _context.Entry(usuario).State = EntityState.Modified;
+            context.Entry(usuario).State = EntityState.Modified;
 
             try
             {
-                await _context.SaveChangesAsync();
+                await context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -108,18 +115,21 @@ namespace backend.Controllers
         public async Task<ActionResult<UsuarioConToken>> Register(Usuario usuario)
         {
             usuario.Password = BCrypt.Net.BCrypt.HashPassword(usuario.Password);
-            var u = _context.Usuarios.Where(x => x.Email == usuario.Email || x.Username == usuario.Username).FirstOrDefault();
-            if (u != null){
-                if (u.Email == usuario.Email){
+            var u = context.Usuarios.Where(x => x.Email == usuario.Email || x.Username == usuario.Username).FirstOrDefault();
+            if (u != null)
+            {
+                if (u.Email == usuario.Email)
+                {
                     return BadRequest("Este correo ya esta registrado");
                 }
-                    return BadRequest("Este nombre de usuario ya esta registrado");
+                return BadRequest("Este nombre de usuario ya esta registrado");
             }
 
-            _context.Usuarios.Add(usuario);
-            await _context.SaveChangesAsync();
+            context.Usuarios.Add(usuario);
+            await context.SaveChangesAsync();
             usuario.Password = null;
-            UsuarioConToken usuarioConToken = new UsuarioConToken{
+            UsuarioConToken usuarioConToken = new UsuarioConToken
+            {
                 usuario = usuario,
                 token = GetNewTokenString(usuario)
             };
@@ -130,28 +140,29 @@ namespace backend.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Usuario>> DeleteUsuario(int id)
         {
-            var usuario = await _context.Usuarios.FindAsync(id);
+            var usuario = await context.Usuarios.FindAsync(id);
             if (usuario == null)
             {
                 return NotFound("El usuario especificado no existe");
             }
 
-            _context.Usuarios.Remove(usuario);
-            await _context.SaveChangesAsync();
+            context.Usuarios.Remove(usuario);
+            await context.SaveChangesAsync();
             usuario.Password = null;
             return usuario;
         }
 
         private bool UsuarioExists(int id)
         {
-            return _context.Usuarios.Any(e => e.Id == id);
+            return context.Usuarios.Any(e => e.Id == id);
         }
 
         private string GetNewTokenString(Usuario usuario)
-        {            
+        {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_jwtSettings.SecretKey);
-            var tokenDescriptor = new SecurityTokenDescriptor(){
+            var key = Encoding.ASCII.GetBytes(jwtSettings.SecretKey);
+            var tokenDescriptor = new SecurityTokenDescriptor()
+            {
                 Subject = new System.Security.Claims.ClaimsIdentity(new Claim[]{
                     new Claim(ClaimTypes.Email, usuario.Email)
                 }),

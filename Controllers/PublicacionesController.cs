@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using backend.Models;
+using Microsoft.Extensions.Logging;
 
 namespace backend.Controllers
 {
@@ -13,25 +14,28 @@ namespace backend.Controllers
     [ApiController]
     public class PublicacionesController : ControllerBase
     {
-        private readonly CattleyaToursContext _context;
+        private readonly CattleyaToursContext context;
 
-        public PublicacionesController(CattleyaToursContext context)
+        private readonly ILogger<PublicacionesController> logger;
+
+        public PublicacionesController(CattleyaToursContext _context, ILogger<PublicacionesController> _logger)
         {
-            _context = context;
+            context = _context;
+            logger = _logger;
         }
 
         // GET: api/Publicaciones
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicaciones()
         {
-            return await _context.Publicaciones.ToListAsync();
+            return await context.Publicaciones.ToListAsync();
         }
 
         // GET: api/Publicaciones/region/andina
         [HttpGet("region/{region}")]
         public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicacionesByRegion(string region)
         {
-            return await _context.Publicaciones.Include(x => x.Sitio).Where(x => x.Sitio.Region == region).ToListAsync();
+            return await context.Publicaciones.Include(x => x.Sitio).Where(x => x.Sitio.Region == region).ToListAsync();
         }
 
 
@@ -39,7 +43,7 @@ namespace backend.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Publicacion>> GetPublicacion(int id)
         {
-            var publicacion = await _context.Publicaciones.FindAsync(id);
+            var publicacion = await context.Publicaciones.FindAsync(id);
 
             if (publicacion == null)
             {
@@ -49,7 +53,7 @@ namespace backend.Controllers
             return publicacion;
         }
 
-        
+
 
         // PUT: api/Publicaciones/5
         [HttpPut("{id}")]
@@ -60,11 +64,11 @@ namespace backend.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(publicacion).State = EntityState.Modified;
+            context.Entry(publicacion).State = EntityState.Modified;
 
             try
             {
-                await _context.SaveChangesAsync();
+                await context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -85,8 +89,8 @@ namespace backend.Controllers
         [HttpPost]
         public async Task<ActionResult<Publicacion>> PostPublicacion(Publicacion publicacion)
         {
-            _context.Publicaciones.Add(publicacion);
-            await _context.SaveChangesAsync();
+            context.Publicaciones.Add(publicacion);
+            await context.SaveChangesAsync();
 
             return CreatedAtAction("GetPublicacion", new { id = publicacion.Id }, publicacion);
         }
@@ -95,21 +99,21 @@ namespace backend.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Publicacion>> DeletePublicacion(int id)
         {
-            var publicacion = await _context.Publicaciones.FindAsync(id);
+            var publicacion = await context.Publicaciones.FindAsync(id);
             if (publicacion == null)
             {
                 return NotFound();
             }
 
-            _context.Publicaciones.Remove(publicacion);
-            await _context.SaveChangesAsync();
+            context.Publicaciones.Remove(publicacion);
+            await context.SaveChangesAsync();
 
             return publicacion;
         }
 
         private bool PublicacionExists(int id)
         {
-            return _context.Publicaciones.Any(e => e.Id == id);
+            return context.Publicaciones.Any(e => e.Id == id);
         }
     }
 }
