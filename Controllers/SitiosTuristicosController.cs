@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using backend.Models;
+using Microsoft.Extensions.Logging;
 
 namespace backend.Controllers
 {
@@ -13,25 +14,28 @@ namespace backend.Controllers
     [ApiController]
     public class SitiosTuristicosController : ControllerBase
     {
-        private readonly CattleyaToursContext _context;
+        private readonly CattleyaToursContext context;
 
-        public SitiosTuristicosController(CattleyaToursContext context)
+        private readonly ILogger<SitiosTuristicosController> logger;
+
+        public SitiosTuristicosController(CattleyaToursContext _context, ILogger<SitiosTuristicosController> _logger)
         {
-            _context = context;
+            context = _context;
+            logger = _logger;
         }
 
         // GET: api/SitiosTuristicos
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SitioTuristico>>> GetSitiosTuristicos()
         {
-            return await _context.SitiosTuristicos.ToListAsync();
+            return await context.SitiosTuristicos.ToListAsync();
         }
 
         // GET: api/SitiosTuristicos/5
         [HttpGet("{id}")]
         public async Task<ActionResult<SitioTuristico>> GetSitioTuristico(int id)
         {
-            var sitioTuristico = await _context.SitiosTuristicos.FindAsync(id);            
+            var sitioTuristico = await context.SitiosTuristicos.FindAsync(id);
 
             if (sitioTuristico == null)
             {
@@ -45,7 +49,7 @@ namespace backend.Controllers
         [HttpGet("propietario/{propietarioId}")]
         public async Task<ActionResult<IEnumerable<SitioTuristico>>> GetPublicacionesByPropietario(int propietarioId)
         {
-            return await _context.SitiosTuristicos.Where(x => x.PropietarioId == propietarioId).ToListAsync();
+            return await context.SitiosTuristicos.Where(x => x.PropietarioId == propietarioId).ToListAsync();
         }
 
         // PUT: api/SitiosTuristicos/5
@@ -57,11 +61,11 @@ namespace backend.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(sitioTuristico).State = EntityState.Modified;
+            context.Entry(sitioTuristico).State = EntityState.Modified;
 
             try
             {
-                await _context.SaveChangesAsync();
+                await context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -82,9 +86,9 @@ namespace backend.Controllers
         [HttpPost]
         public async Task<ActionResult<SitioTuristico>> PostSitioTuristico(SitioTuristico sitioTuristico)
         {
-            
-            _context.SitiosTuristicos.Add(sitioTuristico);
-            await _context.SaveChangesAsync();
+
+            context.SitiosTuristicos.Add(sitioTuristico);
+            await context.SaveChangesAsync();
 
             return CreatedAtAction("GetSitioTuristico", new { id = sitioTuristico.Id }, sitioTuristico);
         }
@@ -93,21 +97,21 @@ namespace backend.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<SitioTuristico>> DeleteSitioTuristico(int id)
         {
-            var sitioTuristico = await _context.SitiosTuristicos.FindAsync(id);
+            var sitioTuristico = await context.SitiosTuristicos.FindAsync(id);
             if (sitioTuristico == null)
             {
                 return NotFound();
             }
 
-            _context.SitiosTuristicos.Remove(sitioTuristico);
-            await _context.SaveChangesAsync();
+            context.SitiosTuristicos.Remove(sitioTuristico);
+            await context.SaveChangesAsync();
 
             return sitioTuristico;
         }
 
         private bool SitioTuristicoExists(int id)
         {
-            return _context.SitiosTuristicos.Any(e => e.Id == id);
+            return context.SitiosTuristicos.Any(e => e.Id == id);
         }
     }
 }

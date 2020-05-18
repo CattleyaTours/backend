@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backend.Models;
 
 namespace backend.Migrations
 {
     [DbContext(typeof(CattleyaToursContext))]
-    partial class CattleyaToursContextModelSnapshot : ModelSnapshot
+    [Migration("20200516003822_CategoriaActividadHabitacionesRol")]
+    partial class CategoriaActividadHabitacionesRol
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,100 +43,7 @@ namespace backend.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CategoriasActividad");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Descripcion = "Talleres de todo tipo, fotografia, artesanías típicas etc ...",
-                            Icono = "fas fa-pencil-ruler",
-                            Nombre = "Talleres"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Descripcion = "Prueba las delicias típicas de nuestra tierra, en sitios únicos y vive una experiencia única",
-                            Icono = "fas fa-utensils",
-                            Nombre = "Gastronomia"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Descripcion = "Visita los parques y reservas naturales mas famosas de nuestro país en compañía de expertos",
-                            Icono = "fas fa-map-marked-alt",
-                            Nombre = "Visitas guiadas"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Descripcion = "Visita sitios únicos en el mundo como cascadas naturales, volcanes, nevados y muchos otros sitios alejados de la ciudad",
-                            Icono = "fas fa-hiking",
-                            Nombre = "Maravillas naturales"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Descripcion = "Experimenta el vértigo y la adrenalina practicando deportes extremos como Rapel, Parapente ...",
-                            Icono = "fas fa-biking",
-                            Nombre = "Deportes Extremos"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Descripcion = "Además de la naturaleza disfruta de atracciones mecánicas en los parques de diversiones más famosos del país",
-                            Icono = "fas fa-rocket",
-                            Nombre = "Atracciones mecánicas"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Descripcion = "Sal de la ciudad y pasa un fin de semana alejado del estrés acampando en sitios maravillosos en los que podrás disfrutar de la naturaleza en su máximo esplendor.",
-                            Icono = "fas fa-campground",
-                            Nombre = "Acampar * Glamping"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Descripcion = "Sal de la rutina y disfruta de una noche de fiesta ya sea en chivas rumberas, fiestas en la playa u otros sitios.",
-                            Icono = "fas fa-glass-cheers",
-                            Nombre = "Rumba"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Descripcion = "Disfruta la experiencia de alimentar y convivir con caballos, vacas y otros animales",
-                            Icono = "fas fa-paw",
-                            Nombre = "Experiencias con animales"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Descripcion = "Actividades muy originales y divertidas unicas de cada sitio ...",
-                            Icono = "fas fa-ellipsis-h",
-                            Nombre = "Otros"
-                        });
                 });
-
-            modelBuilder.Entity("Archivo_SitioTuristico", b =>
-            {
-                b.Property<int>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("int")
-                    .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                b.Property<int?>("SitioId")
-                    .HasColumnType("int");
-
-                b.Property<byte[]>("info_file")
-                    .IsRequired()
-                    .HasColumnType("varbinary(max)");
-
-                b.HasKey("Id");
-
-                b.HasIndex("SitioId");
-
-                b.ToTable("Archivos_SitioTuristico");
-            });
 
             modelBuilder.Entity("Publicacion", b =>
                 {
@@ -186,18 +95,6 @@ namespace backend.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Roles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Nombre = "Propietario"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Nombre = "Usuario"
-                        });
                 });
 
             modelBuilder.Entity("SitioTuristico", b =>
@@ -257,32 +154,6 @@ namespace backend.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TiposHabitacion");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CapacidadPersonas = 1,
-                            Nombre = "Secilla"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CapacidadPersonas = 2,
-                            Nombre = "Doble"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CapacidadPersonas = 4,
-                            Nombre = "Familiar"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CapacidadPersonas = 8,
-                            Nombre = "Multiple"
-                        });
                 });
 
             modelBuilder.Entity("Usuario", b =>
@@ -330,13 +201,6 @@ namespace backend.Migrations
                         .IsUnique();
 
                     b.ToTable("Usuarios");
-                });
-
-            modelBuilder.Entity("Archivo_SitioTuristico", b =>
-                {
-                    b.HasOne("SitioTuristico", "Sitio")
-                        .WithMany()
-                        .HasForeignKey("SitioId");
                 });
 
             modelBuilder.Entity("Publicacion", b =>

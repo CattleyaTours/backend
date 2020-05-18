@@ -28,6 +28,11 @@ public class Usuario
     [Required]
     [Column(TypeName = "varchar(3)")]
     public string Nacionalidad { get; set; }
+    
+    [Required]
+    public int RolId { get; set; }
+
+    public Rol Rol { get; set; }
 }
 
 [NotMapped]

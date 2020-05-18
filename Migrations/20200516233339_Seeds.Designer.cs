@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backend.Models;
 
 namespace backend.Migrations
 {
     [DbContext(typeof(CattleyaToursContext))]
-    partial class CattleyaToursContextModelSnapshot : ModelSnapshot
+    [Migration("20200516233339_Seeds")]
+    partial class Seeds
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -114,27 +116,6 @@ namespace backend.Migrations
                             Nombre = "Otros"
                         });
                 });
-
-            modelBuilder.Entity("Archivo_SitioTuristico", b =>
-            {
-                b.Property<int>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("int")
-                    .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                b.Property<int?>("SitioId")
-                    .HasColumnType("int");
-
-                b.Property<byte[]>("info_file")
-                    .IsRequired()
-                    .HasColumnType("varbinary(max)");
-
-                b.HasKey("Id");
-
-                b.HasIndex("SitioId");
-
-                b.ToTable("Archivos_SitioTuristico");
-            });
 
             modelBuilder.Entity("Publicacion", b =>
                 {
@@ -330,13 +311,6 @@ namespace backend.Migrations
                         .IsUnique();
 
                     b.ToTable("Usuarios");
-                });
-
-            modelBuilder.Entity("Archivo_SitioTuristico", b =>
-                {
-                    b.HasOne("SitioTuristico", "Sitio")
-                        .WithMany()
-                        .HasForeignKey("SitioId");
                 });
 
             modelBuilder.Entity("Publicacion", b =>
