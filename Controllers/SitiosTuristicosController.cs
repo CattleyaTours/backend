@@ -43,7 +43,7 @@ namespace backend.Controllers
 
         // GET: api/SitiosTuristicos/propietario/5
         [HttpGet("propietario/{propietarioId}")]
-        public async Task<ActionResult<IEnumerable<SitioTuristico>>> GetPublicacionesByPropietario(int propietarioId)
+        public async Task<ActionResult<IEnumerable<SitioTuristico>>> GetSitiosByPropietario(int propietarioId)
         {
             return await _context.SitiosTuristicos.Where(x => x.PropietarioId == propietarioId).ToListAsync();
         }

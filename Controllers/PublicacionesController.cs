@@ -48,9 +48,7 @@ namespace backend.Controllers
 
             return publicacion;
         }
-
         
-
         // PUT: api/Publicaciones/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPublicacion(int id, Publicacion publicacion)
