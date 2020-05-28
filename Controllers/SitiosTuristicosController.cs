@@ -47,9 +47,16 @@ namespace backend.Controllers
 
         // GET: api/SitiosTuristicos/propietario/5
         [HttpGet("propietario/{propietarioId}")]
-        public async Task<ActionResult<IEnumerable<SitioTuristico>>> GetPublicacionesByPropietario(int propietarioId)
+        public async Task<ActionResult<IEnumerable<SitioTuristico>>> GetSitiosByPropietario(int propietarioId)
         {
             return await context.SitiosTuristicos.Where(x => x.PropietarioId == propietarioId).ToListAsync();
+        }
+
+        // GET: api/SitiosTuristicos/region/{region}
+        [HttpGet("region/{region}")]
+        public async Task<ActionResult<IEnumerable<SitioTuristico>>> GetSitiosByRegion(string region)
+        {
+            return await context.SitiosTuristicos.Where(x => x.Region == region).ToListAsync();
         }
 
         // PUT: api/SitiosTuristicos/5
