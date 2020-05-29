@@ -17,4 +17,5 @@ public class Actividad
 
     // Relaciones    
 
+    public CategoriaActividad TipoActividad {get; set;}
 }

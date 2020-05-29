@@ -50,3 +50,33 @@ public class UsuarioAuth
     [Required]
     public string Password { get; set; }
 }
+
+[NotMapped]
+public class UsuarioDTO
+{
+    public int Id { get; set; }
+
+    [Required]
+    [Column(TypeName = "varchar(30)")]
+    public string Email { get; set; }
+
+    [Required]
+    [Column(TypeName = "varchar(30)")]
+    public string Username { get; set; }
+
+    [Required]
+    [Column(TypeName = "varchar(50)")]
+    public string Nombres { get; set; }
+
+    [Required]
+    [Column(TypeName = "varchar(20)")]
+    public string Telefono { get; set; }
+
+    [Required]
+    [Column(TypeName = "varchar(3)")]
+    public string Nacionalidad { get; set; }
+
+    [Required]
+    public int RolId { get; set; }
+
+}

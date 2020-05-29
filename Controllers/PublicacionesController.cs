@@ -28,7 +28,7 @@ namespace backend.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicaciones()
         {
-            return await context.Publicaciones.ToListAsync();
+            return await context.Publicaciones.Include(x=>x.Sitio).ThenInclude(x=>x.Actividades).ThenInclude(x=>x.TipoActividad).ToListAsync();
         }
 
          //GET: api/Publicaciones/region/andina
