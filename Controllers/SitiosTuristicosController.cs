@@ -52,13 +52,6 @@ namespace backend.Controllers
             return await context.SitiosTuristicos.Where(x => x.PropietarioId == propietarioId).ToListAsync();
         }
 
-        // GET: api/SitiosTuristicos/region/{region}
-        [HttpGet("region/{region}")]
-        public async Task<ActionResult<IEnumerable<SitioTuristico>>> GetSitiosByRegion(string region)
-        {
-            return await context.SitiosTuristicos.Where(x => x.Region == region).ToListAsync();
-        }
-
         // PUT: api/SitiosTuristicos/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSitioTuristico(int id, SitioTuristico sitioTuristico)

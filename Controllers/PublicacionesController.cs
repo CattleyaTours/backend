@@ -35,7 +35,6 @@ namespace backend.Controllers
         [HttpGet("region")]
         public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicacionesByRegion([FromQuery(Name = "region")] string region)
         {
-            logger.LogInformation(region);
             return await context.Publicaciones.Include(x => x.Sitio).Where(x => x.Sitio.Region == region).ToListAsync();
         }
 
@@ -59,6 +58,7 @@ namespace backend.Controllers
 
             return publicacion;
         }
+
         
         //GET: api/Publicaciones/propietario/1
         [HttpGet("propietario/{propietarioId}")]
@@ -67,6 +67,7 @@ namespace backend.Controllers
             return await context.Publicaciones.Where(x => x.PropietarioId == propietarioId).ToListAsync();
         }
         
+
         // PUT: api/Publicaciones/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPublicacion(int id, Publicacion publicacion)
