@@ -32,18 +32,25 @@ namespace backend.Controllers
         }
 
          //GET: api/Publicaciones/region/andina
-        [HttpGet("region")]
+        [HttpGet("region/")]
         public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicacionesByRegion([FromQuery(Name = "region")] string region)
         {
             logger.LogInformation(region);
             return await context.Publicaciones.Include(x => x.Sitio).Where(x => x.Sitio.Region == region).ToListAsync();
         }
 
-        //GET: api/Publicaciones/tipo/id
+        //GET: api/Publicaciones/tipo/idTipoActividad
         [HttpGet("tipo/{id}")]
         public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicacionesByTipoActividad(int id)
         {
             return await context.Publicaciones.Include(x => x.Sitio).ThenInclude(x => x.Actividades).Where(x => x.Sitio.Actividades.Where(x => x.TipoActividadId==id).Count()>0).ToListAsync();
+        }
+
+        //GET: api/Publicaciones/region/tipo/idTipoActividad
+        [HttpGet("region/tipo/{id}")]
+        public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicacionesByTipoActividadAndRegion([FromQuery(Name = "region")] string region, int id)
+        {
+            return await context.Publicaciones.Include(x => x.Sitio).ThenInclude(x => x.Actividades).Where(x => x.Sitio.Actividades.Where(x => x.TipoActividadId==id).Count()>0).Where(x => x.Sitio.Region == region).ToListAsync();
         }
 
         // GET: api/Publicaciones/5
@@ -59,14 +66,16 @@ namespace backend.Controllers
 
             return publicacion;
         }
-        
+
         //GET: api/Publicaciones/propietario/1
         [HttpGet("propietario/{propietarioId}")]
         public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicacionByPropietario(int propietarioId)
         {
             return await context.Publicaciones.Where(x => x.PropietarioId == propietarioId).ToListAsync();
         }
-        
+
+
+
         // PUT: api/Publicaciones/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPublicacion(int id, Publicacion publicacion)
