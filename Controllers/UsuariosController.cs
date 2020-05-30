@@ -91,6 +91,7 @@ namespace backend.Controllers
                 .Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
 
+            //Datos que cambiaron
             usuario.RolId=usuarioDTO.RolId;
             
             

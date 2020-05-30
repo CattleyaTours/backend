@@ -60,6 +60,13 @@ namespace backend.Controllers
             return publicacion;
         }
         
+        //GET: api/Publicaciones/propietario/1
+        [HttpGet("propietario/{propietarioId}")]
+        public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicacionByPropietario(int propietarioId)
+        {
+            return await context.Publicaciones.Where(x => x.PropietarioId == propietarioId).ToListAsync();
+        }
+        
         // PUT: api/Publicaciones/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPublicacion(int id, Publicacion publicacion)
