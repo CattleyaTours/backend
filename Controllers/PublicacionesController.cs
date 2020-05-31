@@ -47,10 +47,10 @@ namespace backend.Controllers
         }
 
         //GET: api/Publicaciones/region/tipo/idTipoActividad
-        [HttpGet("region/tipo/{id}")]
+        [HttpGet("tipo/{id}/region/")]
         public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicacionesByTipoActividadAndRegion([FromQuery(Name = "region")] string region, int id)
         {
-            return await context.Publicaciones.Include(x => x.Sitio).ThenInclude(x => x.Actividades).Where(x => x.Sitio.Actividades.Where(x => x.TipoActividadId==id).Count()>0).Where(x => x.Sitio.Region == region).ToListAsync();
+            return await context.Publicaciones.Include(x => x.Sitio).ThenInclude(x => x.Actividades).Where(x => x.Sitio.Region == region).Where(x => x.Sitio.Actividades.Where(x => x.TipoActividadId==id).Count()>0).ToListAsync();
         }
 
         // GET: api/Publicaciones/5
