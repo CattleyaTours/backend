@@ -77,6 +77,44 @@ namespace backend.Controllers
             return usuario;
         }
 
+        // PUT: api/Usuarios/rol/1
+        [HttpPut("rol/{id}")]
+        public async Task<IActionResult> PutUsuarioRol(int id, UsuarioDTO usuarioDTO)
+        {
+
+            if (id != usuarioDTO.Id)
+            {
+                return BadRequest("El id no corresponde al usuario que intenta modificar");
+            }
+
+            var usuario = await context.Usuarios
+                .Where(x => x.Id == id)
+                .FirstOrDefaultAsync();
+
+            //Datos que cambiaron
+            usuario.RolId=usuarioDTO.RolId;
+            
+            
+            context.Entry(usuario).State = EntityState.Modified;
+
+            try
+            {
+                await context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!UsuarioExists(id))
+                {
+                    return NotFound("El usuario especificado no existe");
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return NoContent();
+        }
+
         // PUT: api/Usuarios/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUsuario(int id, Usuario usuario)
