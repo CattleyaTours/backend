@@ -3,47 +3,23 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backend.Models;
 
 namespace backend.Migrations
 {
     [DbContext(typeof(CattleyaToursContext))]
-    partial class CattleyaToursContextModelSnapshot : ModelSnapshot
+    [Migration("20200529232257_Added name field to Archivo_Sitio")]
+    partial class AddednamefieldtoArchivo_Sitio
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("Actividad", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Nombre")
-                        .IsRequired()
-                        .HasColumnType("varchar(50)");
-
-                    b.Property<int>("SitioTuristicoId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TipoActividadId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("SitioTuristicoId");
-
-                    b.HasIndex("TipoActividadId");
-
-                    b.ToTable("Actividades");
-                });
 
             modelBuilder.Entity("Archivo_SitioTuristico", b =>
                 {
@@ -52,16 +28,16 @@ namespace backend.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("SitioId")
+                    b.Property<int?>("SitioId")
                         .HasColumnType("int");
-
-                    b.Property<string>("ext")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<byte[]>("info_file")
                         .IsRequired()
                         .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -362,28 +338,11 @@ namespace backend.Migrations
                     b.ToTable("Usuarios");
                 });
 
-            modelBuilder.Entity("Actividad", b =>
-                {
-                    b.HasOne("SitioTuristico", "SitioTuristico")
-                        .WithMany()
-                        .HasForeignKey("SitioTuristicoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CategoriaActividad", "TipoActividad")
-                        .WithMany()
-                        .HasForeignKey("TipoActividadId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-                
             modelBuilder.Entity("Archivo_SitioTuristico", b =>
                 {
                     b.HasOne("SitioTuristico", "Sitio")
                         .WithMany()
-                        .HasForeignKey("SitioId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SitioId");
                 });
 
             modelBuilder.Entity("Publicacion", b =>
