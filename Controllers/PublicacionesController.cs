@@ -35,21 +35,21 @@ namespace backend.Controllers
         [HttpGet("region/")]
         public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicacionesByRegion([FromQuery(Name = "region")] string region)
         {
-            return await context.Publicaciones.Include(x => x.Sitio).Where(x => x.Sitio.Region == region).ToListAsync();
+            return await context.Publicaciones.Include(x => x.Sitio).ThenInclude(x=>x.Actividades).ThenInclude(x=>x.TipoActividad).Where(x => x.Sitio.Region == region).ToListAsync();
         }
 
         //GET: api/Publicaciones/tipo/idTipoActividad
         [HttpGet("tipo/{id}")]
         public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicacionesByTipoActividad(int id)
         {
-            return await context.Publicaciones.Include(x => x.Sitio).ThenInclude(x => x.Actividades).Where(x => x.Sitio.Actividades.Where(x => x.TipoActividadId==id).Count()>0).ToListAsync();
+            return await context.Publicaciones.Include(x => x.Sitio).ThenInclude(x => x.Actividades).ThenInclude(x=>x.TipoActividad).Where(x => x.Sitio.Actividades.Where(x => x.TipoActividadId==id).Count()>0).ToListAsync();
         }
 
         //GET: api/Publicaciones/region/tipo/idTipoActividad
         [HttpGet("tipo/{id}/region/")]
         public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicacionesByTipoActividadAndRegion([FromQuery(Name = "region")] string region, int id)
         {
-            return await context.Publicaciones.Include(x => x.Sitio).ThenInclude(x => x.Actividades).Where(x => x.Sitio.Region == region).Where(x => x.Sitio.Actividades.Where(x => x.TipoActividadId==id).Count()>0).ToListAsync();
+            return await context.Publicaciones.Include(x => x.Sitio).ThenInclude(x => x.Actividades).ThenInclude(x=>x.TipoActividad).Where(x => x.Sitio.Region == region).Where(x => x.Sitio.Actividades.Where(x => x.TipoActividadId==id).Count()>0).ToListAsync();
         }
 
         // GET: api/Publicaciones/5
