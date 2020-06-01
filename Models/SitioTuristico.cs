@@ -34,5 +34,8 @@ public class SitioTuristico
 
     // Relaciones    
     public Usuario Propietario { get; set; }
+
+    public List<Actividad> Actividades { get; set; }
+
     
 }
