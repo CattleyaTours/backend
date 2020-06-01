@@ -35,7 +35,7 @@ namespace backend.Controllers
         [HttpGet("region")]
         public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicacionesByRegion([FromQuery(Name = "region")] string region)
         {
-            return await context.Publicaciones.Include(x => x.Sitio).Where(x => x.Sitio.Region == region).ToListAsync();
+            return await context.Publicaciones.Include(x => x.Sitio).ThenInclude(x=>x.Actividades).ThenInclude(x=>x.TipoActividad).Where(x => x.Sitio.Region == region).ToListAsync();
         }
 
         //GET: api/Publicaciones/tipo/id
