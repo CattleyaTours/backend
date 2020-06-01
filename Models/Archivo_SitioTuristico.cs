@@ -8,8 +8,13 @@ public class Archivo_SitioTuristico
 
     [Required]
     public byte[] info_file { get; set; }
- 
+
+    [Required]
+    public string ext { get; set; }
+
+    [Required]
+    public int SitioId { get; set; }
+    
     // Relaciones
     public SitioTuristico Sitio { get; set; }
-        
 }

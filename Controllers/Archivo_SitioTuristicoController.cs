@@ -7,6 +7,8 @@ using System.Net;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+
 using backend.Models;
 
 namespace backend.Controllers
@@ -16,15 +18,14 @@ namespace backend.Controllers
     public class Archivo_SitioTuristicoController : ControllerBase
     {
         private readonly CattleyaToursContext _context;
+        private readonly ILogger<Archivo_SitioTuristicoController> logger;
 
-        public Archivo_SitioTuristicoController(CattleyaToursContext context)
+
+        public Archivo_SitioTuristicoController(CattleyaToursContext context, ILogger<Archivo_SitioTuristicoController> _logger)
         {
             _context = context;
+            logger = _logger;
         }
-
-        [BindProperty]
-        public BufferedSingleFileUploadDb FileUpload { get; set; }
-
 
         // GET: api/Archivos_SitioTuristico
         [HttpGet]
@@ -32,23 +33,19 @@ namespace backend.Controllers
         {
             return await _context.Archivos_SitioTuristico.ToListAsync();
         }
-
-
+        
+        
         // GET: api/Archivos_SitioTuristico/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Archivo_SitioTuristico>> GetArchivo_SitioTuristico(int id)
         {
-            var archivo_SitioTuristico = await _context.Archivos_SitioTuristico.FindAsync(id);
+            var archivo_SitioTuristico = await _context.Archivos_SitioTuristico.FirstAsync(e => e.SitioId == id);
 
             if (archivo_SitioTuristico == null)
             {
                 return NotFound();
             }
-
-            ///////aca tenia que hacer algo lol
-            //creo que era formatear bien los archivos
-
-            return archivo_SitioTuristico;
+            return File(archivo_SitioTuristico.info_file, GetMimeTypes()[archivo_SitioTuristico.ext]);;
         }
 
         
@@ -82,41 +79,46 @@ namespace backend.Controllers
             return NoContent();
         }
 
+        public Dictionary<string, string> GetMimeTypes(){
+            return new Dictionary<string, string>{
+            {".png", "image/png"},
+            {".jpg", "image/jpeg"},
+            {".jpeg", "image/jpeg"},
+            {".ico", "image/x-icon"},
+            {".svg", "image/svg+xml"},
+            {".gif", "image/gif"}, 
+            };
+        }
+
         // POST: api/Archivo_SitioTuristico
         [HttpPost]
-        public async Task<ActionResult<Archivo_SitioTuristico>> PostArchivo_SitioTuristico([FromForm(Name = "files")] BufferedSingleFileUploadDb files)
-                                                //TENER EN CUENTA QUE LO QUE TRAIGA DEL BODY DEL REQUEST EN EL FRONT SE LLAME files
-        {
-            
-                using (var uploadedFile = new MemoryStream()){
-                    
-                    // Extract file name from whatever was posted by browser
-                        //traer nombre de base de datos para verificar que el archivo existe o no
-                        //verificar si el nombre pertenece al archivo turistico,
-                    //var fileName = System.IO.Path.GetFileName(file.FileName);
-                    /*
-                    // Don't trust the file name sent by the client. To display
-                    // the file name, HTML-encode the value.
-                    var trustedFileNameForDisplay = WebUtility.HtmlEncode(
-                        FormFile.FileName); //Aca faltaria declarar el nombre en el modelo
-                    */
-                    //if (files.Length < 2097152){
+        public async Task<ActionResult<Archivo_SitioTuristico>> PostArchivo_SitioTuristico([FromForm] IFormFile file, [FromForm] int sitioID){ 
 
-                        await FileUpload.FormFile.CopyToAsync(uploadedFile);
-                        var archivo = new Archivo_SitioTuristico()
-                        {
-                            info_file = uploadedFile.ToArray()
-                        };
+            using (var uploadedFile = new MemoryStream()){
                 
-                        //Adds file to DB
-                        _context.Archivos_SitioTuristico.Add(archivo);
+                await file.CopyToAsync(uploadedFile);
+                
+                var ext = Path.GetExtension(file.FileName).ToLowerInvariant();
 
-                    //}else{
-                        //aca ponddria lo del log pero no se puede :(
-                        //return BadRequest();
-                    //}
-                }     
-            
+                if (file.Length < 4194304 && GetMimeTypes().ContainsKey(ext)){
+                    uploadedFile.Position = 0;
+                    var archivo = new Archivo_SitioTuristico(){
+                        ext = ext,
+                        info_file = uploadedFile.ToArray(),
+                        SitioId = sitioID
+                    };
+                    logger.LogInformation("INFORMACION DEL ARCHIVO");
+                    logger.LogInformation("{@file}", file);
+                    logger.LogInformation("{@sitioID}", sitioID);
+                    _context.Archivos_SitioTuristico.Add(archivo);
+                }else{
+                    if(!GetMimeTypes().ContainsKey(ext)){
+                        return null;
+                    }else{
+                        return BadRequest();
+                    }
+                }
+            }     
             await _context.SaveChangesAsync();
             return Ok();
         }
@@ -141,6 +143,6 @@ namespace backend.Controllers
         private bool Archivo_SitioTuristicoExists(int id)
         {
             return _context.Archivos_SitioTuristico.Any(e => e.Id == id);
-        }
+        } 
     }
 }
