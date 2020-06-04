@@ -45,7 +45,7 @@ namespace backend.Controllers
             return await context.Publicaciones.Include(x => x.Sitio).ThenInclude(x => x.Actividades).ThenInclude(x=>x.TipoActividad).Where(x => x.Sitio.Actividades.Where(x => x.TipoActividadId==id).Count()>0).ToListAsync();
         }
 
-        //GET: api/Publicaciones/region/tipo/idTipoActividad
+        //GET: api/Publicaciones/tipo/idTipoActividad/region
         [HttpGet("tipo/{id}/region/")]
         public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicacionesByTipoActividadAndRegion([FromQuery(Name = "region")] string region, int id)
         {
@@ -70,7 +70,7 @@ namespace backend.Controllers
         [HttpGet("propietario/{propietarioId}")]
         public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicacionByPropietario(int propietarioId)
         {
-            return await context.Publicaciones.Where(x => x.PropietarioId == propietarioId).ToListAsync();
+            return await context.Publicaciones.Where(x => x.PropietarioId == propietarioId).Include(x=>x.Sitio).ThenInclude(x=>x.Actividades).ThenInclude(x=>x.TipoActividad).ToListAsync();
         }
 
         // PUT: api/Publicaciones/5
