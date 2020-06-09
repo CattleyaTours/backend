@@ -33,5 +33,7 @@ namespace backend.Models
         public DbSet<TipoHabitacion> TiposHabitacion { get; set; }
 
         public DbSet<Actividad> Actividades{ get; set;}
+
+        public DbSet<Reserva> Reserva { get; set; }
     }
 }
