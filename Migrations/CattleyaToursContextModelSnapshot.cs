@@ -19,32 +19,6 @@ namespace backend.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Actividad", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Nombre")
-                        .IsRequired()
-                        .HasColumnType("varchar(50)");
-
-                    b.Property<int>("SitioTuristicoId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TipoActividadId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("SitioTuristicoId");
-
-                    b.HasIndex("TipoActividadId");
-
-                    b.ToTable("Actividades");
-                });
-
             modelBuilder.Entity("Archivo_SitioTuristico", b =>
                 {
                     b.Property<int>("Id")
@@ -362,21 +336,6 @@ namespace backend.Migrations
                     b.ToTable("Usuarios");
                 });
 
-            modelBuilder.Entity("Actividad", b =>
-                {
-                    b.HasOne("SitioTuristico", "SitioTuristico")
-                        .WithMany()
-                        .HasForeignKey("SitioTuristicoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CategoriaActividad", "TipoActividad")
-                        .WithMany()
-                        .HasForeignKey("TipoActividadId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-                
             modelBuilder.Entity("Archivo_SitioTuristico", b =>
                 {
                     b.HasOne("SitioTuristico", "Sitio")

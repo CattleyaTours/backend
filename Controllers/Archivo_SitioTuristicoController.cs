@@ -20,7 +20,6 @@ namespace backend.Controllers
         private readonly CattleyaToursContext _context;
         private readonly ILogger<Archivo_SitioTuristicoController> logger;
 
-
         public Archivo_SitioTuristicoController(CattleyaToursContext context, ILogger<Archivo_SitioTuristicoController> _logger)
         {
             _context = context;
@@ -33,22 +32,37 @@ namespace backend.Controllers
         {
             return await _context.Archivos_SitioTuristico.ToListAsync();
         }
-        
-        
+
         // GET: api/Archivos_SitioTuristico/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Archivo_SitioTuristico>> GetArchivo_SitioTuristico(int id)
         {
-            var archivo_SitioTuristico = await _context.Archivos_SitioTuristico.FirstAsync(e => e.SitioId == id);
+            var archivo_SitioTuristico = await _context.Archivos_SitioTuristico.FindAsync(id);
 
             if (archivo_SitioTuristico == null)
             {
                 return NotFound();
             }
-            return File(archivo_SitioTuristico.info_file, GetMimeTypes()[archivo_SitioTuristico.ext]);;
+            return File(archivo_SitioTuristico.info_file, GetMimeTypes()[archivo_SitioTuristico.ext]); ;
         }
 
-        
+        // GET: api/Archivos_SitioTuristico/sitio/5/random
+        [HttpGet("sitio/{id}/random")]
+        public async Task<ActionResult<Archivo_SitioTuristico>> GetArchivo_SitioTuristicoRandomBySitio(int id)
+        {
+            var archivos_SitioTuristico = await _context.Archivos_SitioTuristico.Where(x => x.SitioId == id).ToListAsync();
+            if (archivos_SitioTuristico.Count < 1)
+            {
+                return NotFound();
+            }
+
+            Random rnd = new Random();
+            int r = rnd.Next(archivos_SitioTuristico.Count);
+            var archivo_SitioTuristico = archivos_SitioTuristico.ElementAt(r);
+
+            return File(archivo_SitioTuristico.info_file, GetMimeTypes()[archivo_SitioTuristico.ext]); ;
+        }
+
         // PUT: api/Archivos_SitioTuristico/1
         [HttpPut("{id}")]
         public async Task<IActionResult> PutArchivo_SitioTuristico(int id, Archivo_SitioTuristico archivo_SitioTuristico)
@@ -79,48 +93,55 @@ namespace backend.Controllers
             return NoContent();
         }
 
-        public Dictionary<string, string> GetMimeTypes(){
+        public Dictionary<string, string> GetMimeTypes()
+        {
             return new Dictionary<string, string>{
             {".png", "image/png"},
             {".jpg", "image/jpeg"},
             {".jpeg", "image/jpeg"},
             {".ico", "image/x-icon"},
             {".svg", "image/svg+xml"},
-            {".gif", "image/gif"}, 
+            {".gif", "image/gif"},
             };
         }
 
         // POST: api/Archivo_SitioTuristico
         [HttpPost]
-        public async Task<ActionResult<Archivo_SitioTuristico>> PostArchivo_SitioTuristico([FromForm] IFormFile file, [FromForm] int sitioID){ 
+        public async Task<ActionResult<Archivo_SitioTuristico>> PostArchivo_SitioTuristico([FromForm] IFormFile file, [FromForm] int sitioID)
+        {
 
-            using (var uploadedFile = new MemoryStream()){
-                
+            using (var uploadedFile = new MemoryStream())
+            {
+
                 await file.CopyToAsync(uploadedFile);
-                
+
                 var ext = Path.GetExtension(file.FileName).ToLowerInvariant();
 
-                if (file.Length < 4194304 && GetMimeTypes().ContainsKey(ext)){
+                if (file.Length < 4194304 && GetMimeTypes().ContainsKey(ext))
+                {
                     uploadedFile.Position = 0;
-                    var archivo = new Archivo_SitioTuristico(){
+                    var archivo = new Archivo_SitioTuristico()
+                    {
                         ext = ext,
                         info_file = uploadedFile.ToArray(),
                         SitioId = sitioID
                     };
-                    logger.LogInformation("INFORMACION DEL ARCHIVO");
-                    logger.LogInformation("{@file}", file);
-                    logger.LogInformation("{@sitioID}", sitioID);
                     _context.Archivos_SitioTuristico.Add(archivo);
-                }else{
-                    if(!GetMimeTypes().ContainsKey(ext)){
-                        return null;
-                    }else{
-                        return BadRequest();
+                    await _context.SaveChangesAsync();
+                    return Created("PostArchivo_SitioTuristico", new { id = archivo.Id });
+                }
+                else
+                {
+                    if (!GetMimeTypes().ContainsKey(ext))
+                    {
+                        return BadRequest("El tipo de archivo no es valido");
+                    }
+                    else
+                    {
+                        return BadRequest("El archivo es demasiado grande");
                     }
                 }
-            }     
-            await _context.SaveChangesAsync();
-            return Ok();
+            }
         }
 
 
@@ -143,6 +164,6 @@ namespace backend.Controllers
         private bool Archivo_SitioTuristicoExists(int id)
         {
             return _context.Archivos_SitioTuristico.Any(e => e.Id == id);
-        } 
+        }
     }
 }
