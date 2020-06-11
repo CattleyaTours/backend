@@ -24,14 +24,16 @@ namespace backend.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Reserva>>> GetReserva()
         {
-            return await _context.Reserva.ToListAsync();
+            return await _context.Reserva.Include(x => x.Usuario).Include(x => x.Publicacion).ToListAsync();
         }
 
         // GET: api/Reserva/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Reserva>> GetReserva(int id)
         {
+ 
             var reserva = await _context.Reserva.FindAsync(id);
+            //var reserva = await _context.Reserva.Where(x => x.Id == id).Include(x => x.Usuario).FirstAsync();
 
             if (reserva == null)
             {
@@ -39,6 +41,12 @@ namespace backend.Controllers
             }
 
             return reserva;
+        }
+
+        [HttpGet("usuario/{id}")]
+        public async Task<ActionResult<IEnumerable<Reserva>>> GetReservaByUserId(int id)
+        {
+            return await _context.Reserva.Include(x => x.Usuario).Where(x => x.Usuario.Id == id).ToListAsync();
         }
 
         // PUT: api/Reserva/5
