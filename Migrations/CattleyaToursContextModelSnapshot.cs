@@ -365,19 +365,6 @@ namespace backend.Migrations
                     b.ToTable("Usuarios");
                 });
 
-            modelBuilder.Entity("Actividad", b =>
-                {
-                    b.HasOne("SitioTuristico", null)
-                        .WithMany("Actividades")
-                        .HasForeignKey("SitioTuristicoId");
-
-                    b.HasOne("CategoriaActividad", "TipoActividad")
-                        .WithMany()
-                        .HasForeignKey("TipoActividadId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Archivo_SitioTuristico", b =>
                 {
                     b.HasOne("SitioTuristico", "Sitio")
