@@ -204,25 +204,21 @@ namespace backend.Migrations
 
             modelBuilder.Entity("Reserva", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<int>("UsuarioId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PublicacionId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("PublicacionId")
+                    b.Property<int>("Id")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UsuarioId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
+                    b.HasKey("UsuarioId", "PublicacionId");
 
                     b.HasIndex("PublicacionId");
-
-                    b.HasIndex("UsuarioId");
 
                     b.ToTable("Reserva");
                 });
@@ -430,11 +426,15 @@ namespace backend.Migrations
                 {
                     b.HasOne("Publicacion", "Publicacion")
                         .WithMany()
-                        .HasForeignKey("PublicacionId");
+                        .HasForeignKey("PublicacionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Usuario", "Usuario")
                         .WithMany()
-                        .HasForeignKey("UsuarioId");
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("SitioTuristico", b =>

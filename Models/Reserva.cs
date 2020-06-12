@@ -20,3 +20,16 @@ public class Reserva
 
     public Publicacion Publicacion { get; set; }
 }
+
+[NotMapped]
+public class ReservaDTO
+{
+    public int Id { get; set; }
+
+    [Required]
+    public DateTime Fecha { get; set; }  
+
+    //relaciones
+    public UsuarioDTO Usuario { get; set; }
+
+}

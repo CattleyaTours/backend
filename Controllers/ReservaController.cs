@@ -33,7 +33,6 @@ namespace backend.Controllers
         {
  
             var reserva = await _context.Reserva.FindAsync(id);
-            //var reserva = await _context.Reserva.Where(x => x.Id == id).Include(x => x.Usuario).FirstAsync();
 
             if (reserva == null)
             {
@@ -46,8 +45,31 @@ namespace backend.Controllers
         [HttpGet("usuario/{id}")]
         public async Task<ActionResult<IEnumerable<Reserva>>> GetReservaByUserId(int id)
         {
-            return await _context.Reserva.Include(x => x.Usuario).Where(x => x.Usuario.Id == id).ToListAsync();
+            return await _context.Reserva.Include(x => x.Publicacion).Where(x => x.Usuario.Id == id).ToListAsync();
         }
+
+        [HttpGet("publicacion/{id}")]
+        public async Task<ActionResult<IEnumerable<ReservaDTO>>> GetReservaByPublicacionId(int id)
+        {
+            return  await _context.Reserva
+            .Include(x => x.Usuario)
+            .Where(x => x.Publicacion.Id == id)
+            .Select( x => new ReservaDTO(){ 
+                Id = x.Id,
+                Fecha = x.Fecha,
+                Usuario = new UsuarioDTO(){
+                    Id = x.Usuario.Id,
+                    Email = x.Usuario.Email,
+                    Username = x.Usuario.Username,
+                    Nombres = x.Usuario.Nombres,
+                    Telefono = x.Usuario.Telefono,
+                    Nacionalidad = x.Usuario.Nacionalidad,
+                    RolId = x.Usuario.RolId
+                }
+            }).ToListAsync();
+            //return Ok();
+        }
+        
 
         // PUT: api/Reserva/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
