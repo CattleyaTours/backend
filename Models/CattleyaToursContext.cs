@@ -21,6 +21,8 @@ namespace backend.Models
                 .IsUnique();
             builder.Entity<Interes>()
             .HasKey(k => new { k.UsuarioId, k.PublicacionId });
+            builder.Entity<Reserva>()
+                .HasKey(k => new {k.UsuarioId, k.PublicacionId});
             builder.SeedActividades();
             builder.SeedHabitaciones();
             builder.SeedRoles();
@@ -37,5 +39,7 @@ namespace backend.Models
         public DbSet<Actividad> Actividades { get; set; }
 
         public DbSet<Interes> Interes { get; set; }
+        
+        public DbSet<Reserva> Reserva { get; set; }
     }
 }
