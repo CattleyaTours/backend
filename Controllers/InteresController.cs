@@ -27,11 +27,11 @@ namespace backend.Controllers
             return await _context.Interes.ToListAsync();
         }
 
-        // GET: api/Interes/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Interes>> GetInteres(int id)
+        // GET: api/Interes/publicacion/5/usuario/3
+        [HttpGet("publicacion/{publicacionId}/usuario/{usuarioId}")]
+        public async Task<ActionResult<Interes>> GetInteres(int usuarioId, int publicacionId)
         {
-            var interes = await _context.Interes.FindAsync(id);
+            var interes = await _context.Interes.Where(x => x.UsuarioId == usuarioId).Where(x => x.PublicacionId == publicacionId).FirstAsync();
 
             if (interes == null)
             {
