@@ -31,7 +31,7 @@ namespace backend.Controllers
         [HttpGet("publicacion/{publicacionId}/usuario/{usuarioId}")]
         public async Task<ActionResult<Interes>> GetInteres(int usuarioId, int publicacionId)
         {
-            var interes = await _context.Interes.Where(x => x.UsuarioId == usuarioId).Where(x => x.PublicacionId == publicacionId).FirstAsync();
+            var interes = await _context.Interes.FindAsync(usuarioId,publicacionId);
 
             if (interes == null)
             {
@@ -99,11 +99,11 @@ namespace backend.Controllers
             return CreatedAtAction("GetInteres", new { id = interes.UsuarioId }, interes);
         }
 
-        // DELETE: api/Interes/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Interes>> DeleteInteres(int id)
+        // DELETE: api/Interes/publicacion/5/usuario/3
+        [HttpDelete("publicacion/{publicacionId}/usuario/{usuarioId}")]
+        public async Task<ActionResult<Interes>> DeleteInteres(int usuarioId, int publicacionId)
         {
-            var interes = await _context.Interes.FindAsync(id);
+            var interes = await _context.Interes.FindAsync(usuarioId,publicacionId);
             if (interes == null)
             {
                 return NotFound();
