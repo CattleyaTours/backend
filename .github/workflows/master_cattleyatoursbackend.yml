@@ -26,6 +26,9 @@ jobs:
     - name: dotnet publish
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
+    - name: dotnet migrations
+      run: dotnet ef database update
+
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v1
       with:
