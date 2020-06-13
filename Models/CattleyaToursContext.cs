@@ -32,6 +32,6 @@ namespace backend.Models
         public DbSet<CategoriaActividad> CategoriasActividad { get; set; }
         public DbSet<TipoHabitacion> TiposHabitacion { get; set; }
 
-        public DbSet<Actividad> Actividades{ get; set;}
+        public DbSet<Actividad> Actividades { get; set;}
     }
 }

@@ -11,23 +11,23 @@ namespace backend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ActividadController : ControllerBase
+    public class ActividadesController : ControllerBase
     {
         private readonly CattleyaToursContext _context;
 
-        public ActividadController(CattleyaToursContext context)
+        public ActividadesController(CattleyaToursContext context)
         {
             _context = context;
         }
 
-        // GET: api/Actividad
+        // GET: api/Actividades
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Actividad>>> GetActividades()
         {
             return await _context.Actividades.ToListAsync();
         }
 
-        // GET: api/Actividad/5
+        // GET: api/Actividades/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Actividad>> GetActividad(int id)
         {
@@ -41,7 +41,7 @@ namespace backend.Controllers
             return actividad;
         }
 
-        // PUT: api/Actividad/5
+        // PUT: api/Actividades/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
@@ -73,7 +73,7 @@ namespace backend.Controllers
             return NoContent();
         }
 
-        // POST: api/Actividad
+        // POST: api/Actividades
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
@@ -85,7 +85,7 @@ namespace backend.Controllers
             return CreatedAtAction("GetActividad", new { id = actividad.Id }, actividad);
         }
 
-        // DELETE: api/Actividad/5
+        // DELETE: api/Actividades/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Actividad>> DeleteActividad(int id)
         {

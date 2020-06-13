@@ -33,15 +33,12 @@ namespace backend.Migrations
                     b.Property<int>("PublicacionId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SitioTuristicoId")
-                        .HasColumnType("int");
-
                     b.Property<int>("TipoActividadId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("SitioTuristicoId");
+                    b.HasIndex("PublicacionId");
 
                     b.HasIndex("TipoActividadId");
 
@@ -365,10 +362,25 @@ namespace backend.Migrations
                     b.ToTable("Usuarios");
                 });
 
+            modelBuilder.Entity("Actividad", b =>
+                {
+                    b.HasOne("Publicacion", null)
+                        .WithMany("Actividades")
+                        .HasForeignKey("PublicacionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CategoriaActividad", "TipoActividad")
+                        .WithMany()
+                        .HasForeignKey("TipoActividadId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Archivo_SitioTuristico", b =>
                 {
                     b.HasOne("SitioTuristico", "Sitio")
-                        .WithMany()
+                        .WithMany("Imagenes")
                         .HasForeignKey("SitioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

@@ -34,7 +34,6 @@ namespace backend.Controllers
         public async Task<ActionResult<SitioTuristicoDTO>> GetSitioTuristico(int id)
         {
             var sitioTuristico = await context.SitiosTuristicos
-                .Include(x => x.Actividades)
                 .Include(x => x.Imagenes)
                 .Select(x => new SitioTuristicoDTO
                 {
@@ -45,7 +44,6 @@ namespace backend.Controllers
                     Region = x.Region,
                     Departamento = x.Departamento,
                     Municipio = x.Municipio,
-                    Actividades = x.Actividades,
                     Imagenes = x.Imagenes.Select(x => x.Id).ToList(),
                     PropietarioId = x.PropietarioId
                 }).Where(x => x.Id == id).FirstOrDefaultAsync();
@@ -58,7 +56,6 @@ namespace backend.Controllers
         public async Task<ActionResult<IEnumerable<SitioTuristicoDTO>>> GetSitiosByPropietario(int propietarioId)
         {
             return await context.SitiosTuristicos
-                .Include(x => x.Actividades)
                 .Include(x => x.Imagenes)
                 .Select(x => new SitioTuristicoDTO
                 {
@@ -69,7 +66,6 @@ namespace backend.Controllers
                     Region = x.Region,
                     Departamento = x.Departamento,
                     Municipio = x.Municipio,
-                    Actividades = x.Actividades,
                     Imagenes = x.Imagenes.Select(x => x.Id).ToList(),
                     PropietarioId = x.PropietarioId
                 }).Where(x => x.PropietarioId == propietarioId).ToListAsync();
