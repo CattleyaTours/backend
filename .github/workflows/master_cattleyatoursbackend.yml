@@ -21,7 +21,7 @@ jobs:
         dotnet-version: '3.1.102'
 
     - name: Set up entity framework
-      run: dotnet tool install dotnet-ef 
+      run: dotnet tool install --global dotnet-ef 
 
     - name: Build with dotnet
       run: dotnet build --configuration Release
