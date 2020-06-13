@@ -20,6 +20,9 @@ jobs:
       with:
         dotnet-version: '3.1.102'
 
+    - name: Set up entity framework
+      run: dotnet tool install dotnet-ef 
+
     - name: Build with dotnet
       run: dotnet build --configuration Release
 
