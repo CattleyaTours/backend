@@ -1,8 +1,6 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using backend.Models;
@@ -33,23 +31,48 @@ namespace backend.Controllers
 
         // GET: api/SitiosTuristicos/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<SitioTuristico>> GetSitioTuristico(int id)
+        public async Task<ActionResult<SitioTuristicoDTO>> GetSitioTuristico(int id)
         {
-            var sitioTuristico = await context.SitiosTuristicos.FindAsync(id);
-
-            if (sitioTuristico == null)
-            {
-                return NotFound();
-            }
+            var sitioTuristico = await context.SitiosTuristicos
+                .Include(x => x.Actividades)
+                .Include(x => x.Imagenes)
+                .Select(x => new SitioTuristicoDTO
+                {
+                    Id = x.Id,
+                    Descripcion = x.Descripcion,
+                    Nombre = x.Nombre,
+                    Capacidad = x.Capacidad,
+                    Region = x.Region,
+                    Departamento = x.Departamento,
+                    Municipio = x.Municipio,
+                    Actividades = x.Actividades,
+                    Imagenes = x.Imagenes.Select(x => x.Id).ToList(),
+                    PropietarioId = x.PropietarioId
+                }).Where(x => x.Id == id).FirstOrDefaultAsync();
 
             return sitioTuristico;
         }
 
         // GET: api/SitiosTuristicos/propietario/5
         [HttpGet("propietario/{propietarioId}")]
-        public async Task<ActionResult<IEnumerable<SitioTuristico>>> GetSitiosByPropietario(int propietarioId)
+        public async Task<ActionResult<IEnumerable<SitioTuristicoDTO>>> GetSitiosByPropietario(int propietarioId)
         {
-            return await context.SitiosTuristicos.Where(x => x.PropietarioId == propietarioId).ToListAsync();
+            return await context.SitiosTuristicos
+                .Include(x => x.Actividades)
+                .Include(x => x.Imagenes)
+                .Select(x => new SitioTuristicoDTO
+                {
+                    Id = x.Id,
+                    Descripcion = x.Descripcion,
+                    Nombre = x.Nombre,
+                    Capacidad = x.Capacidad,
+                    Region = x.Region,
+                    Departamento = x.Departamento,
+                    Municipio = x.Municipio,
+                    Actividades = x.Actividades,
+                    Imagenes = x.Imagenes.Select(x => x.Id).ToList(),
+                    PropietarioId = x.PropietarioId
+                }).Where(x => x.PropietarioId == propietarioId).ToListAsync();
         }
 
         // PUT: api/SitiosTuristicos/5
