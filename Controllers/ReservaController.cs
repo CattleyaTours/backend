@@ -27,12 +27,12 @@ namespace backend.Controllers
             return await _context.Reserva.Include(x => x.Usuario).Include(x => x.Publicacion).ToListAsync();
         }
 
-        // GET: api/Reserva/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Reserva>> GetReserva(int id)
+        // GET: api/Reserva/publicacion/5/usuario/3
+        [HttpGet("publicacion/{publicacionId}/usuario/{usuarioId}")]
+        public async Task<ActionResult<Reserva>> GetReserva(int usuarioId, int publicacionId)
         {
  
-            var reserva = await _context.Reserva.FindAsync(id);
+            var reserva = await _context.Reserva.FindAsync(usuarioId,publicacionId);
 
             if (reserva == null)
             {
@@ -41,7 +41,7 @@ namespace backend.Controllers
 
             return reserva;
         }
-
+        
         [HttpGet("usuario/{id}")]
         public async Task<ActionResult<IEnumerable<Reserva>>> GetReservaByUserId(int id)
         {
@@ -67,10 +67,8 @@ namespace backend.Controllers
                     RolId = x.Usuario.RolId
                 }
             }).ToListAsync();
-            //return Ok();
         }
         
-
         // PUT: api/Reserva/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
@@ -115,11 +113,11 @@ namespace backend.Controllers
             return CreatedAtAction("GetReserva", new { id = reserva.Id }, reserva);
         }
 
-        // DELETE: api/Reserva/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Reserva>> DeleteReserva(int id)
+        // DELETE: api/Reserva/5/publicacion/5/usuario/3
+        [HttpDelete("publicacion/{publicacionId}/usuario/{usuarioId}")]
+        public async Task<ActionResult<Reserva>> DeleteReserva(int usuarioId, int publicacionId)
         {
-            var reserva = await _context.Reserva.FindAsync(id);
+            var reserva = await _context.Reserva.FindAsync(usuarioId, publicacionId);
             if (reserva == null)
             {
                 return NotFound();
