@@ -87,6 +87,17 @@ namespace backend.Controllers
             .Include(x=>x.Actividades).ThenInclude(x=>x.TipoActividad)
             .Include(x=>x.Sitio).ToListAsync();
         }
+        
+        //GET: api/Publicaciones/actividades/1
+        [HttpGet("actividades/{id}")]
+        public async Task<ActionResult<IEnumerable<Publicacion>>> GetActividadesByPublicacion(int id)
+        {
+            return await context.Publicaciones
+            .Where(x => x.Id == id)
+            .Include(x=>x.Actividades).ThenInclude(x=>x.TipoActividad)
+            .ToListAsync();
+        }
+
 
         // PUT: api/Publicaciones/5
         [HttpPut("{id}")]
