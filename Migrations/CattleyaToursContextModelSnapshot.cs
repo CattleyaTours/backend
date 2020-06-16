@@ -223,27 +223,6 @@ namespace backend.Migrations
                     b.ToTable("Publicaciones");
                 });
 
-            modelBuilder.Entity("Reserva", b =>
-                {
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PublicacionId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("Fecha")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
-
-                    b.HasKey("UsuarioId", "PublicacionId");
-
-                    b.HasIndex("PublicacionId");
-
-                    b.ToTable("Reserva");
-                });
-
             modelBuilder.Entity("Rol", b =>
                 {
                     b.Property<int>("Id")
@@ -454,21 +433,6 @@ namespace backend.Migrations
                     b.HasOne("SitioTuristico", "Sitio")
                         .WithMany()
                         .HasForeignKey("SitioId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Reserva", b =>
-                {
-                    b.HasOne("Publicacion", "Publicacion")
-                        .WithMany()
-                        .HasForeignKey("PublicacionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Usuario", "Usuario")
-                        .WithMany()
-                        .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

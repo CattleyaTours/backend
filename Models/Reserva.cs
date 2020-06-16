@@ -14,7 +14,7 @@ public class Reserva
 
     [Required]
     public int PublicacionId { get; set; }    
-
+    
     //relaciones
     public Usuario Usuario { get; set; }
 
