@@ -19,6 +19,8 @@ namespace backend.Models
             builder.Entity<Usuario>()
                 .HasIndex(u => u.Username)
                 .IsUnique();
+            builder.Entity<Reserva>()
+                .HasKey(k => new {k.UsuarioId, k.PublicacionId});
             builder.SeedActividades();
             builder.SeedHabitaciones();
             builder.SeedRoles();
@@ -32,6 +34,9 @@ namespace backend.Models
         public DbSet<CategoriaActividad> CategoriasActividad { get; set; }
         public DbSet<TipoHabitacion> TiposHabitacion { get; set; }
 
-        public DbSet<Actividad> Actividades { get; set;}
+        public DbSet<Actividad> Actividades{ get; set;}
+
+        public DbSet<Reserva> Reserva { get; set; }
+
     }
 }

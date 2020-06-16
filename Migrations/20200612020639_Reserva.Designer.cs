@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backend.Models;
 
 namespace backend.Migrations
 {
     [DbContext(typeof(CattleyaToursContext))]
-    partial class CattleyaToursContextModelSnapshot : ModelSnapshot
+    [Migration("20200612020639_Reserva")]
+    partial class Reserva
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,7 +32,7 @@ namespace backend.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(50)");
 
-                    b.Property<int>("PublicacionId")
+                    b.Property<int>("SitioTuristicoId")
                         .HasColumnType("int");
 
                     b.Property<int>("TipoActividadId")
@@ -38,7 +40,7 @@ namespace backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PublicacionId");
+                    b.HasIndex("SitioTuristicoId");
 
                     b.HasIndex("TipoActividadId");
 
@@ -385,9 +387,9 @@ namespace backend.Migrations
 
             modelBuilder.Entity("Actividad", b =>
                 {
-                    b.HasOne("Publicacion", null)
+                    b.HasOne("SitioTuristico", null)
                         .WithMany("Actividades")
-                        .HasForeignKey("PublicacionId")
+                        .HasForeignKey("SitioTuristicoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -401,7 +403,7 @@ namespace backend.Migrations
             modelBuilder.Entity("Archivo_SitioTuristico", b =>
                 {
                     b.HasOne("SitioTuristico", "Sitio")
-                        .WithMany("Imagenes")
+                        .WithMany()
                         .HasForeignKey("SitioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
