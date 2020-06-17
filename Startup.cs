@@ -68,7 +68,7 @@ namespace backend
 
             app.UseRouting();
             
-            app.UseCors(options => options.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader());
+            app.UseCors(options => options.WithOrigins("https://cattleyatoursbackend.azurewebsites.net").AllowAnyMethod().AllowAnyHeader());
             
             app.UseAuthentication();
 
