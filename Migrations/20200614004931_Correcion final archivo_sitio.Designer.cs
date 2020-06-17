@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backend.Models;
 
 namespace backend.Migrations
 {
     [DbContext(typeof(CattleyaToursContext))]
-    partial class CattleyaToursContextModelSnapshot : ModelSnapshot
+    [Migration("20200614004931_Correcion final archivo_sitio")]
+    partial class Correcionfinalarchivo_sitio
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -164,27 +166,6 @@ namespace backend.Migrations
                             Icono = "fas fa-ellipsis-h",
                             Nombre = "Otros"
                         });
-                });
-
-            modelBuilder.Entity("Interes", b =>
-                {
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PublicacionId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("Fecha")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
-
-                    b.HasKey("UsuarioId", "PublicacionId");
-
-                    b.HasIndex("PublicacionId");
-
-                    b.ToTable("Interes");
                 });
 
             modelBuilder.Entity("Publicacion", b =>
@@ -403,21 +384,6 @@ namespace backend.Migrations
                     b.HasOne("SitioTuristico", "Sitio")
                         .WithMany("Imagenes")
                         .HasForeignKey("SitioId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Interes", b =>
-                {
-                    b.HasOne("Publicacion", "Publicacion")
-                        .WithMany()
-                        .HasForeignKey("PublicacionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Usuario", "Usuario")
-                        .WithMany()
-                        .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
