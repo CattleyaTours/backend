@@ -69,7 +69,7 @@ namespace backend.Controllers
         public async Task<ActionResult<Publicacion>> GetPublicacion(int id)
         {
             //var publicacion = await context.Publicaciones.FindAsync(id);
-            var publicacion = await context.Publicaciones.Where(x => x.Id == id).Include(x=>x.Propietario).Include(x=>x.Sitio).ThenInclude(x=>x.Actividades).ThenInclude(x=>x.TipoActividad).FirstAsync();
+            var publicacion = await context.Publicaciones.Where(x => x.Id == id).Include(x=>x.Actividades).ThenInclude(x=>x.TipoActividad).Include(x=>x.Propietario).Include(x=>x.Sitio).FirstAsync();
 
             if (publicacion == null)
             {
