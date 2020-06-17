@@ -68,7 +68,7 @@ namespace backend
 
             app.UseRouting();
             
-            app.UseCors(options => options.WithOrigins("https://cattleyatoursbackend.azurewebsites.net").AllowAnyMethod().AllowAnyHeader());
+            app.UseCors(options => options.WithOrigins("https://proud-mud-080ae1710.azurestaticapps.net").AllowAnyMethod().AllowAnyHeader());
             
             app.UseAuthentication();
 
