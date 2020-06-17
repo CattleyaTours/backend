@@ -13,7 +13,7 @@ public class Actividad
     public int TipoActividadId { get; set; }
 
     [Required]
-    public int SitioTuristicoId { get; set; }
+    public int PublicacionId { get; set; }
 
     // Relaciones    
 

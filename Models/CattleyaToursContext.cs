@@ -41,5 +41,6 @@ namespace backend.Models
         public DbSet<Interes> Interes { get; set; }
         
         public DbSet<Reserva> Reserva { get; set; }
+
     }
 }

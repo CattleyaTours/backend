@@ -10,8 +10,8 @@ using backend.Models;
 namespace backend.Migrations
 {
     [DbContext(typeof(CattleyaToursContext))]
-    [Migration("20200530003559_Added ext field to Arch_Sitio")]
-    partial class AddedextfieldtoArch_Sitio
+    [Migration("20200614004931_Correcion final archivo_sitio")]
+    partial class Correcionfinalarchivo_sitio
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,6 +21,32 @@ namespace backend.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Actividad", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<int>("PublicacionId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TipoActividadId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PublicacionId");
+
+                    b.HasIndex("TipoActividadId");
+
+                    b.ToTable("Actividades");
+                });
+
             modelBuilder.Entity("Archivo_SitioTuristico", b =>
                 {
                     b.Property<int>("Id")
@@ -28,7 +54,7 @@ namespace backend.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("SitioId")
+                    b.Property<int>("SitioId")
                         .HasColumnType("int");
 
                     b.Property<string>("ext")
@@ -338,11 +364,28 @@ namespace backend.Migrations
                     b.ToTable("Usuarios");
                 });
 
+            modelBuilder.Entity("Actividad", b =>
+                {
+                    b.HasOne("Publicacion", null)
+                        .WithMany("Actividades")
+                        .HasForeignKey("PublicacionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CategoriaActividad", "TipoActividad")
+                        .WithMany()
+                        .HasForeignKey("TipoActividadId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Archivo_SitioTuristico", b =>
                 {
                     b.HasOne("SitioTuristico", "Sitio")
-                        .WithMany()
-                        .HasForeignKey("SitioId");
+                        .WithMany("Imagenes")
+                        .HasForeignKey("SitioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Publicacion", b =>

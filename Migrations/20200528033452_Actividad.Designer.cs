@@ -31,17 +31,14 @@ namespace backend.Migrations
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("varchar(50)");
-
-                    b.Property<int>("SitioTuristicoId")
+                    b.Property<int>("PublicacionId")
                         .HasColumnType("int");
-
                     b.Property<int>("TipoActividadId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("SitioTuristicoId");
-
+                    b.HasIndex("PublicacionId");
                     b.HasIndex("TipoActividadId");
 
                     b.ToTable("Actividades");
@@ -341,12 +338,11 @@ namespace backend.Migrations
 
             modelBuilder.Entity("Actividad", b =>
                 {
-                    b.HasOne("SitioTuristico", "SitioTuristico")
+                    b.HasOne("Publicacion", "Publicacion")
                         .WithMany()
-                        .HasForeignKey("SitioTuristicoId")
+                        .HasForeignKey("PublicacionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
                     b.HasOne("CategoriaActividad", "TipoActividad")
                         .WithMany()
                         .HasForeignKey("TipoActividadId")

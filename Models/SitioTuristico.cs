@@ -35,8 +35,6 @@ public class SitioTuristico
     // Relaciones    
     public Usuario Propietario { get; set; }
 
-    public List<Actividad> Actividades { get; set; }
-
     public List<Archivo_SitioTuristico> Imagenes { get; set; }
 }
 
@@ -66,9 +64,6 @@ public class SitioTuristicoDTO
 
     [Required]
     public int PropietarioId { get; set; }
-
-    [Required]
-    public List<Actividad> Actividades { get; set; }
 
     [Required]
     public List<int> Imagenes { get; set; }

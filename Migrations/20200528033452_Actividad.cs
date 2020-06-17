@@ -14,15 +14,15 @@ namespace backend.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nombre = table.Column<string>(type: "varchar(50)", nullable: false),
                     TipoActividadId = table.Column<int>(nullable: false),
-                    SitioTuristicoId = table.Column<int>(nullable: false)
+                    PublicacionId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Actividades", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Actividades_SitiosTuristicos_SitioTuristicoId",
-                        column: x => x.SitioTuristicoId,
-                        principalTable: "SitiosTuristicos",
+                        name: "FK_Actividades_Publicaciones_PublicacionId",
+                        column: x => x.PublicacionId,
+                        principalTable: "Publicaciones",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -34,9 +34,9 @@ namespace backend.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Actividades_SitioTuristicoId",
+                name: "IX_Actividades_PublicacionId",
                 table: "Actividades",
-                column: "SitioTuristicoId");
+                column: "PublicacionId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Actividades_TipoActividadId",

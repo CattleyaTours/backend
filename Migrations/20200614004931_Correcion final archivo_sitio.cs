@@ -2,10 +2,22 @@
 
 namespace backend.Migrations
 {
-    public partial class AddedsitioIDfieldtoArch_Sitio : Migration
+    public partial class Correcionfinalarchivo_sitio : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.AddColumn<string>(
+                name: "name",
+                table: "Archivos_SitioTuristico",
+                nullable: false,
+                defaultValue: "");
+
+            migrationBuilder.AddColumn<string>(
+                name: "ext",
+                table: "Archivos_SitioTuristico",
+                nullable: false,
+                defaultValue: "");
+            
             migrationBuilder.DropForeignKey(
                 name: "FK_Archivos_SitioTuristico_SitiosTuristicos_SitioId",
                 table: "Archivos_SitioTuristico");
@@ -29,6 +41,15 @@ namespace backend.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            
+            migrationBuilder.DropColumn(
+                name: "name",
+                table: "Archivos_SitioTuristico");
+            
+            migrationBuilder.DropColumn(
+                name: "ext",
+                table: "Archivos_SitioTuristico");
+
             migrationBuilder.DropForeignKey(
                 name: "FK_Archivos_SitioTuristico_SitiosTuristicos_SitioId",
                 table: "Archivos_SitioTuristico");
