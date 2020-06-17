@@ -1,0 +1,41 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build and deploy ASP.Net Core app to Azure Web App - cattleyatoursbackend
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Set up .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.102'
+
+    - name: Set up entity framework
+      run: dotnet tool install --global dotnet-ef 
+
+    - name: Build with dotnet
+      run: dotnet build --configuration Release
+
+    - name: dotnet publish
+      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+
+    - name: dotnet migrations
+      run: dotnet ef database update
+
+    - name: Deploy to Azure Web App
+      uses: azure/webapps-deploy@v1
+      with:
+        app-name: 'cattleyatoursbackend'
+        slot-name: 'production'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_a63dcbfeef644387b1d3252f351e7ba8 }}
+        package: ${{env.DOTNET_ROOT}}/myapp 
