@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-public class Reserva
+public class Interes
 {
     public int Id { get; set; }
 
@@ -14,7 +14,7 @@ public class Reserva
 
     [Required]
     public int PublicacionId { get; set; }    
-    
+
     //relaciones
     public Usuario Usuario { get; set; }
 
@@ -22,7 +22,7 @@ public class Reserva
 }
 
 [NotMapped]
-public class ReservaDTO
+public class InteresDTO
 {
     public int Id { get; set; }
 
