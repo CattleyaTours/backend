@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 using backend.Models;
 using Microsoft.Extensions.Logging;
 
@@ -30,6 +31,35 @@ namespace backend.Controllers
         {
             return await context.Publicaciones
             .Include(x=>x.Actividades).ThenInclude(x=>x.TipoActividad).Include(x=>x.Sitio).ToListAsync();
+        }
+        
+         //GET: api/Publicaciones/filtered
+        [HttpGet("filtered")]
+        public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicacionesFiltered()
+        {
+            var filters = HttpContext.Request.Query;
+
+            if(!filters.ContainsKey("region")){
+                return BadRequest("El campo region es obligatorio");
+            }
+
+            var publicaciones = context.Publicaciones
+                .Include(x => x.Sitio)
+                .Include(x => x.Actividades).ThenInclude(x => x.TipoActividad).AsQueryable();
+            
+            if(!filters["region"].Equals("Colombia")){
+                publicaciones  = publicaciones.Where(x => x.Sitio.Region.Equals(filters["region"]));
+            }
+            if(filters.ContainsKey("actividades")){
+                publicaciones = publicaciones.Where(x => x.Actividades.Where(x => filters["actividades"].Contains(x.TipoActividadId.ToString())).Count()>0);
+            }
+            if(filters.ContainsKey("precioMinimo")){
+                publicaciones = publicaciones.Where(x => x.Precio >= Int32.Parse(filters["precioMinimo"]));
+            }
+            if(filters.ContainsKey("precioMaximo")){
+                publicaciones = publicaciones.Where(x => x.Precio <= Int32.Parse(filters["precioMaximo"]));                
+            }
+            return await publicaciones.ToListAsync();
         }
 
          //GET: api/Publicaciones/region/andina
