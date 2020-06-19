@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using backend.Models;
+using Microsoft.Extensions.Logging;
 
 namespace backend.Controllers
 {
@@ -13,18 +14,21 @@ namespace backend.Controllers
     [ApiController]
     public class ReservaController : ControllerBase
     {
-        private readonly CattleyaToursContext _context;
+        private readonly CattleyaToursContext context;
 
-        public ReservaController(CattleyaToursContext context)
+        private readonly ILogger<ReservaController> logger;
+
+        public ReservaController(CattleyaToursContext _context, ILogger<ReservaController> _logger)
         {
-            _context = context;
+            context = _context;
+            logger = _logger;
         }
 
         // GET: api/Reserva
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Reserva>>> GetReserva()
         {
-            return await _context.Reserva.Include(x => x.Usuario).Include(x => x.Publicacion).ToListAsync();
+            return await context.Reserva.Include(x => x.Usuario).Include(x => x.Publicacion).ToListAsync();
         }
 
         // GET: api/Reserva/publicacion/5/usuario/3
@@ -32,7 +36,7 @@ namespace backend.Controllers
         public async Task<ActionResult<Reserva>> GetReserva(int usuarioId, int publicacionId)
         {
  
-            var reserva = await _context.Reserva.FindAsync(usuarioId,publicacionId);
+            var reserva = await context.Reserva.FindAsync(usuarioId,publicacionId);
 
             if (reserva == null)
             {
@@ -45,13 +49,13 @@ namespace backend.Controllers
         [HttpGet("usuario/{id}")]
         public async Task<ActionResult<IEnumerable<Reserva>>> GetReservaByUserId(int id)
         {
-            return await _context.Reserva.Include(x => x.Publicacion).Where(x => x.Usuario.Id == id).ToListAsync();
+            return await context.Reserva.Include(x => x.Publicacion).Where(x => x.Usuario.Id == id).ToListAsync();
         }
 
         [HttpGet("publicacion/{id}")]
         public async Task<ActionResult<IEnumerable<ReservaDTO>>> GetReservaByPublicacionId(int id)
         {
-            return  await _context.Reserva
+            return  await context.Reserva
             .Include(x => x.Usuario)
             .Where(x => x.Publicacion.Id == id)
             .Select( x => new ReservaDTO(){ 
@@ -80,11 +84,11 @@ namespace backend.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(reserva).State = EntityState.Modified;
+            context.Entry(reserva).State = EntityState.Modified;
 
             try
             {
-                await _context.SaveChangesAsync();
+                await context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -107,8 +111,8 @@ namespace backend.Controllers
         [HttpPost]
         public async Task<ActionResult<Reserva>> PostReserva(Reserva reserva)
         {
-            _context.Reserva.Add(reserva);
-            await _context.SaveChangesAsync();
+            context.Reserva.Add(reserva);
+            await context.SaveChangesAsync();
 
             return CreatedAtAction("GetReserva", new { id = reserva.Id }, reserva);
         }
@@ -117,21 +121,21 @@ namespace backend.Controllers
         [HttpDelete("publicacion/{publicacionId}/usuario/{usuarioId}")]
         public async Task<ActionResult<Reserva>> DeleteReserva(int usuarioId, int publicacionId)
         {
-            var reserva = await _context.Reserva.FindAsync(usuarioId, publicacionId);
+            var reserva = await context.Reserva.FindAsync(usuarioId, publicacionId);
             if (reserva == null)
             {
                 return NotFound();
             }
 
-            _context.Reserva.Remove(reserva);
-            await _context.SaveChangesAsync();
+            context.Reserva.Remove(reserva);
+            await context.SaveChangesAsync();
 
             return reserva;
         }
 
         private bool ReservaExists(int id)
         {
-            return _context.Reserva.Any(e => e.Id == id);
+            return context.Reserva.Any(e => e.Id == id);
         }
     }
 }
