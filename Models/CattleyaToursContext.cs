@@ -20,7 +20,7 @@ namespace backend.Models
                 .HasIndex(u => u.Username)
                 .IsUnique();
             builder.Entity<Interes>()
-            .HasKey(k => new { k.UsuarioId, k.PublicacionId });
+                .HasKey(k => new { k.UsuarioId, k.PublicacionId });
             builder.Entity<Reserva>()
                 .HasKey(k => new {k.UsuarioId, k.PublicacionId});
             builder.SeedActividades();

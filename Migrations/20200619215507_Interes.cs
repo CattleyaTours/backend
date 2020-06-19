@@ -7,8 +7,6 @@ namespace backend.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            
-
             migrationBuilder.CreateTable(
                 name: "Interes",
                 columns: table => new
@@ -35,7 +33,6 @@ namespace backend.Migrations
                         onDelete: ReferentialAction.NoAction);
                 });
 
-
             migrationBuilder.CreateIndex(
                 name: "IX_Interes_PublicacionId",
                 table: "Interes",
@@ -44,8 +41,6 @@ namespace backend.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            
-
             migrationBuilder.DropTable(
                 name: "Interes");
         }
