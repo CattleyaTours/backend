@@ -15,7 +15,12 @@ public class Reserva
     [Required]
     public int PublicacionId { get; set; }    
     
+    [Required]
+    public int EstadoReservaId { get; set; }
+
     //relaciones
+    public EstadoReserva EstadoReserva { get; set; }
+
     public Usuario Usuario { get; set; }
 
     public Publicacion Publicacion { get; set; }
@@ -30,6 +35,8 @@ public class ReservaDTO
     public DateTime Fecha { get; set; }  
 
     //relaciones
+    public EstadoReserva EstadoReserva { get; set; }
+
     public UsuarioDTO Usuario { get; set; }
 
 }

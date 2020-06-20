@@ -57,6 +57,7 @@ namespace backend.Controllers
         {
             return  await context.Reserva
             .Include(x => x.Usuario)
+            .Include(x => x.EstadoReserva)
             .Where(x => x.Publicacion.Id == id)
             .Select( x => new ReservaDTO(){ 
                 Id = x.Id,
@@ -69,7 +70,8 @@ namespace backend.Controllers
                     Telefono = x.Usuario.Telefono,
                     Nacionalidad = x.Usuario.Nacionalidad,
                     RolId = x.Usuario.RolId
-                }
+                },
+                EstadoReserva = x.EstadoReserva        
             }).ToListAsync();
         }
         

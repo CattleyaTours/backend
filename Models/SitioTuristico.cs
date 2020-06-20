@@ -51,9 +51,6 @@ public class SitioTuristicoDTO
     public string Nombre { get; set; }
 
     [Required]
-    public int Capacidad { get; set; }
-
-    [Required]
     public string Region { get; set; }
 
     [Required]
