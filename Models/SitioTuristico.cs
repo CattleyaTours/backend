@@ -15,9 +15,6 @@ public class SitioTuristico
     public string Nombre { get; set; }
 
     [Required]
-    public int Capacidad { get; set; }
-
-    [Required]
     [Column(TypeName = "varchar(50)")]
     public string Region { get; set; }
 
