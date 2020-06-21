@@ -104,7 +104,7 @@
     <Property Name="sonaranalyzer.security.cs.pluginKey">securitycsharpfrontend</Property>
     <Property Name="sonar.branch.longLivedBranches.regex">(branch|release)-.*</Property>
     <Property Name="sonar.objc.file.suffixes">.m</Property>
-    <Property Name="sonar.autoscan.enabled">true</Property>
+    <Property Name="sonar.autoscan.enabled">false</Property>
     <Property Name="sonar.ruby.coverage.reportPaths">coverage/.resultset.json</Property>
     <Property Name="sonaranalyzer-cs.staticResourceName">SonarAnalyzer-8.8.0.18411.zip</Property>
     <Property Name="sonar.cpd.cobol.ignoreLiteral">true</Property>

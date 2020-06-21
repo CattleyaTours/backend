@@ -27,6 +27,27 @@ namespace backend.Controllers
             return await _context.Actividades.ToListAsync();
         }
 
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Actividad>>> GetActividades()
+        {
+            return await _context.Actividades.ToListAsync();
+        }
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Actividad>>> GetActividades()
+        {
+            return await _context.Actividades.ToListAsync();
+        }
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Actividad>>> GetActividades()
+        {
+            return await _context.Actividades.ToListAsync();
+        }
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Actividad>>> GetActividades()
+        {
+            return await _context.Actividades.ToListAsync();
+        }        
+
         // GET: api/Actividades/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Actividad>> GetActividad(int id)
