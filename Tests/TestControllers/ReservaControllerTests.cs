@@ -1,6 +1,10 @@
 using Xunit;
 using backend.Controllers;
 using System;
+using backend.Models;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace backend.Tests
 {
@@ -14,7 +18,24 @@ namespace backend.Tests
 
             //Then
         }
+
+        
         /*
+        
+        //AAA Principle
+        [Fact]
+        public async Task AssertTypeRetrievedByGetReservas()
+        {
+            //Arrange
+            ReservaController test = new ReservaController();
+            
+            //Act
+            var comp = test.GetReserva();
+
+            //Assert
+            Assert.IsType<NotFoundObjectResult>(comp.Result);
+        }
+
         [Fact]
         public async Task AssertTypeRetrievedByGetReservas()
         {   
