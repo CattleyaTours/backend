@@ -30,12 +30,11 @@ namespace backend.Controllers
             return await context.Comentario.ToListAsync();
         }
 
-        // GET: api/Comentario/publicacion/5/usuario/3
-        [HttpGet("publicacion/{publicacionId}/usuario/{usuarioId}")]
-        public async Task<ActionResult<Comentario>> GetComentario(int usuarioId, int publicacionId)
+        // GET: api/Comentarios/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Comentario>> GetComentario(int id)
         {
-
-            var comentario = await context.Comentario.FindAsync(usuarioId, publicacionId);
+            var comentario = await context.Comentario.FindAsync(id);
 
             if (comentario == null)
             {
@@ -59,6 +58,7 @@ namespace backend.Controllers
             .Where(x => x.Publicacion.Id == id)
             .Select(x => new ComentarioDTO()
             {
+                Id = x.Id,
                 Fecha = x.Fecha,
                 Contenido = x.Contenido,
                 Usuario = new UsuarioDTO()
@@ -78,10 +78,10 @@ namespace backend.Controllers
         // PUT: api/Comentarios/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("publicacion/{publicacionId}/usuario/{usuarioId}")]
-        public async Task<IActionResult> PutComentario(int usuarioId, int publicacionId, Comentario comentario)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutComentario(int id, Comentario comentario)
         {
-            if (usuarioId != comentario.UsuarioId || publicacionId != comentario.PublicacionId)
+            if (id != comentario.Id)
             {
                 return BadRequest();
             }
@@ -94,7 +94,7 @@ namespace backend.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ComentarioExists(usuarioId, publicacionId))
+                if (!ComentarioExists(id))
                 {
                     return NotFound();
                 }
@@ -114,30 +114,16 @@ namespace backend.Controllers
         public async Task<ActionResult<Comentario>> PostComentario(Comentario comentario)
         {
             context.Comentario.Add(comentario);
-            try
-            {
-                await context.SaveChangesAsync();
-            }
-            catch (DbUpdateException)
-            {
-                if (ComentarioExists(comentario.UsuarioId, comentario.PublicacionId))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            await context.SaveChangesAsync();
 
-            return CreatedAtAction("GetComentario", new { usuarioId = comentario.UsuarioId, publicacionId = comentario.PublicacionId }, comentario);
+            return CreatedAtAction("GetComentario", new { id = comentario.Id }, comentario);
         }
 
         // DELETE: api/Comentarios/5
-        [HttpDelete("publicacion/{publicacionId}/usuario/{usuarioId}")]
-        public async Task<ActionResult<Comentario>> DeleteComentario(int usuarioId, int publicacionId)
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Comentario>> DeleteComentario(int id)
         {
-            var comentario = await context.Comentario.FindAsync(usuarioId, publicacionId);
+            var comentario = await context.Comentario.FindAsync(id);
             if (comentario == null)
             {
                 return NotFound();
@@ -149,9 +135,9 @@ namespace backend.Controllers
             return comentario;
         }
 
-        private bool ComentarioExists(int usuarioId, int publicacionId)
+        private bool ComentarioExists(int id)
         {
-            return context.Comentario.Any(e => e.UsuarioId == usuarioId && e.PublicacionId == publicacionId);
+            return context.Comentario.Any(e => e.Id == id);
         }
     }
 }

@@ -24,7 +24,8 @@ namespace backend.Models
             builder.Entity<Reserva>()
                 .HasKey(k => new {k.UsuarioId, k.PublicacionId});
             builder.Entity<Comentario>()
-                .HasKey(k => new {k.UsuarioId, k.PublicacionId});
+                .Property(c => c.Fecha)
+                .HasDefaultValueSql("getdate()");
             builder.SeedActividades();
             builder.SeedRoles();
             builder.SeedEstadosReserva();

@@ -4,6 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 public class Comentario
 {
+    public int Id { get; set; }
+
     [Required]
     public DateTime Fecha { get; set; }
 
@@ -26,6 +28,8 @@ public class Comentario
 [NotMapped]
 public class ComentarioDTO
 {
+    public int Id { get; set; }
+
     [Required]
     public DateTime Fecha { get; set; }  
 

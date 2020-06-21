@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace backend.Migrations
 {
-    public partial class Comentario : Migration
+    public partial class Comentarios : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,14 +11,16 @@ namespace backend.Migrations
                 name: "Comentario",
                 columns: table => new
                 {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Fecha = table.Column<DateTime>(nullable: false, defaultValueSql: "getdate()"),
+                    Contenido = table.Column<string>(type: "varchar(500)", nullable: false),
                     UsuarioId = table.Column<int>(nullable: false),
-                    PublicacionId = table.Column<int>(nullable: false),
-                    Fecha = table.Column<DateTime>(nullable: false),
-                    Contenido = table.Column<string>(type: "varchar(500)", nullable: false)
+                    PublicacionId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Comentario", x => new { x.UsuarioId, x.PublicacionId });
+                    table.PrimaryKey("PK_Comentario", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Comentario_Publicaciones_PublicacionId",
                         column: x => x.PublicacionId,
@@ -37,6 +39,11 @@ namespace backend.Migrations
                 name: "IX_Comentario_PublicacionId",
                 table: "Comentario",
                 column: "PublicacionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Comentario_UsuarioId",
+                table: "Comentario",
+                column: "UsuarioId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

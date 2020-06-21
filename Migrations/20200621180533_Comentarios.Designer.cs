@@ -10,8 +10,8 @@ using backend.Models;
 namespace backend.Migrations
 {
     [DbContext(typeof(CattleyaToursContext))]
-    [Migration("20200621052805_Comentario")]
-    partial class Comentario
+    [Migration("20200621180533_Comentarios")]
+    partial class Comentarios
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -170,22 +170,31 @@ namespace backend.Migrations
 
             modelBuilder.Entity("Comentario", b =>
                 {
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PublicacionId")
-                        .HasColumnType("int");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Contenido")
                         .IsRequired()
                         .HasColumnType("varchar(500)");
 
                     b.Property<DateTime>("Fecha")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("getdate()");
 
-                    b.HasKey("UsuarioId", "PublicacionId");
+                    b.Property<int>("PublicacionId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UsuarioId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("PublicacionId");
+
+                    b.HasIndex("UsuarioId");
 
                     b.ToTable("Comentario");
                 });
@@ -465,7 +474,7 @@ namespace backend.Migrations
                     b.HasOne("Usuario", "Usuario")
                         .WithMany()
                         .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -501,7 +510,7 @@ namespace backend.Migrations
                     b.HasOne("Usuario", "Usuario")
                         .WithMany()
                         .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 

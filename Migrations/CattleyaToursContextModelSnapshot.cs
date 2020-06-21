@@ -168,22 +168,31 @@ namespace backend.Migrations
 
             modelBuilder.Entity("Comentario", b =>
                 {
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PublicacionId")
-                        .HasColumnType("int");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Contenido")
                         .IsRequired()
                         .HasColumnType("varchar(500)");
 
                     b.Property<DateTime>("Fecha")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("getdate()");
 
-                    b.HasKey("UsuarioId", "PublicacionId");
+                    b.Property<int>("PublicacionId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UsuarioId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("PublicacionId");
+
+                    b.HasIndex("UsuarioId");
 
                     b.ToTable("Comentario");
                 });
