@@ -1,13 +1,13 @@
 c
 ZC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Controllers\ActividadesController.csutf-8n
 eC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Controllers\Archivo_SitioTuristicoController.csutf-8k
-bC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Controllers\CategoriasActividadController.csutf-8_
+bC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Controllers\CategoriasActividadController.csutf-8c
+ZC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Controllers\ComentariosController.csutf-8_
 VC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Controllers\InteresController.csutf-8e
 \C:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Controllers\PublicacionesController.csutf-8_
 VC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Controllers\ReservaController.csutf-8]
 TC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Controllers\RolesController.csutf-8h
-_C:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Controllers\SitiosTuristicosController.csutf-8g
-^C:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Controllers\TiposHabitacionController.csutf-8`
+_C:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Controllers\SitiosTuristicosController.csutf-8`
 WC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Controllers\UsuariosController.csutf-8i
 `C:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200406214119_InitialCreate.csutf-8t
 iC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200406214119_InitialCreate.Designer.csutf-8‘
@@ -36,35 +36,40 @@ zC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200504215433
 tC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200516003822_CategoriaActividadHabitacionesRol.csutf-8ˆ
 }C:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200516003822_CategoriaActividadHabitacionesRol.Designer.csutf-8a
 XC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200516233339_Seeds.csutf-8l
-aC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200516233339_Seeds.Designer.csutf-8{
-rC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200517062332_creacion Archivo_SitioTuristico.csutf-8†
-{C:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200517062332_creacion Archivo_SitioTuristico.Designer.csutf-8x
-oC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200518072925_added new file columns try 1.csutf-8ƒ
-xC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200518072925_added new file columns try 1.Designer.csutf-8e
-\C:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200528033452_Actividad.csutf-8p
-eC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200528033452_Actividad.Designer.csutf-8c
-ZC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200612020639_Reserva.csutf-8n
-cC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200612020639_Reserva.Designer.csutf-8c
-ZC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200612204418_Interes.csutf-8n
-cC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200612204418_Interes.Designer.csutf-8y
-pC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200614004931_Correcion final archivo_sitio.csutf-8„
-yC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200614004931_Correcion final archivo_sitio.Designer.csutf-8p
+aC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200516233339_Seeds.Designer.csutf-8q
+hC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200619215153_ArchivoSitioTuristico.csutf-8|
+qC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200619215153_ArchivoSitioTuristico.Designer.csutf-8e
+\C:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200619215329_Actividad.csutf-8p
+eC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200619215329_Actividad.Designer.csutf-8c
+ZC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200619215507_Interes.csutf-8n
+cC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200619215507_Interes.Designer.csutf-8c
+ZC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200619215704_Reserva.csutf-8n
+cC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200619215704_Reserva.Designer.csutf-8i
+`C:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200619224817_EstadoReserva.csutf-8t
+iC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200619224817_EstadoReserva.Designer.csutf-8h
+_C:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200619233816_FinalChanges.csutf-8s
+hC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200619233816_FinalChanges.Designer.csutf-8k
+bC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200620025355_DeleteCapacidad.csutf-8v
+kC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200620025355_DeleteCapacidad.Designer.csutf-8g
+^C:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200621180533_Comentarios.csutf-8r
+gC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\20200621180533_Comentarios.Designer.csutf-8p
 eC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Migrations\CattleyaToursContextModelSnapshot.csutf-8R
 IC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Models\Actividad.csutf-8_
 VC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Models\Archivo_SitioTuristico.csutf-8[
 RC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Models\CategoriaActividad.csutf-8]
-TC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Models\CattleyaToursContext.csutf-8P
+TC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Models\CattleyaToursContext.csutf-8S
+JC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Models\Comentario.csutf-8V
+MC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Models\EstadoReserva.csutf-8P
 GC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Models\Interes.csutf-8T
 KC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Models\JWTSettings.csutf-8T
 KC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Models\Publicacion.csutf-8P
 GC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Models\Reserva.csutf-8L
 CC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Models\Rol.csutf-8W
-NC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Models\SitioTuristico.csutf-8W
-NC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Models\TipoHabitacion.csutf-8P
+NC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Models\SitioTuristico.csutf-8P
 GC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Models\Usuario.csutf-8I
 @C:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Program.csutf-8Y
-PC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Seeders\ActividadSeeder.csutf-8Z
-QC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Seeders\HabitacionSeeder.csutf-8S
+PC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Seeders\ActividadSeeder.csutf-8]
+TC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Seeders\EstadoReservaSeeder.csutf-8S
 JC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Seeders\RolSeeder.csutf-8I
 @C:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Startup.csutf-8]
 TC:\Users\moise\Documents\G\Ingesoft2\cattleya\backend\Tests\UnitTest\GeneralTests.csutf-8a
