@@ -3,31 +3,32 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace backend.Migrations
 {
-    public partial class Reserva : Migration
+    public partial class Comentarios : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-
             migrationBuilder.CreateTable(
-                name: "Reserva",
+                name: "Comentario",
                 columns: table => new
                 {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Fecha = table.Column<DateTime>(nullable: false, defaultValueSql: "getdate()"),
+                    Contenido = table.Column<string>(type: "varchar(500)", nullable: false),
                     UsuarioId = table.Column<int>(nullable: false),
-                    PublicacionId = table.Column<int>(nullable: false),
-                    Id = table.Column<int>(nullable: false),
-                    Fecha = table.Column<DateTime>(nullable: false)
+                    PublicacionId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Reserva", x => new { x.UsuarioId, x.PublicacionId });
+                    table.PrimaryKey("PK_Comentario", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Reserva_Publicaciones_PublicacionId",
+                        name: "FK_Comentario_Publicaciones_PublicacionId",
                         column: x => x.PublicacionId,
                         principalTable: "Publicaciones",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Reserva_Usuarios_UsuarioId",
+                        name: "FK_Comentario_Usuarios_UsuarioId",
                         column: x => x.UsuarioId,
                         principalTable: "Usuarios",
                         principalColumn: "Id",
@@ -35,15 +36,20 @@ namespace backend.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Reserva_PublicacionId",
-                table: "Reserva",
+                name: "IX_Comentario_PublicacionId",
+                table: "Comentario",
                 column: "PublicacionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Comentario_UsuarioId",
+                table: "Comentario",
+                column: "UsuarioId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Reserva");
+                name: "Comentario");
         }
     }
 }

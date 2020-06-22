@@ -20,12 +20,15 @@ namespace backend.Models
                 .HasIndex(u => u.Username)
                 .IsUnique();
             builder.Entity<Interes>()
-            .HasKey(k => new { k.UsuarioId, k.PublicacionId });
+                .HasKey(k => new { k.UsuarioId, k.PublicacionId });
             builder.Entity<Reserva>()
                 .HasKey(k => new {k.UsuarioId, k.PublicacionId});
+            builder.Entity<Comentario>()
+                .Property(c => c.Fecha)
+                .HasDefaultValueSql("getdate()");
             builder.SeedActividades();
-            builder.SeedHabitaciones();
             builder.SeedRoles();
+            builder.SeedEstadosReserva();
         }
 
         public DbSet<Usuario> Usuarios { get; set; }
@@ -34,13 +37,11 @@ namespace backend.Models
         public DbSet<Archivo_SitioTuristico> Archivos_SitioTuristico { get; set; }
         public DbSet<Rol> Roles { get; set; }
         public DbSet<CategoriaActividad> CategoriasActividad { get; set; }
-        public DbSet<TipoHabitacion> TiposHabitacion { get; set; }
-
         public DbSet<Actividad> Actividades { get; set; }
-
         public DbSet<Interes> Interes { get; set; }
-        
         public DbSet<Reserva> Reserva { get; set; }
+        public DbSet<Comentario> Comentario { get; set; }
+        public DbSet<EstadoReserva> EstadosReserva { get; set; }
 
     }
 }

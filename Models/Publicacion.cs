@@ -8,9 +8,6 @@ public class Publicacion
     public int Id { get; set; }
     
     [Required]
-    public DateTime Fecha { get; set; }
-    
-    [Required]
     [Column(TypeName = "varchar(50)")]
     public string Titulo { get; set; }
 

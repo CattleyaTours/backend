@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backend.Models;
 
 namespace backend.Migrations
 {
     [DbContext(typeof(CattleyaToursContext))]
-    partial class CattleyaToursContextModelSnapshot : ModelSnapshot
+    [Migration("20200620025355_DeleteCapacidad")]
+    partial class DeleteCapacidad
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -164,37 +166,6 @@ namespace backend.Migrations
                             Icono = "fas fa-ellipsis-h",
                             Nombre = "Otros"
                         });
-                });
-
-            modelBuilder.Entity("Comentario", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Contenido")
-                        .IsRequired()
-                        .HasColumnType("varchar(500)");
-
-                    b.Property<DateTime>("Fecha")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("getdate()");
-
-                    b.Property<int>("PublicacionId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PublicacionId");
-
-                    b.HasIndex("UsuarioId");
-
-                    b.ToTable("Comentario");
                 });
 
             modelBuilder.Entity("EstadoReserva", b =>
@@ -443,21 +414,6 @@ namespace backend.Migrations
                         .WithMany("Imagenes")
                         .HasForeignKey("SitioId")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Comentario", b =>
-                {
-                    b.HasOne("Publicacion", "Publicacion")
-                        .WithMany()
-                        .HasForeignKey("PublicacionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Usuario", "Usuario")
-                        .WithMany()
-                        .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 

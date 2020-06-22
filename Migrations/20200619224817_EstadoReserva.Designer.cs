@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backend.Models;
 
 namespace backend.Migrations
 {
     [DbContext(typeof(CattleyaToursContext))]
-    partial class CattleyaToursContextModelSnapshot : ModelSnapshot
+    [Migration("20200619224817_EstadoReserva")]
+    partial class EstadoReserva
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -97,104 +99,73 @@ namespace backend.Migrations
                         new
                         {
                             Id = 1,
-                            Descripcion = "Participa en actividades como creación de artesanías, taller de fotografía entre otras.",
+                            Descripcion = "Talleres de todo tipo, fotografia, artesanías típicas etc ...",
                             Icono = "fas fa-pencil-ruler",
                             Nombre = "Talleres"
                         },
                         new
                         {
                             Id = 2,
-                            Descripcion = "Prueba las delicias típicas de nuestra tierra, en sitios únicos y vive una experiencia inolvidable.",
+                            Descripcion = "Prueba las delicias típicas de nuestra tierra, en sitios únicos y vive una experiencia única",
                             Icono = "fas fa-utensils",
-                            Nombre = "Gastronomía"
+                            Nombre = "Gastronomia"
                         },
                         new
                         {
                             Id = 3,
-                            Descripcion = "Recorre los parques y reservas naturales más famosas de nuestro país en compañía de expertos.",
+                            Descripcion = "Visita los parques y reservas naturales mas famosas de nuestro país en compañía de expertos",
                             Icono = "fas fa-map-marked-alt",
                             Nombre = "Visitas guiadas"
                         },
                         new
                         {
                             Id = 4,
-                            Descripcion = "Visita sitios únicos en el mundo como cascadas naturales, volcanes y nevados.",
+                            Descripcion = "Visita sitios únicos en el mundo como cascadas naturales, volcanes, nevados y muchos otros sitios alejados de la ciudad",
                             Icono = "fas fa-hiking",
                             Nombre = "Maravillas naturales"
                         },
                         new
                         {
                             Id = 5,
-                            Descripcion = "Experimenta el vértigo y la adrenalina practicando deportes extremos como rapel, parapente, paracaidismo, canotaje, ciclomontañismo, entre otros.",
+                            Descripcion = "Experimenta el vértigo y la adrenalina practicando deportes extremos como Rapel, Parapente ...",
                             Icono = "fas fa-biking",
-                            Nombre = "Deportes extremos"
+                            Nombre = "Deportes Extremos"
                         },
                         new
                         {
                             Id = 6,
-                            Descripcion = "Disfruta de atracciones mecánicas en los parques de diversiones más famosos del país.",
+                            Descripcion = "Además de la naturaleza disfruta de atracciones mecánicas en los parques de diversiones más famosos del país",
                             Icono = "fas fa-rocket",
                             Nombre = "Atracciones mecánicas"
                         },
                         new
                         {
                             Id = 7,
-                            Descripcion = "Sal de la ciudad y pasa un fin de semana alejado del estrés acampando en sitios extraordinarios disfrutando de la naturaleza en su máximo esplendor.",
+                            Descripcion = "Sal de la ciudad y pasa un fin de semana alejado del estrés acampando en sitios maravillosos en los que podrás disfrutar de la naturaleza en su máximo esplendor.",
                             Icono = "fas fa-campground",
-                            Nombre = "Glamping"
+                            Nombre = "Acampar * Glamping"
                         },
                         new
                         {
                             Id = 8,
-                            Descripcion = "Vive una noche inolvidable junto a tus amigos disfrutando la sorprendente vida nocturna que tenemos para ofrecerte.",
+                            Descripcion = "Sal de la rutina y disfruta de una noche de fiesta ya sea en chivas rumberas, fiestas en la playa u otros sitios.",
                             Icono = "fas fa-glass-cheers",
                             Nombre = "Rumba"
                         },
                         new
                         {
                             Id = 9,
-                            Descripcion = "Disfruta la experiencia de alimentar y convivir con animales de la región, acompañado por los mejores guías.",
+                            Descripcion = "Disfruta la experiencia de alimentar y convivir con caballos, vacas y otros animales",
                             Icono = "fas fa-paw",
                             Nombre = "Experiencias con animales"
                         },
                         new
                         {
                             Id = 10,
-                            Descripcion = "Realiza actividades originales y divertidas únicas de cada sitio.",
+                            Descripcion = "Actividades muy originales y divertidas unicas de cada sitio ...",
                             Icono = "fas fa-ellipsis-h",
                             Nombre = "Otros"
                         });
-                });
-
-            modelBuilder.Entity("Comentario", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Contenido")
-                        .IsRequired()
-                        .HasColumnType("varchar(500)");
-
-                    b.Property<DateTime>("Fecha")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("getdate()");
-
-                    b.Property<int>("PublicacionId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PublicacionId");
-
-                    b.HasIndex("UsuarioId");
-
-                    b.ToTable("Comentario");
                 });
 
             modelBuilder.Entity("EstadoReserva", b =>
@@ -261,6 +232,9 @@ namespace backend.Migrations
                     b.Property<string>("Descripcion")
                         .IsRequired()
                         .HasColumnType("varchar(800)");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("Precio")
                         .HasColumnType("int");
@@ -344,6 +318,9 @@ namespace backend.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Capacidad")
+                        .HasColumnType("int");
 
                     b.Property<string>("Departamento")
                         .IsRequired()
@@ -443,21 +420,6 @@ namespace backend.Migrations
                         .WithMany("Imagenes")
                         .HasForeignKey("SitioId")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Comentario", b =>
-                {
-                    b.HasOne("Publicacion", "Publicacion")
-                        .WithMany()
-                        .HasForeignKey("PublicacionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Usuario", "Usuario")
-                        .WithMany()
-                        .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 

@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-public class TipoHabitacion
+public class EstadoReserva
 {
     public int Id {get; set;}
 
@@ -9,5 +9,4 @@ public class TipoHabitacion
     [Column(TypeName = "varchar(50)")]
     public string Nombre { get; set; }
 
-    public int CapacidadPersonas {get; set;}
 }
