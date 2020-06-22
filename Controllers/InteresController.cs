@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using backend.Models;
 using Microsoft.Extensions.Logging;
-
+using Microsoft.AspNetCore.Authorization;
 
 namespace backend.Controllers
 {
@@ -26,6 +26,7 @@ namespace backend.Controllers
         }
 
         // GET: api/Interes
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Interes>>> GetInteres()
         {
@@ -47,6 +48,7 @@ namespace backend.Controllers
         }
 
         //GET: api/Interes/usuario/3
+        [Authorize]
         [HttpGet("usuario/{id}")]
         public async Task<ActionResult<IEnumerable<Interes>>> GetReservaByUserId(int id)
         {
@@ -77,6 +79,7 @@ namespace backend.Controllers
         // PUT: api/Interes/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutInteres(int id, Interes interes)
         {
@@ -109,6 +112,7 @@ namespace backend.Controllers
         // POST: api/Interes
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<Interes>> PostInteres(Interes interes)
         {
@@ -133,6 +137,7 @@ namespace backend.Controllers
         }
 
         // DELETE: api/Interes/publicacion/5/usuario/3
+        [Authorize]
         [HttpDelete("publicacion/{publicacionId}/usuario/{usuarioId}")]
         public async Task<ActionResult<Interes>> DeleteInteres(int usuarioId, int publicacionId)
         {

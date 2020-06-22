@@ -13,6 +13,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 namespace backend.Controllers
 {
@@ -55,6 +56,7 @@ namespace backend.Controllers
         }
 
         // GET: api/Usuarios
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Usuario>>> GetUsuarios()
         {
@@ -64,6 +66,7 @@ namespace backend.Controllers
         }
 
         // GET: api/Usuarios/5
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult<Usuario>> GetUsuario(int id)
         {
@@ -78,6 +81,7 @@ namespace backend.Controllers
         }
 
         // PUT: api/Usuarios/rol/1
+        [Authorize]
         [HttpPut("rol/{id}")]
         public async Task<IActionResult> PutUsuarioRol(int id, UsuarioDTO usuarioDTO)
         {
@@ -116,6 +120,7 @@ namespace backend.Controllers
         }
 
         // PUT: api/Usuarios/5
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUsuario(int id, Usuario usuario)
         {
@@ -175,6 +180,7 @@ namespace backend.Controllers
         }
 
         // DELETE: api/Usuarios/5
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<ActionResult<Usuario>> DeleteUsuario(int id)
         {

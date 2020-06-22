@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using backend.Models;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 namespace backend.Controllers
 {
@@ -110,6 +111,7 @@ namespace backend.Controllers
         }
 
         //GET: api/Publicaciones/propietario/1
+        [Authorize]
         [HttpGet("propietario/{propietarioId}")]
         public async Task<ActionResult<IEnumerable<Publicacion>>> GetPublicacionByPropietario(int propietarioId)
         {
@@ -131,6 +133,7 @@ namespace backend.Controllers
 
 
         // PUT: api/Publicaciones/5
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPublicacion(int id, Publicacion publicacion)
         {
@@ -161,6 +164,7 @@ namespace backend.Controllers
         }
 
         // POST: api/Publicaciones
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<Publicacion>> PostPublicacion(Publicacion publicacion)
         {
@@ -171,6 +175,7 @@ namespace backend.Controllers
         }
 
         // DELETE: api/Publicaciones/5
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<ActionResult<Publicacion>> DeletePublicacion(int id)
         {
