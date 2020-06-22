@@ -10,8 +10,8 @@ using backend.Models;
 namespace backend.Migrations
 {
     [DbContext(typeof(CattleyaToursContext))]
-    [Migration("20200612020639_Reserva")]
-    partial class Reserva
+    [Migration("20200619215507_Interes")]
+    partial class Interes
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -32,7 +32,7 @@ namespace backend.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(50)");
 
-                    b.Property<int>("SitioTuristicoId")
+                    b.Property<int>("PublicacionId")
                         .HasColumnType("int");
 
                     b.Property<int>("TipoActividadId")
@@ -40,7 +40,7 @@ namespace backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("SitioTuristicoId");
+                    b.HasIndex("PublicacionId");
 
                     b.HasIndex("TipoActividadId");
 
@@ -168,6 +168,27 @@ namespace backend.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Interes", b =>
+                {
+                    b.Property<int>("UsuarioId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PublicacionId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.HasKey("UsuarioId", "PublicacionId");
+
+                    b.HasIndex("PublicacionId");
+
+                    b.ToTable("Interes");
+                });
+
             modelBuilder.Entity("Publicacion", b =>
                 {
                     b.Property<int>("Id")
@@ -202,27 +223,6 @@ namespace backend.Migrations
                     b.HasIndex("SitioId");
 
                     b.ToTable("Publicaciones");
-                });
-
-            modelBuilder.Entity("Reserva", b =>
-                {
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PublicacionId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("Fecha")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
-
-                    b.HasKey("UsuarioId", "PublicacionId");
-
-                    b.HasIndex("PublicacionId");
-
-                    b.ToTable("Reserva");
                 });
 
             modelBuilder.Entity("Rol", b =>
@@ -387,9 +387,9 @@ namespace backend.Migrations
 
             modelBuilder.Entity("Actividad", b =>
                 {
-                    b.HasOne("SitioTuristico", null)
+                    b.HasOne("Publicacion", null)
                         .WithMany("Actividades")
-                        .HasForeignKey("SitioTuristicoId")
+                        .HasForeignKey("PublicacionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -403,9 +403,24 @@ namespace backend.Migrations
             modelBuilder.Entity("Archivo_SitioTuristico", b =>
                 {
                     b.HasOne("SitioTuristico", "Sitio")
-                        .WithMany()
+                        .WithMany("Imagenes")
                         .HasForeignKey("SitioId")
                         .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Interes", b =>
+                {
+                    b.HasOne("Publicacion", "Publicacion")
+                        .WithMany()
+                        .HasForeignKey("PublicacionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -420,21 +435,6 @@ namespace backend.Migrations
                     b.HasOne("SitioTuristico", "Sitio")
                         .WithMany()
                         .HasForeignKey("SitioId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Reserva", b =>
-                {
-                    b.HasOne("Publicacion", "Publicacion")
-                        .WithMany()
-                        .HasForeignKey("PublicacionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Usuario", "Usuario")
-                        .WithMany()
-                        .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

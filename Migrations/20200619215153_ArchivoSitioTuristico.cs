@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace backend.Migrations
 {
-    public partial class creacionArchivo_SitioTuristico : Migration
+    public partial class ArchivoSitioTuristico : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,8 +13,9 @@ namespace backend.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Ruta = table.Column<string>(type: "varchar(400)", nullable: false),
-                    SitioId = table.Column<int>(nullable: true)
+                    info_file = table.Column<byte[]>(nullable: false),
+                    ext = table.Column<string>(nullable: false),
+                    SitioId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -23,7 +25,7 @@ namespace backend.Migrations
                         column: x => x.SitioId,
                         principalTable: "SitiosTuristicos",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

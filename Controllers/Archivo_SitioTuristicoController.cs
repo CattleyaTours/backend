@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 using backend.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace backend.Controllers
 {
@@ -63,7 +64,36 @@ namespace backend.Controllers
             return File(archivo_SitioTuristico.info_file, GetMimeTypes()[archivo_SitioTuristico.ext]); ;
         }
 
+        // GET: api/Archivos_SitioTuristico/sitio/5/random
+        [HttpGet("sitio/{id}/imagenes")]
+        public async Task<ActionResult<int>> GetArchivos_SitioTuristico(int id)
+        {
+            var archivos_SitioTuristico = await _context.Archivos_SitioTuristico.Where(x => x.SitioId == id).ToListAsync();
+            if (archivos_SitioTuristico.Count < 1)
+            {
+                return NotFound();
+            }
+
+            return archivos_SitioTuristico.Count ;
+        }
+
+        // GET: api/Archivos_SitioTuristico/sitio/5/1
+        [HttpGet("sitio/{id}/{num}")]
+        public async Task<ActionResult<Archivo_SitioTuristico>> GetArchivo_SitioTuristicoRandomByNum(int id, int num)
+        {
+            var archivos_SitioTuristico = await _context.Archivos_SitioTuristico.Where(x => x.SitioId == id).ToListAsync();
+            if (archivos_SitioTuristico.Count < 1)
+            {
+                return NotFound();
+            }
+
+            var archivo_SitioTuristico = archivos_SitioTuristico.ElementAt(num);
+
+            return File(archivo_SitioTuristico.info_file, GetMimeTypes()[archivo_SitioTuristico.ext]); ;
+        }
+
         // PUT: api/Archivos_SitioTuristico/1
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutArchivo_SitioTuristico(int id, Archivo_SitioTuristico archivo_SitioTuristico)
         {
@@ -106,6 +136,7 @@ namespace backend.Controllers
         }
 
         // POST: api/Archivo_SitioTuristico
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<Archivo_SitioTuristico>> PostArchivo_SitioTuristico([FromForm] IFormFile file, [FromForm] int sitioID)
         {
@@ -146,6 +177,7 @@ namespace backend.Controllers
 
 
         // DELETE: api/Archivo_SitioTuristico/1
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<ActionResult<Archivo_SitioTuristico>> DeleteArchivo_SitioTuristico(int id)
         {

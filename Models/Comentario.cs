@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-public class Reserva
+public class Comentario
 {
     public int Id { get; set; }
 
@@ -10,33 +10,32 @@ public class Reserva
     public DateTime Fecha { get; set; }
 
     [Required]
+    [Column(TypeName = "varchar(500)")]
+    public string Contenido { get; set; }
+
+    [Required]
     public int UsuarioId { get; set; }    
 
     [Required]
     public int PublicacionId { get; set; }    
-    
-    [Required]
-    public int EstadoReservaId { get; set; }
 
     //relaciones
-    public EstadoReserva EstadoReserva { get; set; }
-
     public Usuario Usuario { get; set; }
 
     public Publicacion Publicacion { get; set; }
 }
 
 [NotMapped]
-public class ReservaDTO
+public class ComentarioDTO
 {
     public int Id { get; set; }
 
     [Required]
     public DateTime Fecha { get; set; }  
 
-    //relaciones
-    public EstadoReserva EstadoReserva { get; set; }
+    [Required]
+    [Column(TypeName = "varchar(500)")]
+    public string Contenido { get; set; }
 
     public UsuarioDTO Usuario { get; set; }
-
 }

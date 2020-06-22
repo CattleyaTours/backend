@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using backend.Models;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 namespace backend.Controllers
 {
@@ -23,6 +24,7 @@ namespace backend.Controllers
         }
 
         // GET: api/SitiosTuristicos
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SitioTuristico>>> GetSitiosTuristicos()
         {
@@ -30,6 +32,7 @@ namespace backend.Controllers
         }
 
         // GET: api/SitiosTuristicos/5
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult<SitioTuristicoDTO>> GetSitioTuristico(int id)
         {
@@ -40,7 +43,6 @@ namespace backend.Controllers
                     Id = x.Id,
                     Descripcion = x.Descripcion,
                     Nombre = x.Nombre,
-                    Capacidad = x.Capacidad,
                     Region = x.Region,
                     Departamento = x.Departamento,
                     Municipio = x.Municipio,
@@ -52,6 +54,7 @@ namespace backend.Controllers
         }
 
         // GET: api/SitiosTuristicos/propietario/5
+        [Authorize]
         [HttpGet("propietario/{propietarioId}")]
         public async Task<ActionResult<IEnumerable<SitioTuristicoDTO>>> GetSitiosByPropietario(int propietarioId)
         {
@@ -62,7 +65,6 @@ namespace backend.Controllers
                     Id = x.Id,
                     Descripcion = x.Descripcion,
                     Nombre = x.Nombre,
-                    Capacidad = x.Capacidad,
                     Region = x.Region,
                     Departamento = x.Departamento,
                     Municipio = x.Municipio,
@@ -72,6 +74,7 @@ namespace backend.Controllers
         }
 
         // PUT: api/SitiosTuristicos/5
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSitioTuristico(int id, SitioTuristico sitioTuristico)
         {
@@ -102,6 +105,7 @@ namespace backend.Controllers
         }
 
         // POST: api/SitiosTuristicos
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<SitioTuristico>> PostSitioTuristico(SitioTuristico sitioTuristico)
         {
@@ -113,6 +117,7 @@ namespace backend.Controllers
         }
 
         // DELETE: api/SitiosTuristicos/5
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<ActionResult<SitioTuristico>> DeleteSitioTuristico(int id)
         {
