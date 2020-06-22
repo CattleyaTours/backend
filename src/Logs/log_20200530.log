@@ -1,0 +1,756 @@
+[14:21:28 INF] Iniciando aplicación ... 
+{"MachineName":"DESKTOP-UEI8527","ProcessId":5300,"ThreadId":1}
+[14:45:48 INF] HTTP GET / responded 404 in 4918.4733 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04Q84UPKEO:00000001","SpanId":"|3ebe01b6-4a77babc46e1b812.","TraceId":"3ebe01b6-4a77babc46e1b812","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5300,"ThreadId":23}
+[14:47:20 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 8708.9617 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04Q84UPKF6:00000001","SpanId":"|3ebe01b7-4a77babc46e1b812.","TraceId":"3ebe01b7-4a77babc46e1b812","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5300,"ThreadId":22}
+[14:47:29 INF] HTTP OPTIONS /api/SitiosTuristicos responded 204 in 3.9998 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04Q84UPKF8:00000001","SpanId":"|3ebe01b8-4a77babc46e1b812.","TraceId":"3ebe01b8-4a77babc46e1b812","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5300,"ThreadId":15}
+[14:47:29 INF] HTTP POST /api/SitiosTuristicos responded 201 in 607.8686 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04Q84UPKF8:00000003","SpanId":"|3ebe01b9-4a77babc46e1b812.","TraceId":"3ebe01b9-4a77babc46e1b812","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5300,"ThreadId":20}
+[14:47:29 INF] HTTP OPTIONS /api/Usuarios/rol/1011 responded 204 in 0.4897 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04Q84UPKF8:00000005","SpanId":"|3ebe01ba-4a77babc46e1b812.","TraceId":"3ebe01ba-4a77babc46e1b812","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5300,"ThreadId":20}
+[14:47:30 INF] HTTP PUT /api/Usuarios/rol/1011 responded 204 in 343.8558 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04Q84UPKF8:00000007","SpanId":"|3ebe01bb-4a77babc46e1b812.","TraceId":"3ebe01bb-4a77babc46e1b812","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5300,"ThreadId":20}
+[14:47:34 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 21.649 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04Q84UPKF8:00000009","SpanId":"|3ebe01bc-4a77babc46e1b812.","TraceId":"3ebe01bc-4a77babc46e1b812","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5300,"ThreadId":17}
+[14:47:42 INF] HTTP OPTIONS /api/Publicaciones responded 204 in 0.4111 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04Q84UPKFA:00000001","SpanId":"|3ebe01bd-4a77babc46e1b812.","TraceId":"3ebe01bd-4a77babc46e1b812","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5300,"ThreadId":27}
+[14:47:42 INF] HTTP POST /api/Publicaciones responded 201 in 127.7931 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04Q84UPKFA:00000003","SpanId":"|3ebe01be-4a77babc46e1b812.","TraceId":"3ebe01be-4a77babc46e1b812","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5300,"ThreadId":27}
+[14:47:51 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 49.27 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04Q84UPKFC:00000001","SpanId":"|3ebe01bf-4a77babc46e1b812.","TraceId":"3ebe01bf-4a77babc46e1b812","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5300,"ThreadId":23}
+[14:47:58 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 18.3286 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04Q84UPKFE:00000001","SpanId":"|3ebe01c0-4a77babc46e1b812.","TraceId":"3ebe01c0-4a77babc46e1b812","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5300,"ThreadId":24}
+[14:49:16 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 14.3677 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04Q84UPKFG:00000001","SpanId":"|3ebe01c1-4a77babc46e1b812.","TraceId":"3ebe01c1-4a77babc46e1b812","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5300,"ThreadId":29}
+[14:49:18 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 18.4166 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04Q84UPKFG:00000003","SpanId":"|3ebe01c2-4a77babc46e1b812.","TraceId":"3ebe01c2-4a77babc46e1b812","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5300,"ThreadId":10}
+[15:23:39 INF] Iniciando aplicación ... 
+{"MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":1}
+[15:25:55 INF] HTTP GET / responded 404 in 6260.5635 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCGS:00000001","SpanId":"|6a36e86c-4f5f64de5b4d7b4d.","TraceId":"6a36e86c-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":12}
+[15:27:06 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 4017.3019 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCH7:00000001","SpanId":"|6a36e86d-4f5f64de5b4d7b4d.","TraceId":"6a36e86d-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":26}
+[15:27:06 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 59.3799 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCH7:00000003","SpanId":"|6a36e86e-4f5f64de5b4d7b4d.","TraceId":"6a36e86e-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":22}
+[15:27:06 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 18.3976 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCH7:00000005","SpanId":"|6a36e86f-4f5f64de5b4d7b4d.","TraceId":"6a36e86f-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":26}
+[15:27:07 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 17.3085 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCH7:00000007","SpanId":"|6a36e870-4f5f64de5b4d7b4d.","TraceId":"6a36e870-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":30}
+[15:27:09 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 16.0589 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCH7:00000009","SpanId":"|6a36e871-4f5f64de5b4d7b4d.","TraceId":"6a36e871-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":30}
+[15:27:09 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 19.2942 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCH7:0000000B","SpanId":"|6a36e872-4f5f64de5b4d7b4d.","TraceId":"6a36e872-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":23}
+[15:27:09 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 2.2618 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCH7:0000000D","SpanId":"|6a36e873-4f5f64de5b4d7b4d.","TraceId":"6a36e873-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":30}
+[15:27:10 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 6.3263 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCH7:0000000F","SpanId":"|6a36e874-4f5f64de5b4d7b4d.","TraceId":"6a36e874-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":30}
+[15:27:10 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 8.9456 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCH7:00000011","SpanId":"|6a36e875-4f5f64de5b4d7b4d.","TraceId":"6a36e875-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":28}
+[15:27:10 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 9.068 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCH7:00000013","SpanId":"|6a36e876-4f5f64de5b4d7b4d.","TraceId":"6a36e876-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":23}
+[15:27:10 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 29.4672 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCH7:00000015","SpanId":"|6a36e877-4f5f64de5b4d7b4d.","TraceId":"6a36e877-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":26}
+[15:27:10 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 9.3035 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCH7:00000017","SpanId":"|6a36e878-4f5f64de5b4d7b4d.","TraceId":"6a36e878-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":26}
+[15:27:10 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 11.8578 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCH7:00000019","SpanId":"|6a36e879-4f5f64de5b4d7b4d.","TraceId":"6a36e879-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":30}
+[15:27:11 INF] HTTP OPTIONS /api/Publicaciones responded 204 in 1.0921 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCH7:0000001B","SpanId":"|6a36e87a-4f5f64de5b4d7b4d.","TraceId":"6a36e87a-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":22}
+[15:27:11 INF] HTTP POST /api/Publicaciones responded 201 in 494.5798 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCH7:0000001D","SpanId":"|6a36e87b-4f5f64de5b4d7b4d.","TraceId":"6a36e87b-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":23}
+[15:27:16 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 13.6141 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCH9:00000001","SpanId":"|6a36e87c-4f5f64de5b4d7b4d.","TraceId":"6a36e87c-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":27}
+[15:27:18 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 9.8477 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHB:00000001","SpanId":"|6a36e87d-4f5f64de5b4d7b4d.","TraceId":"6a36e87d-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":27}
+[15:27:19 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 11.9145 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHB:00000003","SpanId":"|6a36e87e-4f5f64de5b4d7b4d.","TraceId":"6a36e87e-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":27}
+[15:27:19 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 8.2872 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHB:00000005","SpanId":"|6a36e87f-4f5f64de5b4d7b4d.","TraceId":"6a36e87f-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":25}
+[15:27:19 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 10.9121 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHB:00000007","SpanId":"|6a36e880-4f5f64de5b4d7b4d.","TraceId":"6a36e880-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":27}
+[15:27:20 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 14.4123 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHB:00000009","SpanId":"|6a36e881-4f5f64de5b4d7b4d.","TraceId":"6a36e881-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":24}
+[15:27:20 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 10.6708 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHB:0000000B","SpanId":"|6a36e882-4f5f64de5b4d7b4d.","TraceId":"6a36e882-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":24}
+[15:27:20 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 5.8516 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHB:0000000D","SpanId":"|6a36e883-4f5f64de5b4d7b4d.","TraceId":"6a36e883-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":29}
+[15:27:20 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.8832 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHB:0000000F","SpanId":"|6a36e884-4f5f64de5b4d7b4d.","TraceId":"6a36e884-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":29}
+[15:27:20 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 7.3792 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHB:00000011","SpanId":"|6a36e885-4f5f64de5b4d7b4d.","TraceId":"6a36e885-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":25}
+[15:27:20 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 8.0657 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHB:00000013","SpanId":"|6a36e886-4f5f64de5b4d7b4d.","TraceId":"6a36e886-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":25}
+[15:27:21 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 5.8611 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHB:00000015","SpanId":"|6a36e887-4f5f64de5b4d7b4d.","TraceId":"6a36e887-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":23}
+[15:27:21 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 4.7946 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHB:00000017","SpanId":"|6a36e888-4f5f64de5b4d7b4d.","TraceId":"6a36e888-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":25}
+[15:27:22 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 5.7992 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHB:00000019","SpanId":"|6a36e889-4f5f64de5b4d7b4d.","TraceId":"6a36e889-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":23}
+[15:27:22 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 9.8349 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHB:0000001B","SpanId":"|6a36e88a-4f5f64de5b4d7b4d.","TraceId":"6a36e88a-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":26}
+[15:27:22 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 5.9558 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHB:0000001D","SpanId":"|6a36e88b-4f5f64de5b4d7b4d.","TraceId":"6a36e88b-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":26}
+[15:27:22 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.288 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHB:0000001F","SpanId":"|6a36e88c-4f5f64de5b4d7b4d.","TraceId":"6a36e88c-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":26}
+[15:27:22 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 4.7959 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHB:00000021","SpanId":"|6a36e88d-4f5f64de5b4d7b4d.","TraceId":"6a36e88d-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":23}
+[15:27:22 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 22.1498 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHB:00000023","SpanId":"|6a36e88e-4f5f64de5b4d7b4d.","TraceId":"6a36e88e-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":28}
+[15:27:23 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 5.6433 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHB:00000025","SpanId":"|6a36e88f-4f5f64de5b4d7b4d.","TraceId":"6a36e88f-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":28}
+[15:27:23 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 6.8143 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHB:00000027","SpanId":"|6a36e890-4f5f64de5b4d7b4d.","TraceId":"6a36e890-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":28}
+[15:27:23 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.8823 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:00000001","SpanId":"|6a36e891-4f5f64de5b4d7b4d.","TraceId":"6a36e891-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":29}
+[15:27:23 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 5.3244 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:00000003","SpanId":"|6a36e892-4f5f64de5b4d7b4d.","TraceId":"6a36e892-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":29}
+[15:27:24 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 5.8252 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:00000005","SpanId":"|6a36e893-4f5f64de5b4d7b4d.","TraceId":"6a36e893-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":27}
+[15:27:24 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 12.8731 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:00000007","SpanId":"|6a36e894-4f5f64de5b4d7b4d.","TraceId":"6a36e894-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":27}
+[15:27:27 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 5.3689 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:00000009","SpanId":"|6a36e895-4f5f64de5b4d7b4d.","TraceId":"6a36e895-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":25}
+[15:27:28 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 11.2298 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:0000000B","SpanId":"|6a36e896-4f5f64de5b4d7b4d.","TraceId":"6a36e896-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":28}
+[15:27:29 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 5.3848 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:0000000D","SpanId":"|6a36e897-4f5f64de5b4d7b4d.","TraceId":"6a36e897-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":24}
+[15:27:31 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 10.6033 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:0000000F","SpanId":"|6a36e898-4f5f64de5b4d7b4d.","TraceId":"6a36e898-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":28}
+[15:27:33 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 6.5145 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:00000011","SpanId":"|6a36e899-4f5f64de5b4d7b4d.","TraceId":"6a36e899-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":25}
+[15:27:33 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.9912 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:00000013","SpanId":"|6a36e89a-4f5f64de5b4d7b4d.","TraceId":"6a36e89a-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":25}
+[15:27:33 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 7.7084 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:00000015","SpanId":"|6a36e89b-4f5f64de5b4d7b4d.","TraceId":"6a36e89b-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":25}
+[15:27:33 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 4.027 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:00000017","SpanId":"|6a36e89c-4f5f64de5b4d7b4d.","TraceId":"6a36e89c-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":23}
+[15:27:33 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.3082 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:00000019","SpanId":"|6a36e89d-4f5f64de5b4d7b4d.","TraceId":"6a36e89d-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":28}
+[15:27:33 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.646 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:0000001B","SpanId":"|6a36e89e-4f5f64de5b4d7b4d.","TraceId":"6a36e89e-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":25}
+[15:27:33 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 7.1229 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:0000001D","SpanId":"|6a36e89f-4f5f64de5b4d7b4d.","TraceId":"6a36e89f-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":29}
+[15:27:33 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 2.1544 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:0000001F","SpanId":"|6a36e8a0-4f5f64de5b4d7b4d.","TraceId":"6a36e8a0-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":25}
+[15:27:33 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.2152 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:00000021","SpanId":"|6a36e8a1-4f5f64de5b4d7b4d.","TraceId":"6a36e8a1-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":29}
+[15:27:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.3608 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:00000023","SpanId":"|6a36e8a2-4f5f64de5b4d7b4d.","TraceId":"6a36e8a2-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":28}
+[15:27:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 1.6286 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:00000025","SpanId":"|6a36e8a3-4f5f64de5b4d7b4d.","TraceId":"6a36e8a3-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":23}
+[15:27:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 1.7811 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:00000027","SpanId":"|6a36e8a4-4f5f64de5b4d7b4d.","TraceId":"6a36e8a4-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":23}
+[15:27:36 INF] HTTP OPTIONS /api/Publicaciones responded 204 in 0.1424 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:00000029","SpanId":"|6a36e8a5-4f5f64de5b4d7b4d.","TraceId":"6a36e8a5-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":25}
+[15:27:36 INF] HTTP POST /api/Publicaciones responded 201 in 37.1119 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHD:0000002B","SpanId":"|6a36e8a6-4f5f64de5b4d7b4d.","TraceId":"6a36e8a6-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":28}
+[15:27:40 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 115.0349 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHF:00000001","SpanId":"|6a36e8a7-4f5f64de5b4d7b4d.","TraceId":"6a36e8a7-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":24}
+[15:27:56 INF] HTTP OPTIONS /api/Publicaciones/1081 responded 204 in 1.736 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHH:00000001","SpanId":"|6a36e8a8-4f5f64de5b4d7b4d.","TraceId":"6a36e8a8-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":27}
+[15:27:57 INF] HTTP DELETE /api/Publicaciones/1081 responded 200 in 161.7729 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHH:00000003","SpanId":"|6a36e8a9-4f5f64de5b4d7b4d.","TraceId":"6a36e8a9-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":27}
+[15:28:00 INF] HTTP OPTIONS /api/Publicaciones/1082 responded 204 in 0.0995 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHJ:00000001","SpanId":"|6a36e8aa-4f5f64de5b4d7b4d.","TraceId":"6a36e8aa-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":27}
+[15:28:00 INF] HTTP DELETE /api/Publicaciones/1082 responded 200 in 7.3262 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHJ:00000003","SpanId":"|6a36e8ab-4f5f64de5b4d7b4d.","TraceId":"6a36e8ab-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":28}
+[15:28:11 INF] HTTP OPTIONS /api/Publicaciones/1091 responded 204 in 0.0732 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHL:00000001","SpanId":"|6a36e8ac-4f5f64de5b4d7b4d.","TraceId":"6a36e8ac-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":27}
+[15:28:11 INF] HTTP DELETE /api/Publicaciones/1091 responded 200 in 30.2777 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHL:00000003","SpanId":"|6a36e8ad-4f5f64de5b4d7b4d.","TraceId":"6a36e8ad-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":25}
+[15:28:16 INF] HTTP OPTIONS /api/Publicaciones/1087 responded 204 in 0.1029 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHN:00000001","SpanId":"|6a36e8ae-4f5f64de5b4d7b4d.","TraceId":"6a36e8ae-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":27}
+[15:28:16 INF] HTTP DELETE /api/Publicaciones/1087 responded 200 in 19.804 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHN:00000003","SpanId":"|6a36e8af-4f5f64de5b4d7b4d.","TraceId":"6a36e8af-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":24}
+[15:28:29 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 6.6056 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHP:00000001","SpanId":"|6a36e8b0-4f5f64de5b4d7b4d.","TraceId":"6a36e8b0-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":18}
+[15:28:32 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 4.2777 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHP:00000003","SpanId":"|6a36e8b1-4f5f64de5b4d7b4d.","TraceId":"6a36e8b1-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":18}
+[15:29:21 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 3.6109 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHR:00000001","SpanId":"|6a36e8b2-4f5f64de5b4d7b4d.","TraceId":"6a36e8b2-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":17}
+[15:31:00 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 119.9715 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHT:00000001","SpanId":"|6a36e8b3-4f5f64de5b4d7b4d.","TraceId":"6a36e8b3-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":12}
+[15:31:08 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 5.7332 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHT:00000003","SpanId":"|6a36e8b4-4f5f64de5b4d7b4d.","TraceId":"6a36e8b4-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":6}
+[15:31:09 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 4.7644 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCHV:00000001","SpanId":"|6a36e8b5-4f5f64de5b4d7b4d.","TraceId":"6a36e8b5-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":10}
+[15:31:58 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 17.9032 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCI1:00000001","SpanId":"|6a36e8b6-4f5f64de5b4d7b4d.","TraceId":"6a36e8b6-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":9}
+[15:32:43 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 21.2718 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCI3:00000001","SpanId":"|6a36e8b7-4f5f64de5b4d7b4d.","TraceId":"6a36e8b7-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":36}
+[15:32:58 INF] HTTP OPTIONS /api/Publicaciones/1085 responded 204 in 0.0844 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCI5:00000001","SpanId":"|6a36e8b8-4f5f64de5b4d7b4d.","TraceId":"6a36e8b8-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":31}
+[15:32:58 INF] HTTP DELETE /api/Publicaciones/1085 responded 200 in 25.4645 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCI5:00000003","SpanId":"|6a36e8b9-4f5f64de5b4d7b4d.","TraceId":"6a36e8b9-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":37}
+[15:37:31 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 31.2334 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCI7:00000001","SpanId":"|6a36e8ba-4f5f64de5b4d7b4d.","TraceId":"6a36e8ba-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":38}
+[15:38:21 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 13.223 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCI9:00000001","SpanId":"|6a36e8bb-4f5f64de5b4d7b4d.","TraceId":"6a36e8bb-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":42}
+[15:40:59 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 11.3991 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCIB:00000001","SpanId":"|6a36e8bc-4f5f64de5b4d7b4d.","TraceId":"6a36e8bc-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":38}
+[15:41:06 INF] HTTP OPTIONS /api/Publicaciones/1080 responded 204 in 0.0711 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCID:00000001","SpanId":"|6a36e8bd-4f5f64de5b4d7b4d.","TraceId":"6a36e8bd-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":39}
+[15:41:06 INF] HTTP DELETE /api/Publicaciones/1080 responded 200 in 7.5686 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCID:00000003","SpanId":"|6a36e8be-4f5f64de5b4d7b4d.","TraceId":"6a36e8be-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":39}
+[15:41:15 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 8.6391 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCIF:00000001","SpanId":"|6a36e8bf-4f5f64de5b4d7b4d.","TraceId":"6a36e8bf-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":38}
+[15:41:19 INF] HTTP OPTIONS /api/Publicaciones/1083 responded 204 in 0.1262 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCIH:00000001","SpanId":"|6a36e8c0-4f5f64de5b4d7b4d.","TraceId":"6a36e8c0-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":41}
+[15:41:19 INF] HTTP DELETE /api/Publicaciones/1083 responded 200 in 10.8797 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04QUI0VCIH:00000003","SpanId":"|6a36e8c1-4f5f64de5b4d7b4d.","TraceId":"6a36e8c1-4f5f64de5b4d7b4d","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":13536,"ThreadId":41}
+[17:03:55 INF] Iniciando aplicación ... 
+{"MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":1}
+[17:06:20 INF] HTTP GET / responded 404 in 2439.5799 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCD:00000001","SpanId":"|76b235ce-4e0a598511d6ed9c.","TraceId":"76b235ce-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":12}
+[17:06:35 INF] HTTP GET / responded 404 in 1.5384 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCN:00000001","SpanId":"|76b235d0-4e0a598511d6ed9c.","TraceId":"76b235d0-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":16}
+[17:07:53 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 6159.3331 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCP:00000001","SpanId":"|76b235d1-4e0a598511d6ed9c.","TraceId":"76b235d1-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":8}
+[17:07:54 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 2074.1769 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCP:00000003","SpanId":"|76b235d2-4e0a598511d6ed9c.","TraceId":"76b235d2-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":19}
+[17:07:56 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 48.6181 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCR:00000001","SpanId":"|76b235d3-4e0a598511d6ed9c.","TraceId":"76b235d3-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":17}
+[17:08:03 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 97.0107 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCR:00000003","SpanId":"|76b235d4-4e0a598511d6ed9c.","TraceId":"76b235d4-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":14}
+[17:08:03 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 49.7186 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCR:00000005","SpanId":"|76b235d5-4e0a598511d6ed9c.","TraceId":"76b235d5-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":9}
+[17:08:12 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 16.5974 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCT:00000001","SpanId":"|76b235d6-4e0a598511d6ed9c.","TraceId":"76b235d6-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":19}
+[17:08:14 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 48.7722 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:00000001","SpanId":"|76b235d7-4e0a598511d6ed9c.","TraceId":"76b235d7-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":17}
+[17:08:14 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 68.6399 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:00000003","SpanId":"|76b235d8-4e0a598511d6ed9c.","TraceId":"76b235d8-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":19}
+[17:08:17 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 26.3797 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:00000005","SpanId":"|76b235d9-4e0a598511d6ed9c.","TraceId":"76b235d9-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":19}
+[17:08:17 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 75.6555 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:00000007","SpanId":"|76b235da-4e0a598511d6ed9c.","TraceId":"76b235da-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":18}
+[17:08:17 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 7.6253 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:00000009","SpanId":"|76b235db-4e0a598511d6ed9c.","TraceId":"76b235db-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":17}
+[17:08:17 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 20.3302 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:0000000B","SpanId":"|76b235dc-4e0a598511d6ed9c.","TraceId":"76b235dc-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":9}
+[17:08:17 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 2.4401 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:0000000D","SpanId":"|76b235dd-4e0a598511d6ed9c.","TraceId":"76b235dd-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":14}
+[17:08:17 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.9076 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:0000000F","SpanId":"|76b235de-4e0a598511d6ed9c.","TraceId":"76b235de-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":12}
+[17:08:17 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 17.0057 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:00000011","SpanId":"|76b235df-4e0a598511d6ed9c.","TraceId":"76b235df-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":17}
+[17:08:17 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 9.4529 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:00000013","SpanId":"|76b235e0-4e0a598511d6ed9c.","TraceId":"76b235e0-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":18}
+[17:08:17 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 10.9415 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:00000015","SpanId":"|76b235e1-4e0a598511d6ed9c.","TraceId":"76b235e1-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":19}
+[17:08:17 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 12.2261 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:00000017","SpanId":"|76b235e2-4e0a598511d6ed9c.","TraceId":"76b235e2-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":25}
+[17:08:17 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 38.8671 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:00000019","SpanId":"|76b235e3-4e0a598511d6ed9c.","TraceId":"76b235e3-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":13}
+[17:08:17 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 22.2645 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:0000001B","SpanId":"|76b235e4-4e0a598511d6ed9c.","TraceId":"76b235e4-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":8}
+[17:08:17 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 7.4967 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:0000001D","SpanId":"|76b235e5-4e0a598511d6ed9c.","TraceId":"76b235e5-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":9}
+[17:08:17 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 9.1668 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:0000001F","SpanId":"|76b235e6-4e0a598511d6ed9c.","TraceId":"76b235e6-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":14}
+[17:08:18 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 312.9061 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:00000021","SpanId":"|76b235e7-4e0a598511d6ed9c.","TraceId":"76b235e7-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":13}
+[17:08:18 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 27.6623 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:00000023","SpanId":"|76b235e8-4e0a598511d6ed9c.","TraceId":"76b235e8-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":8}
+[17:08:18 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 34.6714 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:00000025","SpanId":"|76b235e9-4e0a598511d6ed9c.","TraceId":"76b235e9-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":9}
+[17:08:18 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.7052 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:00000027","SpanId":"|76b235ea-4e0a598511d6ed9c.","TraceId":"76b235ea-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":14}
+[17:08:18 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 15.6503 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:00000029","SpanId":"|76b235eb-4e0a598511d6ed9c.","TraceId":"76b235eb-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":13}
+[17:08:18 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 6.9752 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:0000002B","SpanId":"|76b235ec-4e0a598511d6ed9c.","TraceId":"76b235ec-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":8}
+[17:08:18 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.1232 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:0000002D","SpanId":"|76b235ed-4e0a598511d6ed9c.","TraceId":"76b235ed-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":25}
+[17:08:18 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 21.4172 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:0000002F","SpanId":"|76b235ee-4e0a598511d6ed9c.","TraceId":"76b235ee-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":18}
+[17:08:18 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 1.9431 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:00000031","SpanId":"|76b235ef-4e0a598511d6ed9c.","TraceId":"76b235ef-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":12}
+[17:08:18 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 22.8867 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:00000033","SpanId":"|76b235f0-4e0a598511d6ed9c.","TraceId":"76b235f0-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":17}
+[17:08:18 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 11.9621 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:00000035","SpanId":"|76b235f1-4e0a598511d6ed9c.","TraceId":"76b235f1-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":9}
+[17:08:18 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 5.3517 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:00000037","SpanId":"|76b235f2-4e0a598511d6ed9c.","TraceId":"76b235f2-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":19}
+[17:08:19 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 37.159 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:00000039","SpanId":"|76b235f3-4e0a598511d6ed9c.","TraceId":"76b235f3-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":17}
+[17:08:22 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 18.7759 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:0000003B","SpanId":"|76b235f4-4e0a598511d6ed9c.","TraceId":"76b235f4-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":9}
+[17:08:23 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 12.8464 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:0000003D","SpanId":"|76b235f5-4e0a598511d6ed9c.","TraceId":"76b235f5-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":13}
+[17:08:23 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 13.8766 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:0000003F","SpanId":"|76b235f6-4e0a598511d6ed9c.","TraceId":"76b235f6-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":14}
+[17:08:24 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 22.9237 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BCV:00000041","SpanId":"|76b235f7-4e0a598511d6ed9c.","TraceId":"76b235f7-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":13}
+[17:08:27 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 6.578 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BD1:00000001","SpanId":"|76b235f8-4e0a598511d6ed9c.","TraceId":"76b235f8-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":13}
+[17:08:27 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 8.8946 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BD1:00000003","SpanId":"|76b235f9-4e0a598511d6ed9c.","TraceId":"76b235f9-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":18}
+[17:08:27 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 7.4649 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BD1:00000005","SpanId":"|76b235fa-4e0a598511d6ed9c.","TraceId":"76b235fa-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":8}
+[17:08:27 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 12.0811 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BD1:00000007","SpanId":"|76b235fb-4e0a598511d6ed9c.","TraceId":"76b235fb-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":8}
+[17:08:27 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 8.7003 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BD1:00000009","SpanId":"|76b235fc-4e0a598511d6ed9c.","TraceId":"76b235fc-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":12}
+[17:08:27 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 19.9021 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BD1:0000000B","SpanId":"|76b235fd-4e0a598511d6ed9c.","TraceId":"76b235fd-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":12}
+[17:08:29 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 15.0818 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BD1:0000000D","SpanId":"|76b235fe-4e0a598511d6ed9c.","TraceId":"76b235fe-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":14}
+[17:08:29 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 29.8516 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BD1:0000000F","SpanId":"|76b235ff-4e0a598511d6ed9c.","TraceId":"76b235ff-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":13}
+[17:08:29 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 16.1904 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BD1:00000011","SpanId":"|76b23600-4e0a598511d6ed9c.","TraceId":"76b23600-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":25}
+[17:08:29 INF] HTTP OPTIONS /api/Publicaciones1084 responded 204 in 0.8369 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BD1:00000013","SpanId":"|76b23601-4e0a598511d6ed9c.","TraceId":"76b23601-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":19}
+[17:08:29 INF] HTTP PUT /api/Publicaciones1084 responded 404 in 0.6197 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BD1:00000015","SpanId":"|76b23602-4e0a598511d6ed9c.","TraceId":"76b23602-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":18}
+[17:10:21 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 165.7972 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04SMLI8BD3:00000001","SpanId":"|76b23603-4e0a598511d6ed9c.","TraceId":"76b23603-4e0a598511d6ed9c","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":7444,"ThreadId":18}
+[17:15:52 INF] Iniciando aplicación ... 
+{"MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":1}
+[17:17:46 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 3607.5043 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000001","SpanId":"|d6427d29-4cb0e196425e31ed.","TraceId":"d6427d29-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":14}
+[17:18:02 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 202.2608 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000003","SpanId":"|d6427d2a-4cb0e196425e31ed.","TraceId":"d6427d2a-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":17}
+[17:18:06 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 55.5474 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000005","SpanId":"|d6427d2b-4cb0e196425e31ed.","TraceId":"d6427d2b-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":14}
+[17:18:06 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 13.8873 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000007","SpanId":"|d6427d2c-4cb0e196425e31ed.","TraceId":"d6427d2c-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":14}
+[17:18:07 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 49.0057 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000009","SpanId":"|d6427d2d-4cb0e196425e31ed.","TraceId":"d6427d2d-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":14}
+[17:18:07 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 19.1987 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000000B","SpanId":"|d6427d2e-4cb0e196425e31ed.","TraceId":"d6427d2e-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":8}
+[17:18:08 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 16.5315 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000000D","SpanId":"|d6427d2f-4cb0e196425e31ed.","TraceId":"d6427d2f-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":9}
+[17:18:08 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 6.6679 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000000F","SpanId":"|d6427d30-4cb0e196425e31ed.","TraceId":"d6427d30-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":8}
+[17:18:08 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 4.9808 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000011","SpanId":"|d6427d31-4cb0e196425e31ed.","TraceId":"d6427d31-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":9}
+[17:18:08 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 12.9624 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000013","SpanId":"|d6427d32-4cb0e196425e31ed.","TraceId":"d6427d32-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":11}
+[17:18:09 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 13.1216 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000015","SpanId":"|d6427d33-4cb0e196425e31ed.","TraceId":"d6427d33-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":8}
+[17:18:09 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.6986 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000017","SpanId":"|d6427d34-4cb0e196425e31ed.","TraceId":"d6427d34-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":9}
+[17:18:09 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 2.22 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000019","SpanId":"|d6427d35-4cb0e196425e31ed.","TraceId":"d6427d35-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":17}
+[17:18:09 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 6.8419 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000001B","SpanId":"|d6427d36-4cb0e196425e31ed.","TraceId":"d6427d36-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":11}
+[17:18:09 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 13.4067 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000001D","SpanId":"|d6427d37-4cb0e196425e31ed.","TraceId":"d6427d37-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":16}
+[17:18:11 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 9.5334 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000001F","SpanId":"|d6427d38-4cb0e196425e31ed.","TraceId":"d6427d38-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":13}
+[17:18:12 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.9177 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000021","SpanId":"|d6427d39-4cb0e196425e31ed.","TraceId":"d6427d39-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":13}
+[17:18:12 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 9.138 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000023","SpanId":"|d6427d3a-4cb0e196425e31ed.","TraceId":"d6427d3a-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":11}
+[17:18:12 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 12.0713 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000025","SpanId":"|d6427d3b-4cb0e196425e31ed.","TraceId":"d6427d3b-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":11}
+[17:18:12 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 15.8533 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000027","SpanId":"|d6427d3c-4cb0e196425e31ed.","TraceId":"d6427d3c-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":17}
+[17:18:12 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 33.1675 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000029","SpanId":"|d6427d3d-4cb0e196425e31ed.","TraceId":"d6427d3d-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":11}
+[17:18:12 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 2.9957 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000002B","SpanId":"|d6427d3e-4cb0e196425e31ed.","TraceId":"d6427d3e-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":11}
+[17:18:12 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 11.0284 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000002D","SpanId":"|d6427d3f-4cb0e196425e31ed.","TraceId":"d6427d3f-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":16}
+[17:18:13 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 11.7216 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000002F","SpanId":"|d6427d40-4cb0e196425e31ed.","TraceId":"d6427d40-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":11}
+[17:18:13 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 8.2726 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000031","SpanId":"|d6427d41-4cb0e196425e31ed.","TraceId":"d6427d41-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":17}
+[17:18:13 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 10.5654 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000033","SpanId":"|d6427d42-4cb0e196425e31ed.","TraceId":"d6427d42-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":17}
+[17:18:14 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 6.8691 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000035","SpanId":"|d6427d43-4cb0e196425e31ed.","TraceId":"d6427d43-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":18}
+[17:18:14 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 33.053 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000037","SpanId":"|d6427d44-4cb0e196425e31ed.","TraceId":"d6427d44-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":8}
+[17:18:14 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 62.7726 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000039","SpanId":"|d6427d45-4cb0e196425e31ed.","TraceId":"d6427d45-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":11}
+[17:18:14 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 9.4876 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000003B","SpanId":"|d6427d46-4cb0e196425e31ed.","TraceId":"d6427d46-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":8}
+[17:18:14 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 4.8499 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000003D","SpanId":"|d6427d47-4cb0e196425e31ed.","TraceId":"d6427d47-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":19}
+[17:18:14 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 10.2964 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000003F","SpanId":"|d6427d48-4cb0e196425e31ed.","TraceId":"d6427d48-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":17}
+[17:18:14 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 10.874 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000041","SpanId":"|d6427d49-4cb0e196425e31ed.","TraceId":"d6427d49-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":4}
+[17:18:14 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 20.5036 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000043","SpanId":"|d6427d4a-4cb0e196425e31ed.","TraceId":"d6427d4a-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":13}
+[17:18:14 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 13.5125 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000045","SpanId":"|d6427d4b-4cb0e196425e31ed.","TraceId":"d6427d4b-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":11}
+[17:18:14 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 8.7124 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000047","SpanId":"|d6427d4c-4cb0e196425e31ed.","TraceId":"d6427d4c-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":8}
+[17:18:14 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 17.8726 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000049","SpanId":"|d6427d4d-4cb0e196425e31ed.","TraceId":"d6427d4d-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":18}
+[17:18:14 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 5.0949 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000004B","SpanId":"|d6427d4e-4cb0e196425e31ed.","TraceId":"d6427d4e-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":21}
+[17:18:15 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 18.5164 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000004D","SpanId":"|d6427d4f-4cb0e196425e31ed.","TraceId":"d6427d4f-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":19}
+[17:18:15 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 5.5692 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000004F","SpanId":"|d6427d50-4cb0e196425e31ed.","TraceId":"d6427d50-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":25}
+[17:18:15 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 63.5306 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000051","SpanId":"|d6427d51-4cb0e196425e31ed.","TraceId":"d6427d51-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":26}
+[17:18:15 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 30.3943 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000053","SpanId":"|d6427d52-4cb0e196425e31ed.","TraceId":"d6427d52-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":17}
+[17:18:34 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 27.5302 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000055","SpanId":"|d6427d53-4cb0e196425e31ed.","TraceId":"d6427d53-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":17}
+[17:18:34 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 24.7884 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000057","SpanId":"|d6427d54-4cb0e196425e31ed.","TraceId":"d6427d54-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":17}
+[17:18:34 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 13.1174 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000059","SpanId":"|d6427d55-4cb0e196425e31ed.","TraceId":"d6427d55-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":17}
+[17:18:34 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 17.0096 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000005B","SpanId":"|d6427d56-4cb0e196425e31ed.","TraceId":"d6427d56-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":17}
+[17:18:34 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 8.6605 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000005D","SpanId":"|d6427d57-4cb0e196425e31ed.","TraceId":"d6427d57-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":16}
+[17:18:35 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 8.6927 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000005F","SpanId":"|d6427d58-4cb0e196425e31ed.","TraceId":"d6427d58-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":17}
+[17:18:35 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 1.7706 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000061","SpanId":"|d6427d59-4cb0e196425e31ed.","TraceId":"d6427d59-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":25}
+[17:18:35 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 6.0802 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000063","SpanId":"|d6427d5a-4cb0e196425e31ed.","TraceId":"d6427d5a-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":25}
+[17:18:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 6.6754 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000065","SpanId":"|d6427d5b-4cb0e196425e31ed.","TraceId":"d6427d5b-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":25}
+[17:18:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.2486 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000067","SpanId":"|d6427d5c-4cb0e196425e31ed.","TraceId":"d6427d5c-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":9}
+[17:18:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 1.8449 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000069","SpanId":"|d6427d5d-4cb0e196425e31ed.","TraceId":"d6427d5d-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":17}
+[17:18:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 4.0849 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000006B","SpanId":"|d6427d5e-4cb0e196425e31ed.","TraceId":"d6427d5e-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":25}
+[17:18:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 5.1127 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000006D","SpanId":"|d6427d5f-4cb0e196425e31ed.","TraceId":"d6427d5f-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":25}
+[17:18:39 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 2.9582 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000006F","SpanId":"|d6427d60-4cb0e196425e31ed.","TraceId":"d6427d60-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":20}
+[17:18:39 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 5.528 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000071","SpanId":"|d6427d61-4cb0e196425e31ed.","TraceId":"d6427d61-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":25}
+[17:18:40 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 2.4936 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000073","SpanId":"|d6427d62-4cb0e196425e31ed.","TraceId":"d6427d62-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":25}
+[17:18:40 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 23.0649 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000075","SpanId":"|d6427d63-4cb0e196425e31ed.","TraceId":"d6427d63-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":24}
+[17:18:41 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 2.3733 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000077","SpanId":"|d6427d64-4cb0e196425e31ed.","TraceId":"d6427d64-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":25}
+[17:18:41 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 10.4862 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000079","SpanId":"|d6427d65-4cb0e196425e31ed.","TraceId":"d6427d65-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":20}
+[17:18:41 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 17.8641 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000007B","SpanId":"|d6427d66-4cb0e196425e31ed.","TraceId":"d6427d66-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":25}
+[17:18:41 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 10.1366 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000007D","SpanId":"|d6427d67-4cb0e196425e31ed.","TraceId":"d6427d67-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":17}
+[17:18:41 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 10.4172 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000007F","SpanId":"|d6427d68-4cb0e196425e31ed.","TraceId":"d6427d68-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":26}
+[17:18:41 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 7.667 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000081","SpanId":"|d6427d69-4cb0e196425e31ed.","TraceId":"d6427d69-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":25}
+[17:18:41 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 16.1002 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000083","SpanId":"|d6427d6a-4cb0e196425e31ed.","TraceId":"d6427d6a-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":16}
+[17:18:41 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 2.8725 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000085","SpanId":"|d6427d6b-4cb0e196425e31ed.","TraceId":"d6427d6b-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":24}
+[17:18:42 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 8.9799 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000087","SpanId":"|d6427d6c-4cb0e196425e31ed.","TraceId":"d6427d6c-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":17}
+[17:18:42 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 11.3112 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000089","SpanId":"|d6427d6d-4cb0e196425e31ed.","TraceId":"d6427d6d-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":26}
+[17:18:42 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 10.4722 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000008B","SpanId":"|d6427d6e-4cb0e196425e31ed.","TraceId":"d6427d6e-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":9}
+[17:18:42 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 4.6761 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000008D","SpanId":"|d6427d6f-4cb0e196425e31ed.","TraceId":"d6427d6f-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":29}
+[17:18:42 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 24.333 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000008F","SpanId":"|d6427d70-4cb0e196425e31ed.","TraceId":"d6427d70-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":25}
+[17:18:42 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 6.8946 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000091","SpanId":"|d6427d71-4cb0e196425e31ed.","TraceId":"d6427d71-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":30}
+[17:18:42 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 21.0762 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000093","SpanId":"|d6427d72-4cb0e196425e31ed.","TraceId":"d6427d72-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":24}
+[17:18:44 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 37.8227 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000095","SpanId":"|d6427d73-4cb0e196425e31ed.","TraceId":"d6427d73-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":30}
+[17:18:44 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 18.9204 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000097","SpanId":"|d6427d74-4cb0e196425e31ed.","TraceId":"d6427d74-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":25}
+[17:18:45 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 1.6107 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:00000099","SpanId":"|d6427d75-4cb0e196425e31ed.","TraceId":"d6427d75-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":30}
+[17:18:47 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 4.6069 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000009B","SpanId":"|d6427d76-4cb0e196425e31ed.","TraceId":"d6427d76-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":25}
+[17:18:48 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 14.2431 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000009D","SpanId":"|d6427d77-4cb0e196425e31ed.","TraceId":"d6427d77-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":30}
+[17:18:48 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 6.7569 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:0000009F","SpanId":"|d6427d78-4cb0e196425e31ed.","TraceId":"d6427d78-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":23}
+[17:18:48 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 7.7483 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:000000A1","SpanId":"|d6427d79-4cb0e196425e31ed.","TraceId":"d6427d79-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":23}
+[17:18:49 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 1.8702 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:000000A3","SpanId":"|d6427d7a-4cb0e196425e31ed.","TraceId":"d6427d7a-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":23}
+[17:18:49 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 4.4907 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:000000A5","SpanId":"|d6427d7b-4cb0e196425e31ed.","TraceId":"d6427d7b-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":23}
+[17:18:49 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 5.4782 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:000000A7","SpanId":"|d6427d7c-4cb0e196425e31ed.","TraceId":"d6427d7c-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":25}
+[17:18:50 INF] HTTP OPTIONS /api/Publicaciones responded 204 in 3.743 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:000000A9","SpanId":"|d6427d7d-4cb0e196425e31ed.","TraceId":"d6427d7d-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":25}
+[17:18:50 INF] HTTP POST /api/Publicaciones responded 201 in 594.0527 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:000000AB","SpanId":"|d6427d7e-4cb0e196425e31ed.","TraceId":"d6427d7e-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":9}
+[17:18:55 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 36.2495 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04ST2UFB1S:000000AD","SpanId":"|d6427d7f-4cb0e196425e31ed.","TraceId":"d6427d7f-4cb0e196425e31ed","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":5496,"ThreadId":9}
+[19:10:40 INF] Iniciando aplicación ... 
+{"MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":1}
+[19:11:31 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 6021.9954 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000001","SpanId":"|be906b5f-41e98bc3f8de5212.","TraceId":"be906b5f-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:12:19 INF] HTTP OPTIONS /api/Publicaciones/1084 responded 204 in 9.8016 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000003","SpanId":"|be906b60-41e98bc3f8de5212.","TraceId":"be906b60-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":9}
+[19:12:20 INF] HTTP DELETE /api/Publicaciones/1084 responded 200 in 613.9417 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000005","SpanId":"|be906b61-41e98bc3f8de5212.","TraceId":"be906b61-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":4}
+[19:12:28 INF] HTTP GET / responded 404 in 5.0864 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJC:00000001","SpanId":"|be906b63-41e98bc3f8de5212.","TraceId":"be906b63-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:12:36 INF] HTTP GET / responded 404 in 0.5577 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJC:00000003","SpanId":"|be906b65-41e98bc3f8de5212.","TraceId":"be906b65-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":12}
+[19:12:41 INF] HTTP GET / responded 404 in 3.8916 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJC:00000005","SpanId":"|be906b67-41e98bc3f8de5212.","TraceId":"be906b67-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:12:45 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 173.3635 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000007","SpanId":"|be906b68-41e98bc3f8de5212.","TraceId":"be906b68-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:12:59 INF] HTTP OPTIONS /api/Publicaciones/1090 responded 204 in 0.991 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000009","SpanId":"|be906b69-41e98bc3f8de5212.","TraceId":"be906b69-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":13}
+[19:12:59 INF] HTTP DELETE /api/Publicaciones/1090 responded 200 in 88.9952 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000000B","SpanId":"|be906b6a-41e98bc3f8de5212.","TraceId":"be906b6a-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:13:03 INF] HTTP OPTIONS /api/Publicaciones/1092 responded 204 in 0.659 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000000D","SpanId":"|be906b6b-41e98bc3f8de5212.","TraceId":"be906b6b-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":15}
+[19:13:03 INF] HTTP DELETE /api/Publicaciones/1092 responded 200 in 80.6597 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000000F","SpanId":"|be906b6c-41e98bc3f8de5212.","TraceId":"be906b6c-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":15}
+[19:13:13 INF] HTTP OPTIONS /api/Publicaciones/1088 responded 204 in 0.5416 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000011","SpanId":"|be906b6d-41e98bc3f8de5212.","TraceId":"be906b6d-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:13:13 INF] HTTP DELETE /api/Publicaciones/1088 responded 200 in 52.428 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000013","SpanId":"|be906b6e-41e98bc3f8de5212.","TraceId":"be906b6e-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:13:18 INF] HTTP OPTIONS /api/Publicaciones/1086 responded 204 in 0.551 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000015","SpanId":"|be906b6f-41e98bc3f8de5212.","TraceId":"be906b6f-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":18}
+[19:13:18 INF] HTTP DELETE /api/Publicaciones/1086 responded 200 in 109.2224 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000017","SpanId":"|be906b70-41e98bc3f8de5212.","TraceId":"be906b70-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":16}
+[19:13:43 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 93.2175 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000019","SpanId":"|be906b71-41e98bc3f8de5212.","TraceId":"be906b71-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:13:48 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 20.9873 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000001B","SpanId":"|be906b72-41e98bc3f8de5212.","TraceId":"be906b72-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":15}
+[19:13:48 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 11.7129 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000001D","SpanId":"|be906b73-41e98bc3f8de5212.","TraceId":"be906b73-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:13:48 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 18.8008 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000001F","SpanId":"|be906b74-41e98bc3f8de5212.","TraceId":"be906b74-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:13:48 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 15.7332 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000021","SpanId":"|be906b75-41e98bc3f8de5212.","TraceId":"be906b75-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:13:48 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 11.2298 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000023","SpanId":"|be906b76-41e98bc3f8de5212.","TraceId":"be906b76-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":16}
+[19:13:48 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.5619 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000025","SpanId":"|be906b77-41e98bc3f8de5212.","TraceId":"be906b77-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":19}
+[19:13:48 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 11.2982 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000027","SpanId":"|be906b78-41e98bc3f8de5212.","TraceId":"be906b78-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:13:48 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 8.2822 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000029","SpanId":"|be906b79-41e98bc3f8de5212.","TraceId":"be906b79-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:13:48 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 1.8336 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000002B","SpanId":"|be906b7a-41e98bc3f8de5212.","TraceId":"be906b7a-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":24}
+[19:13:49 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 11.97 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000002D","SpanId":"|be906b7b-41e98bc3f8de5212.","TraceId":"be906b7b-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":19}
+[19:13:49 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 23.9076 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000002F","SpanId":"|be906b7c-41e98bc3f8de5212.","TraceId":"be906b7c-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":24}
+[19:13:49 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 14.7328 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000031","SpanId":"|be906b7d-41e98bc3f8de5212.","TraceId":"be906b7d-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":25}
+[19:13:49 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 10.18 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000033","SpanId":"|be906b7e-41e98bc3f8de5212.","TraceId":"be906b7e-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":25}
+[19:13:49 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 8.302 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000035","SpanId":"|be906b7f-41e98bc3f8de5212.","TraceId":"be906b7f-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":18}
+[19:13:49 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 14.3535 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000037","SpanId":"|be906b80-41e98bc3f8de5212.","TraceId":"be906b80-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":24}
+[19:13:49 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 5.7368 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000039","SpanId":"|be906b81-41e98bc3f8de5212.","TraceId":"be906b81-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":16}
+[19:13:53 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 52.1783 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000003B","SpanId":"|be906b82-41e98bc3f8de5212.","TraceId":"be906b82-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":18}
+[19:13:56 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 7.2109 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000003D","SpanId":"|be906b83-41e98bc3f8de5212.","TraceId":"be906b83-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":25}
+[19:13:58 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 4.3603 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000003F","SpanId":"|be906b84-41e98bc3f8de5212.","TraceId":"be906b84-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":18}
+[19:13:58 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 5.8409 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000041","SpanId":"|be906b85-41e98bc3f8de5212.","TraceId":"be906b85-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":25}
+[19:13:58 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 6.9282 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000043","SpanId":"|be906b86-41e98bc3f8de5212.","TraceId":"be906b86-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":25}
+[19:13:58 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 4.8919 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000045","SpanId":"|be906b87-41e98bc3f8de5212.","TraceId":"be906b87-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":16}
+[19:13:59 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.2202 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000047","SpanId":"|be906b88-41e98bc3f8de5212.","TraceId":"be906b88-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":25}
+[19:13:59 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 2.0113 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000049","SpanId":"|be906b89-41e98bc3f8de5212.","TraceId":"be906b89-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":18}
+[19:13:59 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 10.048 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000004B","SpanId":"|be906b8a-41e98bc3f8de5212.","TraceId":"be906b8a-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":18}
+[19:13:59 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 21.342 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000004D","SpanId":"|be906b8b-41e98bc3f8de5212.","TraceId":"be906b8b-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":16}
+[19:13:59 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 8.9061 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000004F","SpanId":"|be906b8c-41e98bc3f8de5212.","TraceId":"be906b8c-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":16}
+[19:13:59 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 8.5781 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000051","SpanId":"|be906b8d-41e98bc3f8de5212.","TraceId":"be906b8d-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":23}
+[19:13:59 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 8.352 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000053","SpanId":"|be906b8e-41e98bc3f8de5212.","TraceId":"be906b8e-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":25}
+[19:14:00 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 6.8723 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000055","SpanId":"|be906b8f-41e98bc3f8de5212.","TraceId":"be906b8f-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":16}
+[19:14:00 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 4.6346 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000057","SpanId":"|be906b90-41e98bc3f8de5212.","TraceId":"be906b90-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":23}
+[19:14:00 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 7.698 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000059","SpanId":"|be906b91-41e98bc3f8de5212.","TraceId":"be906b91-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":23}
+[19:14:00 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 2.9298 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000005B","SpanId":"|be906b92-41e98bc3f8de5212.","TraceId":"be906b92-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":16}
+[19:14:00 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 4.9263 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000005D","SpanId":"|be906b93-41e98bc3f8de5212.","TraceId":"be906b93-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":25}
+[19:14:00 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 4.5568 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000005F","SpanId":"|be906b94-41e98bc3f8de5212.","TraceId":"be906b94-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":16}
+[19:14:01 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 6.5489 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000061","SpanId":"|be906b95-41e98bc3f8de5212.","TraceId":"be906b95-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":16}
+[19:14:01 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 6.9561 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000063","SpanId":"|be906b96-41e98bc3f8de5212.","TraceId":"be906b96-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":16}
+[19:14:01 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 9.388 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000065","SpanId":"|be906b97-41e98bc3f8de5212.","TraceId":"be906b97-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:14:01 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 6.8221 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000067","SpanId":"|be906b98-41e98bc3f8de5212.","TraceId":"be906b98-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":24}
+[19:14:01 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.46 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000069","SpanId":"|be906b99-41e98bc3f8de5212.","TraceId":"be906b99-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:14:01 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.4321 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000006B","SpanId":"|be906b9a-41e98bc3f8de5212.","TraceId":"be906b9a-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:14:01 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 7.4899 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000006D","SpanId":"|be906b9b-41e98bc3f8de5212.","TraceId":"be906b9b-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:14:01 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.109 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000006F","SpanId":"|be906b9c-41e98bc3f8de5212.","TraceId":"be906b9c-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:14:01 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 1.709 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000071","SpanId":"|be906b9d-41e98bc3f8de5212.","TraceId":"be906b9d-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":18}
+[19:14:02 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 5.6493 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000073","SpanId":"|be906b9e-41e98bc3f8de5212.","TraceId":"be906b9e-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":24}
+[19:14:03 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.5576 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000075","SpanId":"|be906b9f-41e98bc3f8de5212.","TraceId":"be906b9f-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":25}
+[19:14:03 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 2.4992 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000077","SpanId":"|be906ba0-41e98bc3f8de5212.","TraceId":"be906ba0-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:14:04 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 6.3953 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000079","SpanId":"|be906ba1-41e98bc3f8de5212.","TraceId":"be906ba1-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:14:04 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 1.6818 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000007B","SpanId":"|be906ba2-41e98bc3f8de5212.","TraceId":"be906ba2-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:14:04 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.7058 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000007D","SpanId":"|be906ba3-41e98bc3f8de5212.","TraceId":"be906ba3-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:14:07 INF] HTTP OPTIONS /api/Publicaciones responded 204 in 4.1684 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000007F","SpanId":"|be906ba4-41e98bc3f8de5212.","TraceId":"be906ba4-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:14:07 INF] HTTP POST /api/Publicaciones responded 201 in 247.1719 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000081","SpanId":"|be906ba5-41e98bc3f8de5212.","TraceId":"be906ba5-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":14}
+[19:14:12 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 4.4381 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000083","SpanId":"|be906ba6-41e98bc3f8de5212.","TraceId":"be906ba6-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":15}
+[19:14:49 INF] HTTP OPTIONS /api/Publicaciones/1093 responded 204 in 0.0945 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000085","SpanId":"|be906ba7-41e98bc3f8de5212.","TraceId":"be906ba7-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":25}
+[19:14:49 INF] HTTP DELETE /api/Publicaciones/1093 responded 200 in 21.0188 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000087","SpanId":"|be906ba8-41e98bc3f8de5212.","TraceId":"be906ba8-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":28}
+[19:14:54 INF] HTTP OPTIONS /api/Publicaciones/1074 responded 204 in 0.1066 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:00000089","SpanId":"|be906ba9-41e98bc3f8de5212.","TraceId":"be906ba9-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":28}
+[19:14:54 INF] HTTP DELETE /api/Publicaciones/1074 responded 200 in 50.8622 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04USJUQPJ8:0000008B","SpanId":"|be906baa-41e98bc3f8de5212.","TraceId":"be906baa-41e98bc3f8de5212","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1792,"ThreadId":15}
+[19:34:26 INF] Iniciando aplicación ... 
+{"MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":1}
+[19:35:30 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 3526.425 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000001","SpanId":"|5c982ec7-4bee964bb372acc2.","TraceId":"5c982ec7-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":14}
+[19:35:33 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 143.7568 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000003","SpanId":"|5c982ec8-4bee964bb372acc2.","TraceId":"5c982ec8-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":14}
+[19:35:35 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 49.4685 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000005","SpanId":"|5c982ec9-4bee964bb372acc2.","TraceId":"5c982ec9-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":13}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 93.0364 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000007","SpanId":"|5c982eca-4bee964bb372acc2.","TraceId":"5c982eca-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":9}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 45.5172 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000009","SpanId":"|5c982ecb-4bee964bb372acc2.","TraceId":"5c982ecb-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":5}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 44.5012 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:0000000B","SpanId":"|5c982ecc-4bee964bb372acc2.","TraceId":"5c982ecc-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":9}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 30.7351 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:0000000D","SpanId":"|5c982ecd-4bee964bb372acc2.","TraceId":"5c982ecd-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":15}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 15.3891 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:0000000F","SpanId":"|5c982ece-4bee964bb372acc2.","TraceId":"5c982ece-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":5}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 15.4085 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000011","SpanId":"|5c982ecf-4bee964bb372acc2.","TraceId":"5c982ecf-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":18}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 7.491 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000013","SpanId":"|5c982ed0-4bee964bb372acc2.","TraceId":"5c982ed0-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":12}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 10.3799 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000015","SpanId":"|5c982ed1-4bee964bb372acc2.","TraceId":"5c982ed1-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":13}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 13.4673 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000017","SpanId":"|5c982ed2-4bee964bb372acc2.","TraceId":"5c982ed2-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":16}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 20.902 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000019","SpanId":"|5c982ed3-4bee964bb372acc2.","TraceId":"5c982ed3-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":15}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 23.7648 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:0000001B","SpanId":"|5c982ed4-4bee964bb372acc2.","TraceId":"5c982ed4-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":9}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 19.8395 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:0000001D","SpanId":"|5c982ed5-4bee964bb372acc2.","TraceId":"5c982ed5-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":17}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 9.6058 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:0000001F","SpanId":"|5c982ed6-4bee964bb372acc2.","TraceId":"5c982ed6-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":21}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 38.1246 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000021","SpanId":"|5c982ed7-4bee964bb372acc2.","TraceId":"5c982ed7-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":19}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 9.9004 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000023","SpanId":"|5c982ed8-4bee964bb372acc2.","TraceId":"5c982ed8-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":20}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 11.0292 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000025","SpanId":"|5c982ed9-4bee964bb372acc2.","TraceId":"5c982ed9-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":4}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.093 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000027","SpanId":"|5c982eda-4bee964bb372acc2.","TraceId":"5c982eda-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":5}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 2.8615 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000029","SpanId":"|5c982edb-4bee964bb372acc2.","TraceId":"5c982edb-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":24}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 15.7217 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:0000002B","SpanId":"|5c982edc-4bee964bb372acc2.","TraceId":"5c982edc-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":18}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 5.4744 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:0000002D","SpanId":"|5c982edd-4bee964bb372acc2.","TraceId":"5c982edd-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":23}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 59.3524 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:0000002F","SpanId":"|5c982ede-4bee964bb372acc2.","TraceId":"5c982ede-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":14}
+[19:35:36 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 13.9833 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000031","SpanId":"|5c982edf-4bee964bb372acc2.","TraceId":"5c982edf-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":16}
+[19:35:37 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 44.7622 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000033","SpanId":"|5c982ee0-4bee964bb372acc2.","TraceId":"5c982ee0-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":23}
+[19:35:37 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 18.4758 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000035","SpanId":"|5c982ee1-4bee964bb372acc2.","TraceId":"5c982ee1-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":12}
+[19:35:38 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 40.2942 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000037","SpanId":"|5c982ee2-4bee964bb372acc2.","TraceId":"5c982ee2-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":14}
+[19:35:40 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 10.7101 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000039","SpanId":"|5c982ee3-4bee964bb372acc2.","TraceId":"5c982ee3-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":12}
+[19:35:40 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 8.9452 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:0000003B","SpanId":"|5c982ee4-4bee964bb372acc2.","TraceId":"5c982ee4-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":12}
+[19:35:41 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 7.0754 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:0000003D","SpanId":"|5c982ee5-4bee964bb372acc2.","TraceId":"5c982ee5-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":12}
+[19:35:41 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 2.6887 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:0000003F","SpanId":"|5c982ee6-4bee964bb372acc2.","TraceId":"5c982ee6-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":15}
+[19:35:41 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.3673 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000041","SpanId":"|5c982ee7-4bee964bb372acc2.","TraceId":"5c982ee7-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":15}
+[19:35:41 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 2.2919 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000043","SpanId":"|5c982ee8-4bee964bb372acc2.","TraceId":"5c982ee8-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":15}
+[19:35:41 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 13.857 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000045","SpanId":"|5c982ee9-4bee964bb372acc2.","TraceId":"5c982ee9-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":22}
+[19:35:42 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 11.6638 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000047","SpanId":"|5c982eea-4bee964bb372acc2.","TraceId":"5c982eea-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":12}
+[19:35:42 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 19.1266 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000049","SpanId":"|5c982eeb-4bee964bb372acc2.","TraceId":"5c982eeb-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":22}
+[19:35:42 INF] HTTP OPTIONS /api/Publicaciones responded 204 in 0.7037 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:0000004B","SpanId":"|5c982eec-4bee964bb372acc2.","TraceId":"5c982eec-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":16}
+[19:35:42 INF] HTTP POST /api/Publicaciones responded 201 in 345.9623 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:0000004D","SpanId":"|5c982eed-4bee964bb372acc2.","TraceId":"5c982eed-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":23}
+[19:35:48 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 26.6485 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:0000004F","SpanId":"|5c982eee-4bee964bb372acc2.","TraceId":"5c982eee-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":22}
+[19:35:50 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 16.9256 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000051","SpanId":"|5c982eef-4bee964bb372acc2.","TraceId":"5c982eef-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":23}
+[19:35:50 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 36.3085 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000053","SpanId":"|5c982ef0-4bee964bb372acc2.","TraceId":"5c982ef0-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":14}
+[19:36:01 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 11.0138 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000055","SpanId":"|5c982ef1-4bee964bb372acc2.","TraceId":"5c982ef1-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":18}
+[19:36:03 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 5.6664 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000057","SpanId":"|5c982ef2-4bee964bb372acc2.","TraceId":"5c982ef2-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":15}
+[19:36:04 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 6.7697 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000059","SpanId":"|5c982ef3-4bee964bb372acc2.","TraceId":"5c982ef3-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":15}
+[19:36:07 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 16.3763 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:0000005B","SpanId":"|5c982ef4-4bee964bb372acc2.","TraceId":"5c982ef4-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":22}
+[19:36:07 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 3.8821 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:0000005D","SpanId":"|5c982ef5-4bee964bb372acc2.","TraceId":"5c982ef5-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":15}
+[19:36:07 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 64.026 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:0000005F","SpanId":"|5c982ef6-4bee964bb372acc2.","TraceId":"5c982ef6-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":22}
+[19:36:07 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 50.308 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000061","SpanId":"|5c982ef7-4bee964bb372acc2.","TraceId":"5c982ef7-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":9}
+[19:36:07 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 33.573 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000063","SpanId":"|5c982ef8-4bee964bb372acc2.","TraceId":"5c982ef8-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":15}
+[19:36:08 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 18.4549 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000065","SpanId":"|5c982ef9-4bee964bb372acc2.","TraceId":"5c982ef9-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":15}
+[19:36:08 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 23.9633 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000067","SpanId":"|5c982efa-4bee964bb372acc2.","TraceId":"5c982efa-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":18}
+[19:36:08 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 29.4163 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:00000069","SpanId":"|5c982efb-4bee964bb372acc2.","TraceId":"5c982efb-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":15}
+[19:36:08 INF] HTTP OPTIONS /api/Publicaciones1094 responded 204 in 0.2645 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:0000006B","SpanId":"|5c982efc-4bee964bb372acc2.","TraceId":"5c982efc-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":23}
+[19:36:08 INF] HTTP PUT /api/Publicaciones1094 responded 404 in 0.4719 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1G:0000006D","SpanId":"|5c982efd-4bee964bb372acc2.","TraceId":"5c982efd-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":23}
+[19:36:17 INF] HTTP OPTIONS /api/Publicaciones1094 responded 204 in 0.0943 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1I:00000001","SpanId":"|5c982efe-4bee964bb372acc2.","TraceId":"5c982efe-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":15}
+[19:36:17 INF] HTTP PUT /api/Publicaciones1094 responded 404 in 0.0727 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1I:00000003","SpanId":"|5c982eff-4bee964bb372acc2.","TraceId":"5c982eff-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":13}
+[19:36:17 INF] HTTP PUT /api/Publicaciones1094 responded 404 in 0.3022 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1I:00000005","SpanId":"|5c982f00-4bee964bb372acc2.","TraceId":"5c982f00-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":22}
+[19:36:17 INF] HTTP PUT /api/Publicaciones1094 responded 404 in 0.0795 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1I:00000007","SpanId":"|5c982f01-4bee964bb372acc2.","TraceId":"5c982f01-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":22}
+[19:36:18 INF] HTTP PUT /api/Publicaciones1094 responded 404 in 0.5087 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM04VA1IGG1I:00000009","SpanId":"|5c982f02-4bee964bb372acc2.","TraceId":"5c982f02-4bee964bb372acc2","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":12824,"ThreadId":22}

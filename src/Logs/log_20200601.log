@@ -1,0 +1,376 @@
+[13:00:04 INF] Iniciando aplicación ... 
+{"MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":1}
+[13:03:10 INF] HTTP OPTIONS /api/Usuarios/Login responded 204 in 37.2456 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRC:0000000F","SpanId":"|1cfad1a1-44b50cb065a1a5df.","TraceId":"1cfad1a1-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":13}
+[13:03:14 INF] HTTP POST /api/Usuarios/Login responded 200 in 4140.8881 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRC:00000011","SpanId":"|1cfad1a2-44b50cb065a1a5df.","TraceId":"1cfad1a2-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":12}
+[13:03:19 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 213.1368 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRC:00000013","SpanId":"|1cfad1a3-44b50cb065a1a5df.","TraceId":"1cfad1a3-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":11}
+[13:03:28 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 85.7022 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRC:00000015","SpanId":"|1cfad1a4-44b50cb065a1a5df.","TraceId":"1cfad1a4-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":12}
+[13:03:33 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 25.3264 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRC:00000017","SpanId":"|1cfad1a5-44b50cb065a1a5df.","TraceId":"1cfad1a5-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":12}
+[13:03:34 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 83.1919 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRC:00000019","SpanId":"|1cfad1a6-44b50cb065a1a5df.","TraceId":"1cfad1a6-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":15}
+[13:03:40 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 20.8969 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRC:0000001B","SpanId":"|1cfad1a7-44b50cb065a1a5df.","TraceId":"1cfad1a7-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":8}
+[13:03:43 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 29.5689 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRC:0000001D","SpanId":"|1cfad1a8-44b50cb065a1a5df.","TraceId":"1cfad1a8-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":12}
+[13:03:55 INF] HTTP OPTIONS /api/Publicaciones/1089 responded 204 in 0.5997 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRC:0000001F","SpanId":"|1cfad1a9-44b50cb065a1a5df.","TraceId":"1cfad1a9-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":18}
+[13:03:55 INF] HTTP DELETE /api/Publicaciones/1089 responded 200 in 378.4566 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRC:00000021","SpanId":"|1cfad1aa-44b50cb065a1a5df.","TraceId":"1cfad1aa-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":18}
+[13:03:57 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 12.6668 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRC:00000023","SpanId":"|1cfad1ab-44b50cb065a1a5df.","TraceId":"1cfad1ab-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":8}
+[13:04:00 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 12.1392 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRC:00000025","SpanId":"|1cfad1ac-44b50cb065a1a5df.","TraceId":"1cfad1ac-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":18}
+[13:11:05 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 21.2144 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRE:0000000F","SpanId":"|1cfad1ad-44b50cb065a1a5df.","TraceId":"1cfad1ad-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":39}
+[13:11:05 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 6.6059 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRE:00000011","SpanId":"|1cfad1ae-44b50cb065a1a5df.","TraceId":"1cfad1ae-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":42}
+[13:11:33 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 25.6236 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRG:00000001","SpanId":"|1cfad1af-44b50cb065a1a5df.","TraceId":"1cfad1af-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":41}
+[13:11:33 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 3.4471 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRG:00000003","SpanId":"|1cfad1b0-44b50cb065a1a5df.","TraceId":"1cfad1b0-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":38}
+[13:11:47 INF] HTTP OPTIONS /api/SitiosTuristicos responded 204 in 0.3385 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRG:00000005","SpanId":"|1cfad1b1-44b50cb065a1a5df.","TraceId":"1cfad1b1-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":38}
+[13:11:48 INF] HTTP POST /api/SitiosTuristicos responded 201 in 453.8944 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRG:00000007","SpanId":"|1cfad1b2-44b50cb065a1a5df.","TraceId":"1cfad1b2-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":38}
+[13:11:48 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 6.8956 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRG:00000009","SpanId":"|1cfad1b3-44b50cb065a1a5df.","TraceId":"1cfad1b3-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":42}
+[13:11:51 INF] HTTP GET /api/Publicaciones/propietario/1013 responded 200 in 12.7436 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRG:0000000B","SpanId":"|1cfad1b4-44b50cb065a1a5df.","TraceId":"1cfad1b4-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":38}
+[13:11:54 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 10.6379 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRG:0000000D","SpanId":"|1cfad1b5-44b50cb065a1a5df.","TraceId":"1cfad1b5-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":47}
+[13:11:54 INF] HTTP GET /api/Publicaciones/1095 responded 200 in 17.2703 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRG:0000000F","SpanId":"|1cfad1b6-44b50cb065a1a5df.","TraceId":"1cfad1b6-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":42}
+[13:11:54 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 10.7088 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRG:00000011","SpanId":"|1cfad1b7-44b50cb065a1a5df.","TraceId":"1cfad1b7-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":38}
+[13:11:54 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 4.5235 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRG:00000013","SpanId":"|1cfad1b8-44b50cb065a1a5df.","TraceId":"1cfad1b8-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":47}
+[13:11:54 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 14.3917 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRG:00000015","SpanId":"|1cfad1b9-44b50cb065a1a5df.","TraceId":"1cfad1b9-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":38}
+[13:12:15 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 39.3481 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRG:00000017","SpanId":"|1cfad1ba-44b50cb065a1a5df.","TraceId":"1cfad1ba-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":48}
+[13:12:15 INF] HTTP GET /api/Publicaciones/1095 responded 200 in 69.658 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRG:00000019","SpanId":"|1cfad1bb-44b50cb065a1a5df.","TraceId":"1cfad1bb-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":46}
+[13:12:15 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 17.8397 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRG:0000001B","SpanId":"|1cfad1bc-44b50cb065a1a5df.","TraceId":"1cfad1bc-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":47}
+[13:12:16 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 46.783 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRG:0000001D","SpanId":"|1cfad1bd-44b50cb065a1a5df.","TraceId":"1cfad1bd-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":50}
+[13:12:16 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 16.0986 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRG:0000001F","SpanId":"|1cfad1be-44b50cb065a1a5df.","TraceId":"1cfad1be-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":46}
+[13:15:02 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 62.5447 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRJ:00000003","SpanId":"|1cfad1c0-44b50cb065a1a5df.","TraceId":"1cfad1c0-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":63}
+[13:15:02 INF] HTTP GET /api/Publicaciones/1095 responded 200 in 90.758 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRJ:00000001","SpanId":"|1cfad1bf-44b50cb065a1a5df.","TraceId":"1cfad1bf-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":64}
+[13:15:03 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 43.5472 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRJ:00000005","SpanId":"|1cfad1c1-44b50cb065a1a5df.","TraceId":"1cfad1c1-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":64}
+[13:15:03 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 26.933 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRJ:00000007","SpanId":"|1cfad1c2-44b50cb065a1a5df.","TraceId":"1cfad1c2-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":60}
+[13:15:03 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 91.207 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRJ:00000009","SpanId":"|1cfad1c3-44b50cb065a1a5df.","TraceId":"1cfad1c3-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":63}
+[13:16:01 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 5.3354 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRJ:0000000B","SpanId":"|1cfad1c4-44b50cb065a1a5df.","TraceId":"1cfad1c4-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":64}
+[13:16:01 INF] HTTP GET /api/Publicaciones/1095 responded 200 in 10.1325 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRJ:0000000D","SpanId":"|1cfad1c5-44b50cb065a1a5df.","TraceId":"1cfad1c5-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":69}
+[13:16:01 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 23.8968 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRJ:0000000F","SpanId":"|1cfad1c6-44b50cb065a1a5df.","TraceId":"1cfad1c6-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":69}
+[13:16:29 INF] HTTP GET /api/Publicaciones/propietario/1013 responded 200 in 32.8562 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRJ:00000011","SpanId":"|1cfad1c7-44b50cb065a1a5df.","TraceId":"1cfad1c7-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":75}
+[13:16:41 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 18.356 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRJ:00000013","SpanId":"|1cfad1c8-44b50cb065a1a5df.","TraceId":"1cfad1c8-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":75}
+[13:16:41 INF] HTTP GET /api/Publicaciones/1095 responded 200 in 41.3397 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRJ:00000015","SpanId":"|1cfad1c9-44b50cb065a1a5df.","TraceId":"1cfad1c9-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":69}
+[13:16:41 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 72.8279 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRJ:00000017","SpanId":"|1cfad1ca-44b50cb065a1a5df.","TraceId":"1cfad1ca-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":73}
+[13:16:45 INF] HTTP OPTIONS /api/Publicaciones/1095 responded 204 in 1.0468 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRJ:00000019","SpanId":"|1cfad1cb-44b50cb065a1a5df.","TraceId":"1cfad1cb-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":73}
+[13:16:45 INF] HTTP PUT /api/Publicaciones/1095 responded 204 in 127.7124 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRJ:0000001B","SpanId":"|1cfad1cc-44b50cb065a1a5df.","TraceId":"1cfad1cc-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":69}
+[13:16:45 INF] HTTP GET /api/Publicaciones/propietario/1013 responded 200 in 4.8104 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRJ:0000001D","SpanId":"|1cfad1cd-44b50cb065a1a5df.","TraceId":"1cfad1cd-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":69}
+[13:16:52 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 21.3533 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRJ:0000001F","SpanId":"|1cfad1ce-44b50cb065a1a5df.","TraceId":"1cfad1ce-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":80}
+[13:16:52 INF] HTTP GET /api/Publicaciones/1095 responded 200 in 12.1434 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRJ:00000021","SpanId":"|1cfad1cf-44b50cb065a1a5df.","TraceId":"1cfad1cf-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":69}
+[13:16:52 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 1.9291 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRJ:00000023","SpanId":"|1cfad1d0-44b50cb065a1a5df.","TraceId":"1cfad1d0-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":69}
+[13:19:43 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 29.269 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000001","SpanId":"|1cfad1d1-44b50cb065a1a5df.","TraceId":"1cfad1d1-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":89}
+[13:19:43 INF] HTTP GET /api/Publicaciones/1095 responded 200 in 24.2201 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000003","SpanId":"|1cfad1d2-44b50cb065a1a5df.","TraceId":"1cfad1d2-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":87}
+[13:19:43 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 49.7308 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000005","SpanId":"|1cfad1d3-44b50cb065a1a5df.","TraceId":"1cfad1d3-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":87}
+[13:20:15 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 16.6565 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000007","SpanId":"|1cfad1d4-44b50cb065a1a5df.","TraceId":"1cfad1d4-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":90}
+[13:20:15 INF] HTTP GET /api/Publicaciones/1095 responded 200 in 38.8644 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000009","SpanId":"|1cfad1d5-44b50cb065a1a5df.","TraceId":"1cfad1d5-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":89}
+[13:20:16 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 26.0289 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:0000000B","SpanId":"|1cfad1d6-44b50cb065a1a5df.","TraceId":"1cfad1d6-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":90}
+[13:20:43 INF] HTTP GET /api/Publicaciones/1095 responded 200 in 12.353 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:0000000F","SpanId":"|1cfad1d8-44b50cb065a1a5df.","TraceId":"1cfad1d8-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":90}
+[13:20:43 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 15.8384 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:0000000D","SpanId":"|1cfad1d7-44b50cb065a1a5df.","TraceId":"1cfad1d7-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":89}
+[13:20:43 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 22.919 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000011","SpanId":"|1cfad1d9-44b50cb065a1a5df.","TraceId":"1cfad1d9-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":90}
+[13:21:04 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 7.1811 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000013","SpanId":"|1cfad1da-44b50cb065a1a5df.","TraceId":"1cfad1da-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":94}
+[13:21:04 INF] HTTP GET /api/Publicaciones/1095 responded 200 in 20.2406 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000015","SpanId":"|1cfad1db-44b50cb065a1a5df.","TraceId":"1cfad1db-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":90}
+[13:21:04 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 20.1856 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000017","SpanId":"|1cfad1dc-44b50cb065a1a5df.","TraceId":"1cfad1dc-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":90}
+[13:21:23 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 3.32 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000019","SpanId":"|1cfad1dd-44b50cb065a1a5df.","TraceId":"1cfad1dd-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":100}
+[13:21:23 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 7.1617 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:0000001B","SpanId":"|1cfad1de-44b50cb065a1a5df.","TraceId":"1cfad1de-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":90}
+[13:22:19 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 11.4245 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:0000001D","SpanId":"|1cfad1df-44b50cb065a1a5df.","TraceId":"1cfad1df-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":104}
+[13:22:19 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 40.0244 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:0000001F","SpanId":"|1cfad1e0-44b50cb065a1a5df.","TraceId":"1cfad1e0-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":104}
+[13:22:38 INF] HTTP OPTIONS /api/Publicaciones/ responded 204 in 0.2401 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000021","SpanId":"|1cfad1e1-44b50cb065a1a5df.","TraceId":"1cfad1e1-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":106}
+[13:22:38 INF] HTTP POST /api/Publicaciones/ responded 201 in 47.8221 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000023","SpanId":"|1cfad1e2-44b50cb065a1a5df.","TraceId":"1cfad1e2-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":100}
+[13:22:38 INF] HTTP GET /api/Publicaciones/propietario/1013 responded 200 in 2.5569 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000025","SpanId":"|1cfad1e3-44b50cb065a1a5df.","TraceId":"1cfad1e3-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":106}
+[13:22:40 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 5.101 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000027","SpanId":"|1cfad1e4-44b50cb065a1a5df.","TraceId":"1cfad1e4-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":106}
+[13:22:40 INF] HTTP GET /api/Publicaciones/2081 responded 200 in 4.9235 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000029","SpanId":"|1cfad1e5-44b50cb065a1a5df.","TraceId":"1cfad1e5-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":101}
+[13:22:40 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 6.6638 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:0000002B","SpanId":"|1cfad1e6-44b50cb065a1a5df.","TraceId":"1cfad1e6-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":106}
+[13:22:55 INF] HTTP OPTIONS /api/Publicaciones/2081 responded 204 in 0.1466 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:0000002D","SpanId":"|1cfad1e7-44b50cb065a1a5df.","TraceId":"1cfad1e7-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":103}
+[13:22:55 INF] HTTP PUT /api/Publicaciones/2081 responded 204 in 45.4073 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:0000002F","SpanId":"|1cfad1e8-44b50cb065a1a5df.","TraceId":"1cfad1e8-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":104}
+[13:22:55 INF] HTTP GET /api/Publicaciones/propietario/1013 responded 200 in 1.5834 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000031","SpanId":"|1cfad1e9-44b50cb065a1a5df.","TraceId":"1cfad1e9-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":100}
+[13:22:57 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 5.2129 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000033","SpanId":"|1cfad1ea-44b50cb065a1a5df.","TraceId":"1cfad1ea-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":102}
+[13:22:57 INF] HTTP GET /api/Publicaciones/2081 responded 200 in 9.448 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000035","SpanId":"|1cfad1eb-44b50cb065a1a5df.","TraceId":"1cfad1eb-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":106}
+[13:22:57 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 21.1813 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000037","SpanId":"|1cfad1ec-44b50cb065a1a5df.","TraceId":"1cfad1ec-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":101}
+[13:23:09 INF] HTTP GET /api/CategoriasActividad responded 200 in 121.4617 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:0000003B","SpanId":"|1cfad1ee-44b50cb065a1a5df.","TraceId":"1cfad1ee-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":109}
+[13:23:10 INF] HTTP GET /api/Publicaciones/region responded 200 in 427.6582 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:0000003D","SpanId":"|1cfad1ef-44b50cb065a1a5df.","TraceId":"1cfad1ef-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":100}
+[13:23:10 INF] HTTP GET /api/Publicaciones responded 200 in 843.2327 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000039","SpanId":"|1cfad1ed-44b50cb065a1a5df.","TraceId":"1cfad1ed-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":100}
+[13:23:12 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 9.3633 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:0000003F","SpanId":"|1cfad1f0-44b50cb065a1a5df.","TraceId":"1cfad1f0-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":100}
+[13:23:12 INF] HTTP GET /api/Publicaciones/2081 responded 200 in 9.9738 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000041","SpanId":"|1cfad1f1-44b50cb065a1a5df.","TraceId":"1cfad1f1-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":111}
+[13:23:12 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 7.5828 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000043","SpanId":"|1cfad1f2-44b50cb065a1a5df.","TraceId":"1cfad1f2-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":100}
+[13:23:15 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 2.3998 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000045","SpanId":"|1cfad1f3-44b50cb065a1a5df.","TraceId":"1cfad1f3-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":104}
+[13:23:15 INF] HTTP GET /api/Publicaciones/2081 responded 200 in 2.2416 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000047","SpanId":"|1cfad1f4-44b50cb065a1a5df.","TraceId":"1cfad1f4-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":100}
+[13:23:15 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 2.9303 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000049","SpanId":"|1cfad1f5-44b50cb065a1a5df.","TraceId":"1cfad1f5-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":101}
+[13:23:22 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 11.9711 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:0000004B","SpanId":"|1cfad1f6-44b50cb065a1a5df.","TraceId":"1cfad1f6-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":108}
+[13:23:22 INF] HTTP GET /api/Publicaciones/2081 responded 200 in 11.3603 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:0000004D","SpanId":"|1cfad1f7-44b50cb065a1a5df.","TraceId":"1cfad1f7-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":109}
+[13:23:22 INF] HTTP GET /api/SitiosTuristicos/propietario/1013 responded 200 in 1.9862 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:0000004F","SpanId":"|1cfad1f8-44b50cb065a1a5df.","TraceId":"1cfad1f8-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":109}
+[13:24:08 INF] HTTP OPTIONS /api/Usuarios/Register responded 204 in 0.6667 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000051","SpanId":"|1cfad1f9-44b50cb065a1a5df.","TraceId":"1cfad1f9-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":109}
+[13:24:09 INF] HTTP POST /api/Usuarios/Register responded 201 in 404.0622 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000053","SpanId":"|1cfad1fa-44b50cb065a1a5df.","TraceId":"1cfad1fa-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":108}
+[13:24:26 INF] HTTP GET /api/SitiosTuristicos/propietario/2012 responded 200 in 4.2043 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000055","SpanId":"|1cfad1fb-44b50cb065a1a5df.","TraceId":"1cfad1fb-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":109}
+[13:24:26 INF] HTTP GET /api/SitiosTuristicos/propietario/2012 responded 200 in 8.4504 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06AO5N1DRM:00000057","SpanId":"|1cfad1fc-44b50cb065a1a5df.","TraceId":"1cfad1fc-44b50cb065a1a5df","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":8272,"ThreadId":102}
+[15:44:35 INF] Iniciando aplicación ... 
+{"MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":1}
+[15:44:41 INF] HTTP OPTIONS /api/Usuarios/Login responded 204 in 55.2812 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q95:0000000F","SpanId":"|99421720-40e7bffa1b1312a6.","TraceId":"99421720-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":10}
+[15:44:45 INF] HTTP POST /api/Usuarios/Login responded 200 in 3871.8341 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q95:00000011","SpanId":"|99421721-40e7bffa1b1312a6.","TraceId":"99421721-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":4}
+[15:44:50 INF] HTTP GET /api/Publicaciones/propietario/2012 responded 200 in 140.3525 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q95:00000013","SpanId":"|99421722-40e7bffa1b1312a6.","TraceId":"99421722-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":10}
+[15:44:52 INF] HTTP GET /api/SitiosTuristicos/propietario/2012 responded 200 in 79.8796 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q95:00000015","SpanId":"|99421723-40e7bffa1b1312a6.","TraceId":"99421723-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":10}
+[15:45:01 INF] HTTP OPTIONS /api/Usuarios/Login responded 204 in 0.4118 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q95:00000017","SpanId":"|99421724-40e7bffa1b1312a6.","TraceId":"99421724-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":9}
+[15:45:01 INF] HTTP POST /api/Usuarios/Login responded 200 in 438.7365 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q95:00000019","SpanId":"|99421725-40e7bffa1b1312a6.","TraceId":"99421725-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":15}
+[15:45:07 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 56.8258 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q95:0000001B","SpanId":"|99421726-40e7bffa1b1312a6.","TraceId":"99421726-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":10}
+[15:45:10 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 71.474 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q95:0000001D","SpanId":"|99421727-40e7bffa1b1312a6.","TraceId":"99421727-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":4}
+[15:45:10 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 7.2151 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q95:00000021","SpanId":"|99421729-40e7bffa1b1312a6.","TraceId":"99421729-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":10}
+[15:45:10 INF] HTTP GET /api/Publicaciones/1094 responded 200 in 163.4113 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q95:0000001F","SpanId":"|99421728-40e7bffa1b1312a6.","TraceId":"99421728-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":15}
+[15:45:11 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 16.5309 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q95:00000023","SpanId":"|9942172a-40e7bffa1b1312a6.","TraceId":"9942172a-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":7}
+[15:45:51 INF] HTTP GET / responded 404 in 0.6199 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9A:00000001","SpanId":"|9942172c-40e7bffa1b1312a6.","TraceId":"9942172c-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":9}
+[15:45:56 INF] HTTP GET / responded 404 in 0.4428 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9A:00000003","SpanId":"|9942172e-40e7bffa1b1312a6.","TraceId":"9942172e-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":10}
+[15:46:03 INF] HTTP GET / responded 404 in 0.8788 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9A:00000005","SpanId":"|99421730-40e7bffa1b1312a6.","TraceId":"99421730-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":7}
+[15:46:25 INF] HTTP OPTIONS /api/Usuarios/rol/undefined responded 204 in 0.308 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:00000001","SpanId":"|99421731-40e7bffa1b1312a6.","TraceId":"99421731-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":10}
+[15:46:25 INF] HTTP OPTIONS /api/SitiosTuristicos responded 204 in 0.2263 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:00000003","SpanId":"|99421732-40e7bffa1b1312a6.","TraceId":"99421732-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":16}
+[15:46:25 INF] HTTP PUT /api/Usuarios/rol/undefined responded 400 in 100.6331 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:00000005","SpanId":"|99421733-40e7bffa1b1312a6.","TraceId":"99421733-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":10}
+[15:46:25 INF] HTTP POST /api/SitiosTuristicos responded 201 in 440.3543 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:00000007","SpanId":"|99421734-40e7bffa1b1312a6.","TraceId":"99421734-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":9}
+[15:46:25 INF] HTTP GET /api/SitiosTuristicos/propietario/2012 responded 200 in 13.3372 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:00000009","SpanId":"|99421735-40e7bffa1b1312a6.","TraceId":"99421735-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":21}
+[15:46:30 INF] HTTP GET /api/Publicaciones/propietario/2012 responded 200 in 10.6246 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:0000000B","SpanId":"|99421736-40e7bffa1b1312a6.","TraceId":"99421736-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":16}
+[15:46:33 INF] HTTP GET /api/SitiosTuristicos/propietario/2012 responded 200 in 14.6139 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:0000000D","SpanId":"|99421737-40e7bffa1b1312a6.","TraceId":"99421737-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":10}
+[15:46:33 INF] HTTP GET /api/SitiosTuristicos/propietario/2012 responded 200 in 14.1461 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:0000000F","SpanId":"|99421738-40e7bffa1b1312a6.","TraceId":"99421738-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":7}
+[15:46:45 INF] HTTP OPTIONS /api/Publicaciones/ responded 204 in 0.2368 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:00000011","SpanId":"|99421739-40e7bffa1b1312a6.","TraceId":"99421739-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":23}
+[15:46:45 INF] HTTP POST /api/Publicaciones/ responded 201 in 92.2687 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:00000013","SpanId":"|9942173a-40e7bffa1b1312a6.","TraceId":"9942173a-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":23}
+[15:46:45 INF] HTTP GET /api/Publicaciones/propietario/2012 responded 200 in 26.5246 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:00000015","SpanId":"|9942173b-40e7bffa1b1312a6.","TraceId":"9942173b-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":23}
+[15:46:49 INF] HTTP GET /api/SitiosTuristicos/propietario/2012 responded 200 in 13.5572 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:00000017","SpanId":"|9942173c-40e7bffa1b1312a6.","TraceId":"9942173c-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":16}
+[15:46:49 INF] HTTP GET /api/SitiosTuristicos/propietario/2012 responded 200 in 24.9278 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:00000019","SpanId":"|9942173d-40e7bffa1b1312a6.","TraceId":"9942173d-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":21}
+[15:47:01 INF] HTTP OPTIONS /api/Publicaciones/ responded 204 in 0.3887 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:0000001B","SpanId":"|9942173e-40e7bffa1b1312a6.","TraceId":"9942173e-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":10}
+[15:47:01 INF] HTTP POST /api/Publicaciones/ responded 201 in 28.958 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:0000001D","SpanId":"|9942173f-40e7bffa1b1312a6.","TraceId":"9942173f-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":10}
+[15:47:01 INF] HTTP GET /api/Publicaciones/propietario/2012 responded 200 in 10.0002 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:0000001F","SpanId":"|99421740-40e7bffa1b1312a6.","TraceId":"99421740-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":21}
+[15:47:03 INF] HTTP GET /api/SitiosTuristicos/propietario/2012 responded 200 in 15.8383 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:00000021","SpanId":"|99421741-40e7bffa1b1312a6.","TraceId":"99421741-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":7}
+[15:47:03 INF] HTTP GET /api/Publicaciones/3082 responded 200 in 24.5186 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:00000023","SpanId":"|99421742-40e7bffa1b1312a6.","TraceId":"99421742-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":7}
+[15:47:03 INF] HTTP GET /api/SitiosTuristicos/propietario/2012 responded 200 in 12.5372 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:00000025","SpanId":"|99421743-40e7bffa1b1312a6.","TraceId":"99421743-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":21}
+[15:47:14 INF] HTTP OPTIONS /api/Publicaciones/3082 responded 204 in 1.5825 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:00000027","SpanId":"|99421744-40e7bffa1b1312a6.","TraceId":"99421744-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":7}
+[15:47:14 INF] HTTP PUT /api/Publicaciones/3082 responded 204 in 61.4258 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:00000029","SpanId":"|99421745-40e7bffa1b1312a6.","TraceId":"99421745-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":25}
+[15:47:14 INF] HTTP GET /api/Publicaciones/propietario/2012 responded 200 in 26.6652 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:0000002B","SpanId":"|99421746-40e7bffa1b1312a6.","TraceId":"99421746-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":7}
+[15:47:18 INF] HTTP GET /api/SitiosTuristicos/propietario/2012 responded 200 in 15.599 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:0000002D","SpanId":"|99421747-40e7bffa1b1312a6.","TraceId":"99421747-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":23}
+[15:47:18 INF] HTTP GET /api/Publicaciones/3082 responded 200 in 8.4994 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:0000002F","SpanId":"|99421748-40e7bffa1b1312a6.","TraceId":"99421748-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":16}
+[15:47:18 INF] HTTP GET /api/SitiosTuristicos/propietario/2012 responded 200 in 13.0766 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:00000031","SpanId":"|99421749-40e7bffa1b1312a6.","TraceId":"99421749-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":7}
+[15:47:31 INF] HTTP OPTIONS /api/Publicaciones/3082 responded 204 in 0.2039 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:00000033","SpanId":"|9942174a-40e7bffa1b1312a6.","TraceId":"9942174a-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":9}
+[15:47:31 INF] HTTP PUT /api/Publicaciones/3082 responded 204 in 15.3631 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:00000035","SpanId":"|9942174b-40e7bffa1b1312a6.","TraceId":"9942174b-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":23}
+[15:47:31 INF] HTTP GET /api/Publicaciones/propietario/2012 responded 200 in 8.2013 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:00000037","SpanId":"|9942174c-40e7bffa1b1312a6.","TraceId":"9942174c-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":23}
+[15:47:33 INF] HTTP GET /api/SitiosTuristicos/propietario/2012 responded 200 in 30.821 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:00000039","SpanId":"|9942174d-40e7bffa1b1312a6.","TraceId":"9942174d-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":7}
+[15:47:33 INF] HTTP GET /api/Publicaciones/3082 responded 200 in 18.0681 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:0000003B","SpanId":"|9942174e-40e7bffa1b1312a6.","TraceId":"9942174e-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":21}
+[15:47:33 INF] HTTP GET /api/SitiosTuristicos/propietario/2012 responded 200 in 2.7297 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DIDV4Q9I:0000003D","SpanId":"|9942174f-40e7bffa1b1312a6.","TraceId":"9942174f-40e7bffa1b1312a6","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9248,"ThreadId":10}
+[15:49:09 INF] Iniciando aplicación ... 
+{"MachineName":"DESKTOP-UEI8527","ProcessId":9948,"ThreadId":1}
+[15:49:13 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 1984.8425 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DKU8K28A:0000000F","SpanId":"|622b2875-4732eced821a0ac7.","TraceId":"622b2875-4732eced821a0ac7","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9948,"ThreadId":10}
+[15:49:16 INF] HTTP GET /api/Publicaciones/1094 responded 200 in 110.4371 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DKU8K28A:00000013","SpanId":"|622b2877-4732eced821a0ac7.","TraceId":"622b2877-4732eced821a0ac7","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9948,"ThreadId":9}
+[15:49:16 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 123.89 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DKU8K28A:00000011","SpanId":"|622b2876-4732eced821a0ac7.","TraceId":"622b2876-4732eced821a0ac7","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9948,"ThreadId":6}
+[15:49:16 INF] HTTP GET /api/SitiosTuristicos/propietario/1011 responded 200 in 70.1391 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DKU8K28A:00000015","SpanId":"|622b2878-4732eced821a0ac7.","TraceId":"622b2878-4732eced821a0ac7","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9948,"ThreadId":8}
+[15:49:19 INF] HTTP OPTIONS /api/Publicaciones/1094 responded 204 in 1.0569 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DKU8K28A:00000017","SpanId":"|622b2879-4732eced821a0ac7.","TraceId":"622b2879-4732eced821a0ac7","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9948,"ThreadId":6}
+[15:49:20 INF] HTTP PUT /api/Publicaciones/1094 responded 204 in 219.2483 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DKU8K28A:00000019","SpanId":"|622b287a-4732eced821a0ac7.","TraceId":"622b287a-4732eced821a0ac7","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9948,"ThreadId":9}
+[15:49:20 INF] HTTP GET /api/Publicaciones/propietario/1011 responded 200 in 6.792 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06DKU8K28A:0000001B","SpanId":"|622b287b-4732eced821a0ac7.","TraceId":"622b287b-4732eced821a0ac7","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":9948,"ThreadId":8}
+[16:43:17 INF] Iniciando aplicación ... 
+{"MachineName":"DESKTOP-UEI8527","ProcessId":1108,"ThreadId":1}
+[16:45:23 INF] HTTP GET /api/CategoriasActividad responded 200 in 2338.7179 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EKAGPVVJ:0000000F","SpanId":"|4687311c-451583097aa144be.","TraceId":"4687311c-451583097aa144be","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1108,"ThreadId":7}
+[16:45:23 INF] HTTP GET /api/CategoriasActividad responded 200 in 2339.3117 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EKAGPVVJ:00000013","SpanId":"|4687311d-451583097aa144be.","TraceId":"4687311d-451583097aa144be","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1108,"ThreadId":13}
+[16:45:23 INF] HTTP GET /api/Publicaciones/region?region=Regi%C3%B3n+Centro+Oriente responded 200 in 2535.0137 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EKAGPVVJ:00000011","SpanId":"|4687311b-451583097aa144be.","TraceId":"4687311b-451583097aa144be","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":1108,"ThreadId":14}
+[16:48:25 INF] Iniciando aplicación ... 
+{"MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":1}
+[16:48:47 INF] HTTP GET /api/CategoriasActividad responded 200 in 4470.9952 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CP:00000013","SpanId":"|ab59808a-47309ccdd57808d9.","TraceId":"ab59808a-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":7}
+[16:48:47 INF] HTTP GET /api/CategoriasActividad responded 200 in 4442.9932 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CP:0000000F","SpanId":"|ab59808c-47309ccdd57808d9.","TraceId":"ab59808c-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":9}
+[16:48:47 INF] HTTP GET /api/Publicaciones/region?region=Regi%C3%B3n+Llano responded 200 in 4645.7762 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CP:00000011","SpanId":"|ab59808b-47309ccdd57808d9.","TraceId":"ab59808b-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":4}
+[16:49:37 INF] HTTP GET /api/CategoriasActividad responded 200 in 105.0411 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CP:00000015","SpanId":"|ab59808d-47309ccdd57808d9.","TraceId":"ab59808d-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":8}
+[16:49:37 INF] HTTP GET /api/CategoriasActividad responded 200 in 92.7812 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CP:00000019","SpanId":"|ab59808f-47309ccdd57808d9.","TraceId":"ab59808f-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":7}
+[16:49:37 INF] HTTP GET /api/Publicaciones/region?region=Regi%C3%B3n+Eje+Cafetero+-+Antioquia responded 200 in 128.4403 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CP:00000017","SpanId":"|ab59808e-47309ccdd57808d9.","TraceId":"ab59808e-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":9}
+[16:49:42 INF] HTTP GET /api/CategoriasActividad responded 200 in 53.1467 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CP:0000001B","SpanId":"|ab598090-47309ccdd57808d9.","TraceId":"ab598090-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":16}
+[16:49:42 INF] HTTP GET /api/CategoriasActividad responded 200 in 40.9031 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CP:0000001F","SpanId":"|ab598092-47309ccdd57808d9.","TraceId":"ab598092-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":20}
+[16:49:42 INF] HTTP GET /api/Publicaciones/region?region=Regi%C3%B3n+Llano responded 200 in 75.8066 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CP:0000001D","SpanId":"|ab598091-47309ccdd57808d9.","TraceId":"ab598091-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":7}
+[16:50:02 INF] HTTP GET /api/CategoriasActividad responded 200 in 8.9866 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CP:00000025","SpanId":"|ab598095-47309ccdd57808d9.","TraceId":"ab598095-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":21}
+[16:50:02 INF] HTTP GET /api/CategoriasActividad responded 200 in 18.7402 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CP:00000021","SpanId":"|ab598093-47309ccdd57808d9.","TraceId":"ab598093-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":16}
+[16:50:02 INF] HTTP GET /api/Publicaciones/region?region=Regi%C3%B3n+Centro+Oriente responded 200 in 28.9986 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CP:00000023","SpanId":"|ab598094-47309ccdd57808d9.","TraceId":"ab598094-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":18}
+[16:50:22 INF] HTTP GET /api/Publicaciones/region?region=Regi%C3%B3n+Eje+Cafetero+-+Antioquia responded 200 in 26.949 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CP:00000029","SpanId":"|ab598097-47309ccdd57808d9.","TraceId":"ab598097-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":19}
+[16:50:22 INF] HTTP GET /api/CategoriasActividad responded 200 in 32.2283 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CP:00000027","SpanId":"|ab598096-47309ccdd57808d9.","TraceId":"ab598096-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":18}
+[16:50:22 INF] HTTP GET /api/CategoriasActividad responded 200 in 26.8099 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CP:0000002B","SpanId":"|ab598098-47309ccdd57808d9.","TraceId":"ab598098-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":22}
+[16:50:27 INF] HTTP GET /api/Publicaciones/tipo/2/region/?region=Regi%C3%B3n+Eje+Cafetero+-+Antioquia responded 200 in 166.4697 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CP:0000002D","SpanId":"|ab598099-47309ccdd57808d9.","TraceId":"ab598099-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":22}
+[16:50:27 INF] HTTP GET /api/Publicaciones/tipo/2/region/?region=Regi%C3%B3n+Eje+Cafetero+-+Antioquia responded 200 in 81.9077 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CP:0000002F","SpanId":"|ab59809a-47309ccdd57808d9.","TraceId":"ab59809a-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":27}
+[16:52:58 INF] HTTP GET /api/CategoriasActividad responded 200 in 47.3481 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CQ:00000015","SpanId":"|ab59809e-47309ccdd57808d9.","TraceId":"ab59809e-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":35}
+[16:52:58 INF] HTTP GET /api/CategoriasActividad responded 200 in 51.7796 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CQ:00000013","SpanId":"|ab59809d-47309ccdd57808d9.","TraceId":"ab59809d-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":40}
+[16:52:58 INF] HTTP GET /api/Publicaciones responded 200 in 226.5109 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CQ:0000000F","SpanId":"|ab59809b-47309ccdd57808d9.","TraceId":"ab59809b-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":19}
+[16:52:58 INF] HTTP GET /api/Publicaciones responded 200 in 217.8626 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CQ:00000011","SpanId":"|ab59809c-47309ccdd57808d9.","TraceId":"ab59809c-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":36}
+[16:53:08 INF] HTTP GET /api/CategoriasActividad responded 200 in 32.7591 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CQ:00000019","SpanId":"|ab5980a0-47309ccdd57808d9.","TraceId":"ab5980a0-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":35}
+[16:53:08 INF] HTTP GET /api/Publicaciones responded 200 in 44.116 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CQ:00000017","SpanId":"|ab59809f-47309ccdd57808d9.","TraceId":"ab59809f-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":41}
+[16:53:08 INF] HTTP GET /api/Publicaciones responded 200 in 34.1288 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CQ:0000001B","SpanId":"|ab5980a1-47309ccdd57808d9.","TraceId":"ab5980a1-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":42}
+[16:53:08 INF] HTTP GET /api/CategoriasActividad responded 200 in 59.9508 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CQ:0000001D","SpanId":"|ab5980a2-47309ccdd57808d9.","TraceId":"ab5980a2-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":46}
+[16:53:10 INF] HTTP GET /api/Publicaciones/tipo/4 responded 200 in 121.0718 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CQ:0000001F","SpanId":"|ab5980a3-47309ccdd57808d9.","TraceId":"ab5980a3-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":46}
+[16:54:41 INF] HTTP GET /api/CategoriasActividad responded 200 in 17.139 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CQ:00000023","SpanId":"|ab5980a5-47309ccdd57808d9.","TraceId":"ab5980a5-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":35}
+[16:54:41 INF] HTTP GET /api/Publicaciones responded 200 in 25.1976 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CQ:00000021","SpanId":"|ab5980a4-47309ccdd57808d9.","TraceId":"ab5980a4-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":41}
+[16:54:41 INF] HTTP GET /api/CategoriasActividad responded 200 in 16.2087 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CQ:00000025","SpanId":"|ab5980a6-47309ccdd57808d9.","TraceId":"ab5980a6-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":47}
+[16:54:41 INF] HTTP GET /api/Publicaciones responded 200 in 17.1542 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CQ:00000027","SpanId":"|ab5980a7-47309ccdd57808d9.","TraceId":"ab5980a7-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":48}
+[16:54:47 INF] HTTP GET /api/Publicaciones/tipo/1 responded 200 in 10.3789 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CQ:00000029","SpanId":"|ab5980a8-47309ccdd57808d9.","TraceId":"ab5980a8-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":35}
+[16:57:38 INF] HTTP GET /api/Publicaciones responded 200 in 35.6245 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CR:0000000F","SpanId":"|ab5980a9-47309ccdd57808d9.","TraceId":"ab5980a9-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":65}
+[16:57:38 INF] HTTP GET /api/Publicaciones responded 200 in 36.1671 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CR:00000013","SpanId":"|ab5980ab-47309ccdd57808d9.","TraceId":"ab5980ab-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":41}
+[16:57:38 INF] HTTP GET /api/CategoriasActividad responded 200 in 55.0279 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CR:00000011","SpanId":"|ab5980aa-47309ccdd57808d9.","TraceId":"ab5980aa-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":64}
+[16:57:38 INF] HTTP GET /api/CategoriasActividad responded 200 in 177.2566 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CR:00000015","SpanId":"|ab5980ac-47309ccdd57808d9.","TraceId":"ab5980ac-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":62}
+[16:57:43 INF] HTTP GET /api/Publicaciones/tipo/3 responded 200 in 36.7983 ms 
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HM06EM6OE1CR:00000017","SpanId":"|ab5980ad-47309ccdd57808d9.","TraceId":"ab5980ad-47309ccdd57808d9","ParentId":"","MachineName":"DESKTOP-UEI8527","ProcessId":6592,"ThreadId":62}
