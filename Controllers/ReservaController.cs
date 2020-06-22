@@ -9,6 +9,7 @@ using backend.Models;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
 
+
 namespace backend.Controllers
 {
     [Route("api/[controller]")]
@@ -17,12 +18,9 @@ namespace backend.Controllers
     {
         private readonly CattleyaToursContext context;
 
-        private readonly ILogger<ReservaController> logger;
-
-        public ReservaController(CattleyaToursContext _context, ILogger<ReservaController> _logger)
+        public ReservaController(CattleyaToursContext _context)
         {
             context = _context;
-            logger = _logger;
         }
 
         // GET: api/Reserva
