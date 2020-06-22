@@ -28,7 +28,8 @@ namespace backend.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Reserva>>> GetReserva()
         {
-            return await context.Reserva.Include(x => x.Usuario).Include(x => x.Publicacion).ToListAsync();
+            return await context.Reserva.Include(x => x.Usuario).Include(x => x.Publicacion)
+            .Include(x => x.EstadoReserva).ToListAsync();
         }
 
         // GET: api/Reserva/publicacion/5/usuario/3
@@ -49,7 +50,8 @@ namespace backend.Controllers
         [HttpGet("usuario/{id}")]
         public async Task<ActionResult<IEnumerable<Reserva>>> GetReservaByUserId(int id)
         {
-            return await context.Reserva.Include(x => x.Publicacion).Where(x => x.Usuario.Id == id).ToListAsync();
+            return await context.Reserva
+            .Include(x => x.EstadoReserva).Include(x => x.Publicacion).Where(x => x.Usuario.Id == id).ToListAsync();
         }
 
         [HttpGet("publicacion/{id}")]
@@ -57,6 +59,7 @@ namespace backend.Controllers
         {
             return  await context.Reserva
             .Include(x => x.Usuario)
+            .Include(x => x.EstadoReserva)
             .Where(x => x.Publicacion.Id == id)
             .Select( x => new ReservaDTO(){ 
                 Id = x.Id,
@@ -69,17 +72,18 @@ namespace backend.Controllers
                     Telefono = x.Usuario.Telefono,
                     Nacionalidad = x.Usuario.Nacionalidad,
                     RolId = x.Usuario.RolId
-                }
+                },
+                EstadoReserva = x.EstadoReserva        
             }).ToListAsync();
         }
         
         // PUT: api/Reserva/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutReserva(int id, Reserva reserva)
+        [HttpPut("publicacion/{publicacionId}/usuario/{usuarioId}")]
+        public async Task<IActionResult> PutReserva(int usuarioId, int publicacionId, Reserva reserva)
         {
-            if (id != reserva.Id)
+            if (usuarioId != reserva.UsuarioId || publicacionId != reserva.PublicacionId)
             {
                 return BadRequest();
             }
@@ -92,7 +96,7 @@ namespace backend.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ReservaExists(id))
+                if (!ReservaExists(usuarioId,publicacionId))
                 {
                     return NotFound();
                 }
@@ -133,9 +137,9 @@ namespace backend.Controllers
             return reserva;
         }
 
-        private bool ReservaExists(int id)
+        private bool ReservaExists(int usuarioId, int publicacionId)
         {
-            return context.Reserva.Any(e => e.Id == id);
+            return context.Reserva.Any(e => e.UsuarioId == usuarioId && e.PublicacionId == publicacionId);
         }
     }
 }

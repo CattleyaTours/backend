@@ -10,8 +10,8 @@ using backend.Models;
 namespace backend.Migrations
 {
     [DbContext(typeof(CattleyaToursContext))]
-    [Migration("20200614004931_Correcion final archivo_sitio")]
-    partial class Correcionfinalarchivo_sitio
+    [Migration("20200619215153_ArchivoSitioTuristico")]
+    partial class ArchivoSitioTuristico
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,32 +20,6 @@ namespace backend.Migrations
                 .HasAnnotation("ProductVersion", "3.1.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("Actividad", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Nombre")
-                        .IsRequired()
-                        .HasColumnType("varchar(50)");
-
-                    b.Property<int>("PublicacionId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TipoActividadId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PublicacionId");
-
-                    b.HasIndex("TipoActividadId");
-
-                    b.ToTable("Actividades");
-                });
 
             modelBuilder.Entity("Archivo_SitioTuristico", b =>
                 {
@@ -362,21 +336,6 @@ namespace backend.Migrations
                         .IsUnique();
 
                     b.ToTable("Usuarios");
-                });
-
-            modelBuilder.Entity("Actividad", b =>
-                {
-                    b.HasOne("Publicacion", null)
-                        .WithMany("Actividades")
-                        .HasForeignKey("PublicacionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CategoriaActividad", "TipoActividad")
-                        .WithMany()
-                        .HasForeignKey("TipoActividadId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("Archivo_SitioTuristico", b =>
