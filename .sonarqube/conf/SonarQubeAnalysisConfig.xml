@@ -31,7 +31,7 @@
     <Property Name="sonar.cpp.file.suffixes">.cc,.cpp,.cxx,.c++,.hh,.hpp,.hxx,.h++,.ipp</Property>
     <Property Name="sonaranalyzer.security.cs.nuget.packageVersion">8.4.0-M1.2226</Property>
     <Property Name="sonaranalyzer-cs.ruleNamespace">SonarAnalyzer.CSharp</Property>
-    <Property Name="sonar.cs.analyzeGeneratedCode">false</Property>
+    <Property Name="sonar.cs.analyzeGeneratedCode">true</Property>
     <Property Name="sonar.builtInQualityProfiles.disableNotificationOnUpdate">false</Property>
     <Property Name="sonar.css.file.suffixes">.css,.less,.scss</Property>
     <Property Name="sonar.organizations.createPersonalOrg">true</Property>
@@ -102,7 +102,7 @@
     <Property Name="sonaranalyzer-cs.pluginKey">csharp</Property>
     <Property Name="sonar.cpd.cobol.minimumTokens">100</Property>
     <Property Name="sonaranalyzer.security.cs.pluginKey">securitycsharpfrontend</Property>
-    <Property Name="sonar.branch.longLivedBranches.regex">(branch|release)-.*</Property>
+    <Property Name="sonar.branch.longLivedBranches.regex">*</Property>
     <Property Name="sonar.objc.file.suffixes">.m</Property>
     <Property Name="sonar.autoscan.enabled">false</Property>
     <Property Name="sonar.ruby.coverage.reportPaths">coverage/.resultset.json</Property>
@@ -124,7 +124,8 @@
     <Property Name="sonar.core.serverBaseURL">https://sonarcloud.io</Property>
     <Property Name="sonar.lf.logoWidthPx">105</Property>
     <Property Name="sonar.core.id">1BD809FA-AWHW8ct9-T_TB3XqouNu</Property>
-    <Property Name="sonar.core.startTime">6/19/2020 3:13:18 AM</Property>
+    <Property Name="sonar.core.startTime">6/22/2020 9:31:29 AM</Property>
+    <Property Name="sonar.pullrequest.provider">GitHub</Property>
   </ServerSettings>
   <LocalSettings>
     <Property Name="sonar.host.url">https://sonarcloud.io</Property>
