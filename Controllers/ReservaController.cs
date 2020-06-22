@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using backend.Models;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 namespace backend.Controllers
 {
@@ -25,6 +26,7 @@ namespace backend.Controllers
         }
 
         // GET: api/Reserva
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Reserva>>> GetReserva()
         {
@@ -47,6 +49,7 @@ namespace backend.Controllers
             return reserva;
         }
         
+        [Authorize]
         [HttpGet("usuario/{id}")]
         public async Task<ActionResult<IEnumerable<Reserva>>> GetReservaByUserId(int id)
         {
@@ -80,6 +83,7 @@ namespace backend.Controllers
         // PUT: api/Reserva/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [Authorize]
         [HttpPut("publicacion/{publicacionId}/usuario/{usuarioId}")]
         public async Task<IActionResult> PutReserva(int usuarioId, int publicacionId, Reserva reserva)
         {
@@ -112,6 +116,7 @@ namespace backend.Controllers
         // POST: api/Reserva
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<Reserva>> PostReserva(Reserva reserva)
         {
@@ -122,6 +127,7 @@ namespace backend.Controllers
         }
 
         // DELETE: api/Reserva/5/publicacion/5/usuario/3
+        [Authorize]
         [HttpDelete("publicacion/{publicacionId}/usuario/{usuarioId}")]
         public async Task<ActionResult<Reserva>> DeleteReserva(int usuarioId, int publicacionId)
         {
