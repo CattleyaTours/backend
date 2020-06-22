@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 using backend.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace backend.Controllers
 {
@@ -92,6 +93,7 @@ namespace backend.Controllers
         }
 
         // PUT: api/Archivos_SitioTuristico/1
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutArchivo_SitioTuristico(int id, Archivo_SitioTuristico archivo_SitioTuristico)
         {
@@ -134,6 +136,7 @@ namespace backend.Controllers
         }
 
         // POST: api/Archivo_SitioTuristico
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<Archivo_SitioTuristico>> PostArchivo_SitioTuristico([FromForm] IFormFile file, [FromForm] int sitioID)
         {
@@ -174,6 +177,7 @@ namespace backend.Controllers
 
 
         // DELETE: api/Archivo_SitioTuristico/1
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<ActionResult<Archivo_SitioTuristico>> DeleteArchivo_SitioTuristico(int id)
         {
