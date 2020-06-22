@@ -6,13 +6,6 @@ namespace backend.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_Interes_Usuarios_UsuarioId",
-                table: "Interes");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Reserva_Usuarios_UsuarioId",
-                table: "Reserva");
 
             migrationBuilder.DropTable(
                 name: "TiposHabitacion");
@@ -115,19 +108,6 @@ namespace backend.Migrations
                     { 4, 8, "Multiple" }
                 });
 
-            migrationBuilder.AddForeignKey(
-                name: "FK_Interes_Usuarios_UsuarioId",
-                table: "Interes",
-                column: "UsuarioId",
-                principalTable: "Usuarios",
-                principalColumn: "Id");
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Reserva_Usuarios_UsuarioId",
-                table: "Reserva",
-                column: "UsuarioId",
-                principalTable: "Usuarios",
-                principalColumn: "Id");
         }
     }
 }
