@@ -28,7 +28,8 @@ namespace backend.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Reserva>>> GetReserva()
         {
-            return await context.Reserva.Include(x => x.Usuario).Include(x => x.Publicacion).ToListAsync();
+            return await context.Reserva.Include(x => x.Usuario).Include(x => x.Publicacion)
+            .Include(x => x.EstadoReserva).ToListAsync();
         }
 
         // GET: api/Reserva/publicacion/5/usuario/3
@@ -49,7 +50,8 @@ namespace backend.Controllers
         [HttpGet("usuario/{id}")]
         public async Task<ActionResult<IEnumerable<Reserva>>> GetReservaByUserId(int id)
         {
-            return await context.Reserva.Include(x => x.Publicacion).Where(x => x.Usuario.Id == id).ToListAsync();
+            return await context.Reserva
+            .Include(x => x.EstadoReserva).Include(x => x.Publicacion).Where(x => x.Usuario.Id == id).ToListAsync();
         }
 
         [HttpGet("publicacion/{id}")]
