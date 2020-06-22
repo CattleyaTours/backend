@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using backend.Models;
-using Microsoft.Extensions.Logging;
+//using Microsoft.Extensions.Logging;
 
 namespace backend.Controllers
 {
@@ -16,12 +16,11 @@ namespace backend.Controllers
     {
         private readonly CattleyaToursContext context;
 
-        private readonly ILogger<ReservaController> logger;
+        //private readonly ILogger<ReservaController> logger;
 
-        public ReservaController(CattleyaToursContext _context, ILogger<ReservaController> _logger)
+        public ReservaController(CattleyaToursContext _context)
         {
             context = _context;
-            logger = _logger;
         }
 
         // GET: api/Reserva
