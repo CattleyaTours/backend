@@ -10,7 +10,7 @@ namespace backend.Migrations
 {
     [DbContext(typeof(CattleyaToursContext))]
     [Migration("20200410201601_testm")]
-    partial class testm
+    partial class Testm
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

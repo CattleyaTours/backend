@@ -11,7 +11,7 @@ namespace backend.Migrations
 {
     [DbContext(typeof(CattleyaToursContext))]
     [Migration("20200504040703_cambio sitio turistico")]
-    partial class cambiositioturistico
+    partial class CambioSitioTuristico
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

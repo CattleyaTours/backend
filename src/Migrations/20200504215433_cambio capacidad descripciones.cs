@@ -2,7 +2,7 @@
 
 namespace backend.Migrations
 {
-    public partial class cambiocapacidaddescripciones : Migration
+    public partial class CambioCapacidadDescripciones : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

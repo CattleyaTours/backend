@@ -2,7 +2,7 @@
 
 namespace backend.Migrations
 {
-    public partial class testm : Migration
+    public partial class Testm : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

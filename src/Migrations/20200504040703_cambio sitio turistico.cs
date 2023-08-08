@@ -2,7 +2,7 @@
 
 namespace backend.Migrations
 {
-    public partial class cambiositioturistico : Migration
+    public partial class CambioSitioTuristico : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
