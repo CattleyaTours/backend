@@ -2,41 +2,36 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backend.Models;
+
+#nullable disable
 
 namespace backend.Migrations
 {
     [DbContext(typeof(CattleyaToursContext))]
-    [Migration("20200619215704_Reserva")]
-    partial class Reserva
+    partial class CattleyaToursContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.3")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+            modelBuilder.HasAnnotation("ProductVersion", "7.0.10");
 
             modelBuilder.Entity("Actividad", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("varchar(50)");
 
                     b.Property<int>("PublicacionId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("TipoActividadId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
@@ -51,19 +46,18 @@ namespace backend.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("SitioId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("ext")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<byte[]>("info_file")
                         .IsRequired()
-                        .HasColumnType("varbinary(max)");
+                        .HasColumnType("BLOB");
 
                     b.HasKey("Id");
 
@@ -76,8 +70,7 @@ namespace backend.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
@@ -99,88 +92,150 @@ namespace backend.Migrations
                         new
                         {
                             Id = 1,
-                            Descripcion = "Talleres de todo tipo, fotografia, artesanías típicas etc ...",
+                            Descripcion = "Participa en actividades como creación de artesanías, taller de fotografía entre otras.",
                             Icono = "fas fa-pencil-ruler",
                             Nombre = "Talleres"
                         },
                         new
                         {
                             Id = 2,
-                            Descripcion = "Prueba las delicias típicas de nuestra tierra, en sitios únicos y vive una experiencia única",
+                            Descripcion = "Prueba las delicias típicas de nuestra tierra, en sitios únicos y vive una experiencia inolvidable.",
                             Icono = "fas fa-utensils",
-                            Nombre = "Gastronomia"
+                            Nombre = "Gastronomía"
                         },
                         new
                         {
                             Id = 3,
-                            Descripcion = "Visita los parques y reservas naturales mas famosas de nuestro país en compañía de expertos",
+                            Descripcion = "Recorre los parques y reservas naturales más famosas de nuestro país en compañía de expertos.",
                             Icono = "fas fa-map-marked-alt",
                             Nombre = "Visitas guiadas"
                         },
                         new
                         {
                             Id = 4,
-                            Descripcion = "Visita sitios únicos en el mundo como cascadas naturales, volcanes, nevados y muchos otros sitios alejados de la ciudad",
+                            Descripcion = "Visita sitios únicos en el mundo como cascadas naturales, volcanes y nevados.",
                             Icono = "fas fa-hiking",
                             Nombre = "Maravillas naturales"
                         },
                         new
                         {
                             Id = 5,
-                            Descripcion = "Experimenta el vértigo y la adrenalina practicando deportes extremos como Rapel, Parapente ...",
+                            Descripcion = "Experimenta el vértigo y la adrenalina practicando deportes extremos como rapel, parapente, paracaidismo, canotaje, ciclomontañismo, entre otros.",
                             Icono = "fas fa-biking",
-                            Nombre = "Deportes Extremos"
+                            Nombre = "Deportes extremos"
                         },
                         new
                         {
                             Id = 6,
-                            Descripcion = "Además de la naturaleza disfruta de atracciones mecánicas en los parques de diversiones más famosos del país",
+                            Descripcion = "Disfruta de atracciones mecánicas en los parques de diversiones más famosos del país.",
                             Icono = "fas fa-rocket",
                             Nombre = "Atracciones mecánicas"
                         },
                         new
                         {
                             Id = 7,
-                            Descripcion = "Sal de la ciudad y pasa un fin de semana alejado del estrés acampando en sitios maravillosos en los que podrás disfrutar de la naturaleza en su máximo esplendor.",
+                            Descripcion = "Sal de la ciudad y pasa un fin de semana alejado del estrés acampando en sitios extraordinarios disfrutando de la naturaleza en su máximo esplendor.",
                             Icono = "fas fa-campground",
-                            Nombre = "Acampar * Glamping"
+                            Nombre = "Glamping"
                         },
                         new
                         {
                             Id = 8,
-                            Descripcion = "Sal de la rutina y disfruta de una noche de fiesta ya sea en chivas rumberas, fiestas en la playa u otros sitios.",
+                            Descripcion = "Vive una noche inolvidable junto a tus amigos disfrutando la sorprendente vida nocturna que tenemos para ofrecerte.",
                             Icono = "fas fa-glass-cheers",
                             Nombre = "Rumba"
                         },
                         new
                         {
                             Id = 9,
-                            Descripcion = "Disfruta la experiencia de alimentar y convivir con caballos, vacas y otros animales",
+                            Descripcion = "Disfruta la experiencia de alimentar y convivir con animales de la región, acompañado por los mejores guías.",
                             Icono = "fas fa-paw",
                             Nombre = "Experiencias con animales"
                         },
                         new
                         {
                             Id = 10,
-                            Descripcion = "Actividades muy originales y divertidas unicas de cada sitio ...",
+                            Descripcion = "Realiza actividades originales y divertidas únicas de cada sitio.",
                             Icono = "fas fa-ellipsis-h",
                             Nombre = "Otros"
+                        });
+                });
+
+            modelBuilder.Entity("Comentario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Contenido")
+                        .IsRequired()
+                        .HasColumnType("varchar(500)");
+
+                    b.Property<DateTime>("Fecha")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT")
+                        .HasDefaultValueSql("getdate()");
+
+                    b.Property<int>("PublicacionId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("UsuarioId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PublicacionId");
+
+                    b.HasIndex("UsuarioId");
+
+                    b.ToTable("Comentario");
+                });
+
+            modelBuilder.Entity("EstadoReserva", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EstadosReserva");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Nombre = "En espera"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Nombre = "Aceptado"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Nombre = "Rechazado"
                         });
                 });
 
             modelBuilder.Entity("Interes", b =>
                 {
                     b.Property<int>("UsuarioId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("PublicacionId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("Fecha")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("UsuarioId", "PublicacionId");
 
@@ -193,24 +248,20 @@ namespace backend.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
                         .HasColumnType("varchar(800)");
 
-                    b.Property<DateTime>("Fecha")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("Precio")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("PropietarioId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("SitioId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Titulo")
                         .IsRequired()
@@ -228,18 +279,23 @@ namespace backend.Migrations
             modelBuilder.Entity("Reserva", b =>
                 {
                     b.Property<int>("UsuarioId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("PublicacionId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("EstadoReservaId")
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("Fecha")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("UsuarioId", "PublicacionId");
+
+                    b.HasIndex("EstadoReservaId");
 
                     b.HasIndex("PublicacionId");
 
@@ -250,8 +306,7 @@ namespace backend.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
@@ -278,11 +333,7 @@ namespace backend.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("Capacidad")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Departamento")
                         .IsRequired()
@@ -301,7 +352,7 @@ namespace backend.Migrations
                         .HasColumnType("varchar(50)");
 
                     b.Property<int>("PropietarioId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Region")
                         .IsRequired()
@@ -314,57 +365,11 @@ namespace backend.Migrations
                     b.ToTable("SitiosTuristicos");
                 });
 
-            modelBuilder.Entity("TipoHabitacion", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("CapacidadPersonas")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Nombre")
-                        .IsRequired()
-                        .HasColumnType("varchar(50)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TiposHabitacion");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CapacidadPersonas = 1,
-                            Nombre = "Secilla"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CapacidadPersonas = 2,
-                            Nombre = "Doble"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CapacidadPersonas = 4,
-                            Nombre = "Familiar"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CapacidadPersonas = 8,
-                            Nombre = "Multiple"
-                        });
-                });
-
             modelBuilder.Entity("Usuario", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -383,7 +388,7 @@ namespace backend.Migrations
                         .HasColumnType("varchar(200)");
 
                     b.Property<int>("RolId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Telefono")
                         .IsRequired()
@@ -419,6 +424,8 @@ namespace backend.Migrations
                         .HasForeignKey("TipoActividadId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("TipoActividad");
                 });
 
             modelBuilder.Entity("Archivo_SitioTuristico", b =>
@@ -428,6 +435,27 @@ namespace backend.Migrations
                         .HasForeignKey("SitioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Sitio");
+                });
+
+            modelBuilder.Entity("Comentario", b =>
+                {
+                    b.HasOne("Publicacion", "Publicacion")
+                        .WithMany()
+                        .HasForeignKey("PublicacionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Publicacion");
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("Interes", b =>
@@ -443,6 +471,10 @@ namespace backend.Migrations
                         .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Publicacion");
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("Publicacion", b =>
@@ -458,10 +490,20 @@ namespace backend.Migrations
                         .HasForeignKey("SitioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Propietario");
+
+                    b.Navigation("Sitio");
                 });
 
             modelBuilder.Entity("Reserva", b =>
                 {
+                    b.HasOne("EstadoReserva", "EstadoReserva")
+                        .WithMany()
+                        .HasForeignKey("EstadoReservaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Publicacion", "Publicacion")
                         .WithMany()
                         .HasForeignKey("PublicacionId")
@@ -471,8 +513,14 @@ namespace backend.Migrations
                     b.HasOne("Usuario", "Usuario")
                         .WithMany()
                         .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("EstadoReserva");
+
+                    b.Navigation("Publicacion");
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("SitioTuristico", b =>
@@ -482,6 +530,8 @@ namespace backend.Migrations
                         .HasForeignKey("PropietarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Propietario");
                 });
 
             modelBuilder.Entity("Usuario", b =>
@@ -491,6 +541,18 @@ namespace backend.Migrations
                         .HasForeignKey("RolId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Rol");
+                });
+
+            modelBuilder.Entity("Publicacion", b =>
+                {
+                    b.Navigation("Actividades");
+                });
+
+            modelBuilder.Entity("SitioTuristico", b =>
+                {
+                    b.Navigation("Imagenes");
                 });
 #pragma warning restore 612, 618
         }

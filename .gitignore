@@ -41,3 +41,9 @@ bld/
 msbuild.log
 msbuild.err
 msbuild.wrn
+
+#Logs
+Logs/*
+
+#SQL Lite Database
+CattleyaToursTestDB*

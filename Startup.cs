@@ -25,7 +25,7 @@ namespace backend
         public void ConfigureServices(IServiceCollection services)
         {            
             services.AddDbContext<CattleyaToursContext>(opt => 
-                opt.UseSqlServer(Configuration.GetConnectionString("CattleyaToursDatabase")));
+                opt.UseSqlite("Data Source=CattleyaToursTestDB"));
             
             services.AddControllers();
             
@@ -55,8 +55,6 @@ namespace backend
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, CattleyaToursContext dataContext)
         {
-            dataContext.Database.Migrate();
-            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
